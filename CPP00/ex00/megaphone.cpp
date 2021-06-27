@@ -3,20 +3,19 @@
  
 int main(int ac, char **av)
 {
-  int ix = 1;                               // индекс символов строки
+  int ix = 1;
   if (ac == 1) {
 	  std::cout << "\342\230\272" << "\t";
 	  std::cout << "SHHH SHHH..." << "\t";
 	  std::cout << "\342\230\272" << "\n";
   }
- 
-  for(int ix = 1; av[ix]; ix++)                           // пока не конец строки
+  for(int ix = 1; av[ix]; ix++)
   {
 	 for(int i = 0; av[ix][i]; i++) { 
-    	std::cout << (char)toupper(av[ix][i]);  // преобразовать строчную букву в прописную
+    	std::cout << (char)toupper(av[ix][i]);
 	 }
 	std::cout << " ";
-	if (av[ix + 1] == NULL) 
+	if (av[ix + 1] == NULL)
 		std::cout << "\n";
   }
   return 0;
