@@ -19,6 +19,7 @@ class Contact {
 public:
 
 	Contact();
+	void add();
 	void print() const;
 
 	const std::string &getMFirstName() const;
@@ -43,7 +44,7 @@ private:
 	std::string m_nickname;
 	std::string m_number;
 	std::string m_secret;
-	bool 		is_empty;
+//	bool 		is_empty;
 };
 
 #endif //CONTACT_HPP

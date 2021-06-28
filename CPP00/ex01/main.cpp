@@ -11,20 +11,15 @@
 /* ************************************************************************** */
 
 #include "header.h"
+//# include "Contact.hpp"
+//# include "PhoneBook.hpp"
 
-void search(char *av) {
-	std::cout << "search\n";
+int main() {
+	PhoneBook myPhoneBook;
+	myPhoneBook.create();
+	return 0;
+//	std::cout << myPhoneBook.getCmd();
 }
-
-int main(int ac, char **av) {
-	PhoneBook a;
-	a.print();
-//	Contact a1;
-//	a1.print();
-
-	return (0);
-}
-
 
 //	Contact first;
 //	first.print();

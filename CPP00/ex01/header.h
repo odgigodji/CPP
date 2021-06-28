@@ -1,9 +1,12 @@
-//
-// Created by Nelson Amerei on 6/28/21.
-//
 
-#ifndef EX01_HEADER_H
-#define EX01_HEADER_H
+
+#ifndef HEADER_H
+# define HEADER_H
+
+# include <iostream>
+# include <cstring>
+# include "Contact.hpp"
+# include "PhoneBook.hpp"
 
 # define RED        "\x1B[31m"
 # define WTH        "\x1B[38m"
@@ -14,9 +17,4 @@
 # define CYN        "\x1B[36m"
 # define RESET      "\x1B[0m"
 
-#include <iostream>
-#include <cstring>
-#include "Contact.hpp"
-#include "PhoneBook.hpp"
-
-#endif //EX01_HEADER_H
+#endif //HEADER_H

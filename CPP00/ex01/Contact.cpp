@@ -12,13 +12,15 @@
 
 #include "header.h"
 
-Contact::Contact() : is_empty(false){
+Contact::Contact() {}
+
+void Contact::add() {
 	std::cout << "First name: ";
 	std::cin >> this->m_firstName ;
 
-	std::cout << "Last name: ";
-	std::cin >> this->m_lastName ;
-
+//	std::cout << "Last name: ";
+//	std::cin >> this->m_lastName ;
+//
 //	std::cout << "Nickname: ";
 //	std::cin >> this->m_nickname ;
 //
@@ -29,19 +31,12 @@ Contact::Contact() : is_empty(false){
 //	std::cin >> this->m_secret ;
 }
 
-
-
-//Contact::~Contact( void ) {
-//	std::cout << "Destructor called" << std::endl;
-//	return ;
-//}
-
 void Contact::print() const {
 	std::cout << this->m_firstName << std::endl;
 	std::cout << this->m_lastName << std::endl;
-//	std::cout << this->m_nickname << std::endl;
-//	std::cout << this->m_number << std::endl;
-//	std::cout << this->m_secret << std::endl;
+	std::cout << this->m_nickname << std::endl;
+	std::cout << this->m_number << std::endl;
+	std::cout << this->m_secret << std::endl;
 }
 
 const std::string &Contact::getMFirstName() const {return m_firstName;}
@@ -59,6 +54,6 @@ void Contact::setMFirstName(const std::string &mFirstName) {m_firstName = mFirst
 //const std::string &Contact::getMSecret() const {return m_secret;}
 //void Contact::setMSecret(const std::string &mSecret) {m_secret = mSecret;}
 //
-bool Contact::isEmpty() const {return is_empty;}
-void Contact::setIsEmpty(bool isEmpty) {is_empty = isEmpty;}
+//bool Contact::isEmpty() const {return is_empty;}
+//void Contact::setIsEmpty(bool isEmpty) {is_empty = isEmpty;}
 

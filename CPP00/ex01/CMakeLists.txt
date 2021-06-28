@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 98)
 
 add_executable(ex01 main.cpp
         PhoneBook.cpp PhoneBook.hpp
-        Contact.cpp Contact.hpp header.h)
+        Contact.cpp Contact.hpp
+        header.h)
