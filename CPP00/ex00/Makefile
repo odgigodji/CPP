@@ -1,3 +1,2 @@
 all:
-	clang++ megaphone-1.cpp -o megaphone
-
+	clang++ -Wall -Wextra -Werror megaphone.cpp -o megaphone
