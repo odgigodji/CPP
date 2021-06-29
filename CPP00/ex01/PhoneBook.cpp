@@ -13,19 +13,20 @@
 #include "header.h"
 #include "PhoneBook.hpp"
 
+//#include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook() : position(0) {}
+
+PhoneBook::PhoneBook() {
+	this->position = 0;
+	addCounter = 0;
+}
 
 void PhoneBook::addContact() {
-	if (position == 2) {
-		position = 0;
-	}
-	cont[position++].add();
-	cont[position - 1].print();
-//	for(int i = 0; i < 2; ++i) { //8
-//		this->cont[i].add();
-//		cont[i].print();
-//	}
+	cont[position].add();
+//	std::cout << "position is " << position << std::endl;
+	position = (position == BOOK_SIZE - 1) ? 0 : position + 1;
+//	std::cout << "position after ++ is " << position << std::endl;
+	addCounter = (addCounter == BOOK_SIZE) ? addCounter : addCounter + 1;
 }
 
 //void PhoneBook::inputCommand() {
@@ -39,22 +40,44 @@ void PhoneBook::addContact() {
 //}
 
 void PhoneBook::create() {
-	while(1) {
-		std::cin >> cmd;
-		if (!std::strcmp(cmd.c_str(), "ADD"))
-			std::cout << "add cmd is start" << std::endl;
-		else if (!std::strcmp(cmd.c_str(), "SEARCH"))
-			std::cout << "search cmd is start" << std::endl;
-		else if (!std::strcmp(cmd.c_str(), "EXIT")) {
-			std::cout << "search cmd is start" << std::endl;
-			exit(1);
+	while(true) {
+		setCmd();
+		if (!std::strcmp(cmd.c_str(), "EXIT")) { exit(1); }
+		else if (!std::strcmp(cmd.c_str(), "ADD")) { addContact(); }
+		else if (!std::strcmp(cmd.c_str(), "SEARCH")) { search(); }
+		else {
+			std::cout << RED"Command not exist.\n"RESET;
+			std::cout << YEL"ADD - add contact to Phonebook.\n";
+			std::cout << "SEARCH - show available contacts.\n";
+			std::cout << "EXIT - exit program.\n"RESET;
 		}
-		else
-			std::cout << "other cmd\n";
 	}
 }
 
-const std::string &PhoneBook::getCmd() const {
-	return cmd;
+void PhoneBook::setCmd() {
+	std::cout << MAG"Enter command: "RESET; //(ADD, SEARCH or EXIT)
+//	std::cin >> PhoneBook::cmd;
+	if (std::getline(std::cin, cmd).eof())
+		exit(1);
 }
 
+void PhoneBook::search() {
+	std::cout << CYN"|" << std::setw(10) << "index"  << "|";
+	std::cout << std::setw(10) << "first name"  << "|";
+	std::cout << std::setw(10) << "last name"  << "|";
+	std::cout << std::setw(10) << "nickname"  << "|" << std::endl;
+
+	for (int i = 0;i < addCounter; ++i) {
+//		std::cout << "|" << std::setw(10) <<
+//		cont[i].getMFirstName().substr(0, 9).append(".") << "|";
+//		std::cout << i << std::endl;
+//		std::cout << !cont[i].isEmpty1() << std::endl;
+		cont[i].print();
+//		std::cout << "check1\n";
+	}
+}
+
+void PhoneBook::printBook() const {
+
+
+}

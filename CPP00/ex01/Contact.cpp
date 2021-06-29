@@ -11,49 +11,61 @@
 /* ************************************************************************** */
 
 #include "header.h"
-
+#include <cstring>
+#include <sstream>
 Contact::Contact() {}
 
 void Contact::add() {
-	std::cout << "First name: ";
-	std::cin >> this->m_firstName ;
+	std::cout << BLU"First name: "RESET;
+	setMFirstName();
 
-//	std::cout << "Last name: ";
-//	std::cin >> this->m_lastName ;
-//
-//	std::cout << "Nickname: ";
-//	std::cin >> this->m_nickname ;
-//
-//	std::cout << "Phone number: ";
-//	std::cin >> this->m_number ;
-//
-//	std::cout << "Secret: ";
-//	std::cin >> this->m_secret ;
+	std::cout << BLU"Last name: "RESET;
+	setMLastName();
+
+	std::cout << BLU"Nickname: "RESET;
+	setMNickname();
+
+	std::cout << BLU"Phone number: "RESET;
+	setMNumber();
+
+	std::cout << BLU"Secret: "RESET;
+	setMSecret();
 }
 
 void Contact::print() const {
-	std::cout << this->m_firstName << std::endl;
-	std::cout << this->m_lastName << std::endl;
-	std::cout << this->m_nickname << std::endl;
-	std::cout << this->m_number << std::endl;
-	std::cout << this->m_secret << std::endl;
+	std::cout << "|" << std::setw(10)
+	<< getMFirstName().substr(0, 9).append(".") << "|";
 }
 
-const std::string &Contact::getMFirstName() const {return m_firstName;}
-void Contact::setMFirstName(const std::string &mFirstName) {m_firstName = mFirstName;}
+const std::string &Contact::getMFirstName() const {
+	if (m_firstName.length() < 10)
+		return m_firstName;
+	else { return m_firstName.substr(0, 9).append("."); }
+}
 
-//const std::string &Contact::getMLastName() const {return m_lastName;}
-//void Contact::setMLastName(const std::string &mLastName) {m_lastName = mLastName;}
-//
-//const std::string &Contact::getMNickname() const {return m_nickname;}
-//void Contact::setMNickname(const std::string &mNickname) {m_nickname = mNickname;}
-//
-//const std::string &Contact::getMNumber() const {return m_number;}
-//void Contact::setMNumber(const std::string &mNumber) {m_number = mNumber;}
-//
-//const std::string &Contact::getMSecret() const {return m_secret;}
-//void Contact::setMSecret(const std::string &mSecret) {m_secret = mSecret;}
-//
-//bool Contact::isEmpty() const {return is_empty;}
-//void Contact::setIsEmpty(bool isEmpty) {is_empty = isEmpty;}
+//SETTERS:
+void Contact::setMFirstName() {
+	if (std::getline(std::cin, m_firstName).eof())
+			exit(1);
+}
+
+void Contact::setMLastName() {
+	if (std::getline(std::cin, m_lastName).eof())
+		exit(1);
+}
+
+void Contact::setMNickname() {
+	if (std::getline(std::cin, m_nickname).eof())
+		exit(1);
+}
+
+void Contact::setMNumber() {
+	if (std::getline(std::cin, m_number).eof())
+		exit(1);
+}
+
+void Contact::setMSecret() {
+	if (std::getline(std::cin, m_secret).eof())
+		exit(1);
+}
 

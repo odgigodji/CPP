@@ -21,22 +21,9 @@ public:
 	Contact();
 	void add();
 	void print() const;
+//	bool notEmpty() const;
+//	void setIsEmpty(bool isEmpty);
 
-	const std::string &getMFirstName() const;
-	void setMFirstName(const std::string &mFirstName);
-//	const std::string &getMLastName() const;
-//	void setMLastName(const std::string &mLastName);
-//	const std::string &getMNickname() const;
-//	void setMNickname(const std::string &mNickname);
-//	const std::string &getMNumber() const;
-//	void setMNumber(const std::string &mNumber);
-//	const std::string &getMSecret() const;
-//	void setMSecret(const std::string &mSecret);
-	bool isEmpty() const;
-
-//	Contact(const std::string &mFirstName);
-
-	void setIsEmpty(bool isEmpty);
 
 private:
 	std::string m_firstName;
@@ -44,7 +31,18 @@ private:
 	std::string m_nickname;
 	std::string m_number;
 	std::string m_secret;
-//	bool 		is_empty;
+//	bool 		isEmpty;
+
+public:
+	void setMFirstName();
+	const std::string &getMFirstName() const;
+
+//SETTERS:
+	void setMLastName();
+	void setMNickname();
+	void setMNumber();
+	void setMSecret();
+
 };
 
 #endif //CONTACT_HPP
