@@ -12,18 +12,11 @@
 
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
+
+#include <ostream>
 #include "header.h"
 
 class Contact {
-
-public:
-
-	Contact();
-	void add();
-	void print() const;
-//	bool notEmpty() const;
-//	void setIsEmpty(bool isEmpty);
-
 
 private:
 	std::string m_firstName;
@@ -34,8 +27,11 @@ private:
 //	bool 		isEmpty;
 
 public:
+	Contact();
+	void add();
 	void setMFirstName();
-	const std::string &getMFirstName() const;
+
+//	const std::string &getMFirstName() const;
 
 //SETTERS:
 	void setMLastName();
@@ -43,6 +39,11 @@ public:
 	void setMNumber();
 	void setMSecret();
 
+//PRINTS
+	void print() const;
+	void printMFirstName() const;
+	void printMlastName() const;
+	void printMnickName() const;
 };
 
 #endif //CONTACT_HPP

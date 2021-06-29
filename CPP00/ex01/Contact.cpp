@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 #include "header.h"
-#include <cstring>
-#include <sstream>
+
+
 Contact::Contact() {}
 
 void Contact::add() {
@@ -32,40 +32,66 @@ void Contact::add() {
 	setMSecret();
 }
 
+//main print
 void Contact::print() const {
-	std::cout << "|" << std::setw(10)
-	<< getMFirstName().substr(0, 9).append(".") << "|";
+
+	printMFirstName();
+	printMlastName();
+	printMnickName();
+//	std::cout  << std::setw(10) << getMLastName() << "|";
+//	std::cout  << std::setw(10) << getMNickname() << "|\n";
 }
 
-const std::string &Contact::getMFirstName() const {
-	if (m_firstName.length() < 10)
-		return m_firstName;
-	else { return m_firstName.substr(0, 9).append("."); }
+//PRINTS:
+void Contact::printMFirstName() const {
+	std::cout  << std::setw(10);
+	if (m_firstName.length() < 10) {
+		std::cout << m_firstName;
+	} else {
+		std::cout << m_firstName.substr(0, 9).append(".");
+	}
+	std::cout << "|";
+}
+void Contact::printMlastName() const {
+	std::cout  << std::setw(10);
+	if (m_lastName.length() < 10) {
+		std::cout << m_lastName;
+	} else {
+		std::cout << m_lastName.substr(0, 9).append(".");
+	}
+	std::cout << "|";
+}
+void Contact::printMnickName() const {
+	std::cout  << std::setw(10);
+	if (m_nickname.length() < 10) {
+		std::cout << m_nickname;
+	} else {
+		std::cout << m_nickname.substr(0, 9).append(".");
+	}
+	std::cout << "|" << std::endl;
 }
 
 //SETTERS:
+
 void Contact::setMFirstName() {
 	if (std::getline(std::cin, m_firstName).eof())
 			exit(1);
 }
-
 void Contact::setMLastName() {
 	if (std::getline(std::cin, m_lastName).eof())
 		exit(1);
 }
-
 void Contact::setMNickname() {
 	if (std::getline(std::cin, m_nickname).eof())
 		exit(1);
 }
-
 void Contact::setMNumber() {
 	if (std::getline(std::cin, m_number).eof())
 		exit(1);
 }
-
 void Contact::setMSecret() {
 	if (std::getline(std::cin, m_secret).eof())
 		exit(1);
 }
+
 

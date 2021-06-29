@@ -23,21 +23,9 @@ PhoneBook::PhoneBook() {
 
 void PhoneBook::addContact() {
 	cont[position].add();
-//	std::cout << "position is " << position << std::endl;
 	position = (position == BOOK_SIZE - 1) ? 0 : position + 1;
-//	std::cout << "position after ++ is " << position << std::endl;
 	addCounter = (addCounter == BOOK_SIZE) ? addCounter : addCounter + 1;
 }
-
-//void PhoneBook::inputCommand() {
-//	std::cin >> cmd;
-//	//do all shit
-//	while (!std::strcmp(cmd.c_str(), "ADD")) {
-//		std::cout << "add command is loading...\n";
-//		std::cin >> cmd;
-//	}
-//	std::cout << cmd << std::endl;
-//}
 
 void PhoneBook::create() {
 	while(true) {
@@ -68,12 +56,8 @@ void PhoneBook::search() {
 	std::cout << std::setw(10) << "nickname"  << "|" << std::endl;
 
 	for (int i = 0;i < addCounter; ++i) {
-//		std::cout << "|" << std::setw(10) <<
-//		cont[i].getMFirstName().substr(0, 9).append(".") << "|";
-//		std::cout << i << std::endl;
-//		std::cout << !cont[i].isEmpty1() << std::endl;
+		std::cout << "|" << std::setw(10) << i + 1 << "|";
 		cont[i].print();
-//		std::cout << "check1\n";
 	}
 }
 

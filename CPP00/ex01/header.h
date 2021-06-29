@@ -5,6 +5,7 @@
 
 # include <iostream>
 # include <iomanip>
+#include <sstream>
 # include "Contact.hpp"
 # include "PhoneBook.hpp"
 

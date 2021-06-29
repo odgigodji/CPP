@@ -29,7 +29,7 @@ int main() {
 //	return 0;
 //	std::cout << std::setw(10);
 //	std::cout << 77 << std::endl;
-std::string name = "ivasdfasdfasdfads";
+//std::string name = "ivasdfasdfasdfads";
 //name.substr(0, 9);
 
 //	std::cout << GRN"|" << std::setw(10) << "index"  << "|";
