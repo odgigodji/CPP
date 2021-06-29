@@ -11,10 +11,6 @@
 /* ************************************************************************** */
 
 #include "header.h"
-#include "PhoneBook.hpp"
-
-//#include "PhoneBook.hpp"
-
 
 PhoneBook::PhoneBook() {
 	this->position = 0;
@@ -23,6 +19,7 @@ PhoneBook::PhoneBook() {
 
 void PhoneBook::addContact() {
 	cont[position].add();
+	position = (cont[position].ContIsEmpty()) ? position - 1 : position;
 	position = (position == BOOK_SIZE - 1) ? 0 : position + 1;
 	addCounter = (addCounter == BOOK_SIZE) ? addCounter : addCounter + 1;
 }
@@ -43,8 +40,7 @@ void PhoneBook::create() {
 }
 
 void PhoneBook::setCmd() {
-	std::cout << MAG"Enter command: "RESET; //(ADD, SEARCH or EXIT)
-//	std::cin >> PhoneBook::cmd;
+	std::cout << MAG"Enter command: "RESET;
 	if (std::getline(std::cin, cmd).eof())
 		exit(1);
 }
@@ -55,13 +51,9 @@ void PhoneBook::search() {
 	std::cout << std::setw(10) << "last name"  << "|";
 	std::cout << std::setw(10) << "nickname"  << "|" << std::endl;
 
-	for (int i = 0;i < addCounter; ++i) {
+	for (int i = 0;i < BOOK_SIZE; ++i) {
 		std::cout << "|" << std::setw(10) << i + 1 << "|";
 		cont[i].print();
 	}
 }
 
-void PhoneBook::printBook() const {
-
-
-}

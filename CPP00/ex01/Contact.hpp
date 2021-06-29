@@ -24,16 +24,14 @@ private:
 	std::string m_nickname;
 	std::string m_number;
 	std::string m_secret;
-//	bool 		isEmpty;
 
 public:
 	Contact();
 	void add();
-	void setMFirstName();
-
-//	const std::string &getMFirstName() const;
+	bool ContIsEmpty();
 
 //SETTERS:
+	void setMFirstName();
 	void setMLastName();
 	void setMNickname();
 	void setMNumber();

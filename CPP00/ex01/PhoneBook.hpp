@@ -12,27 +12,22 @@
 
 #ifndef TEST_PHONEBOOK_H
 #define TEST_PHONEBOOK_H
+#define BOOK_SIZE	8
 #include "header.h"
-//#include "Contact.hpp"
-
-# define BOOK_SIZE	8
 
 class PhoneBook {
-public:
-	PhoneBook();
-	void create();
-//	void print();
-	void printBook() const;
-
 private:
 	Contact 	cont[BOOK_SIZE];
 	std::string cmd;
 	int 		position;
 	int			addCounter;
 
+public:
+	void setCmd();
+	PhoneBook();
 	void addContact();
 	void search();
-	void setCmd();
+	void create();
 };
 
 #endif //TEST_PHONEBOOK_H

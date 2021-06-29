@@ -12,37 +12,32 @@
 
 #include "header.h"
 
-
 Contact::Contact() {}
 
 void Contact::add() {
-	std::cout << BLU"First name: "RESET;
 	setMFirstName();
-
-	std::cout << BLU"Last name: "RESET;
 	setMLastName();
-
-	std::cout << BLU"Nickname: "RESET;
 	setMNickname();
-
-	std::cout << BLU"Phone number: "RESET;
 	setMNumber();
-
-	std::cout << BLU"Secret: "RESET;
 	setMSecret();
 }
 
-//main print
-void Contact::print() const {
+bool Contact::ContIsEmpty() {
+	if (m_firstName.length() + m_nickname.length() +
+	m_lastName.length() + m_number.length() + m_secret.length()) {
+		return false;
+	} else {
+		return true;
+	}
+}
+//PRINTS:
 
+void Contact::print() const {
 	printMFirstName();
 	printMlastName();
 	printMnickName();
-//	std::cout  << std::setw(10) << getMLastName() << "|";
-//	std::cout  << std::setw(10) << getMNickname() << "|\n";
 }
 
-//PRINTS:
 void Contact::printMFirstName() const {
 	std::cout  << std::setw(10);
 	if (m_firstName.length() < 10) {
@@ -74,24 +69,27 @@ void Contact::printMnickName() const {
 //SETTERS:
 
 void Contact::setMFirstName() {
+	std::cout << BLU"First name: "RESET;
 	if (std::getline(std::cin, m_firstName).eof())
 			exit(1);
 }
 void Contact::setMLastName() {
+	std::cout << BLU"Last name: "RESET;
 	if (std::getline(std::cin, m_lastName).eof())
 		exit(1);
 }
 void Contact::setMNickname() {
+	std::cout << BLU"Nickname: "RESET;
 	if (std::getline(std::cin, m_nickname).eof())
 		exit(1);
 }
 void Contact::setMNumber() {
+	std::cout << BLU"Phone number: "RESET;
 	if (std::getline(std::cin, m_number).eof())
 		exit(1);
 }
 void Contact::setMSecret() {
+	std::cout << BLU"Secret: "RESET;
 	if (std::getline(std::cin, m_secret).eof())
 		exit(1);
 }
-
-
