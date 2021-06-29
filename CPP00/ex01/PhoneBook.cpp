@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "header.h"
+# include "Contact.hpp"
+# include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook() {
 	this->position = 0;
@@ -27,9 +29,9 @@ void PhoneBook::addContact() {
 void PhoneBook::create() {
 	while(true) {
 		setCmd();
-		if (!std::strcmp(cmd.c_str(), "EXIT")) { exit(1); }
-		else if (!std::strcmp(cmd.c_str(), "ADD")) { addContact(); }
-		else if (!std::strcmp(cmd.c_str(), "SEARCH")) { search(); }
+		if (cmd == "EXIT") { exit(1); }
+		else if (cmd == "ADD") { addContact(); }
+		else if (cmd == "SEARCH") { search(); }
 		else {
 			std::cout << RED"Command not exist.\n"RESET;
 			std::cout << YEL"ADD - add contact to Phonebook.\n";

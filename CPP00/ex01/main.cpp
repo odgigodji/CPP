@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+# include "Contact.hpp"
+# include "PhoneBook.hpp"
 
 int main() {
 	PhoneBook myPhoneBook;

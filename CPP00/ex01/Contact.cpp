@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "header.h"
+# include "Contact.hpp"
 
 Contact::Contact() {}
 
@@ -30,8 +31,8 @@ bool Contact::ContIsEmpty() {
 		return true;
 	}
 }
-//PRINTS:
 
+//PRINTS:
 void Contact::print() const {
 	printMFirstName();
 	printMlastName();
@@ -67,7 +68,6 @@ void Contact::printMnickName() const {
 }
 
 //SETTERS:
-
 void Contact::setMFirstName() {
 	std::cout << BLU"First name: "RESET;
 	if (std::getline(std::cin, m_firstName).eof())

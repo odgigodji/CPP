@@ -23,8 +23,8 @@ private:
 	int			addCounter;
 
 public:
-	void setCmd();
 	PhoneBook();
+	void setCmd();
 	void addContact();
 	void search();
 	void create();
