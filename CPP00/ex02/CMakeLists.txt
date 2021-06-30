@@ -4,4 +4,5 @@ project(ex02)
 set(CMAKE_CXX_STANDARD 98)
 
 add_executable(ex02 test.cpp
-        Account.cpp)
+        Account.cpp
+        Account.hpp)

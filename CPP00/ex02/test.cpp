@@ -11,17 +11,18 @@
 #include <algorithm>
 #include <functional>
 #include "Account.hpp"
+//#include "Account.cpp"
 
 
-int		main( void ) {
+int		main() {
 
 	typedef std::vector<Account::t>							  accounts_t;
 	typedef std::vector<int>								  ints_t;
 	typedef std::pair<accounts_t::iterator, ints_t::iterator> acc_int_t;
 
 	int	const				amounts[]	= { 42, 54, 957, 432, 1234, 0, 754, 16576 }; //amount
-	size_t const			amounts_size( sizeof(amounts) / sizeof(int) );
-	accounts_t				accounts( amounts, amounts + amounts_size );
+	size_t const			amounts_size( sizeof(amounts) / sizeof(int) ); //amount_size
+	accounts_t				accounts( amounts, amounts + amounts_size ); //array objects Account
 	accounts_t::iterator	acc_begin	= accounts.begin();
 	accounts_t::iterator	acc_end		= accounts.end();
 
@@ -31,14 +32,19 @@ int		main( void ) {
 	ints_t::iterator	dep_begin	= deposits.begin();
 	ints_t::iterator	dep_end		= deposits.end();
 
-	int	const			w[]			= { 321, 34, 657, 4, 76, 275, 657, 7654 };
+	int	const			w[]			= { 321, 34, 657, 4, 76, 275, 657, 7654 };//widthdrawals
 	size_t const		w_size( sizeof(w) / sizeof(int) );
 	ints_t				withdrawals( w, w + w_size );
 	ints_t::iterator	wit_begin	= withdrawals.begin();
 	ints_t::iterator	wit_end		= withdrawals.end();
 
+	printf("0\n");
+
 	Account::displayAccountsInfos();
+	printf("1\n");
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
+	printf("2\n");
+
 
 	for ( acc_int_t it( acc_begin, dep_begin );
 		  it.first != acc_end && it.second != dep_end;
@@ -48,7 +54,9 @@ int		main( void ) {
 	}
 
 	Account::displayAccountsInfos();
+	printf("3\n");
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
+	printf("4\n");
 
 	for ( acc_int_t it( acc_begin, wit_begin );
 		  it.first != acc_end && it.second != wit_end;
@@ -56,9 +64,11 @@ int		main( void ) {
 
 		(*(it.first)).makeWithdrawal( *(it.second) );
 	}
-
 	Account::displayAccountsInfos();
+	printf("5\n");
+
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
+	printf("6\n");
 
 	return 0;
 }

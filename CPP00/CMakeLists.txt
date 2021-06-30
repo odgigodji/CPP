@@ -4,4 +4,4 @@ project(CPP00)
 set(CMAKE_CXX_STANDARD 98)
 
 add_executable(CPP00
-        main.cpp)
+        ex00/megaphone.cpp)

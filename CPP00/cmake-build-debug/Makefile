@@ -142,32 +142,32 @@ CPP00/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP00.dir/build.make CMakeFiles/CPP00.dir/build
 .PHONY : CPP00/fast
 
-main.o: main.cpp.o
+ex00/megaphone.o: ex00/megaphone.cpp.o
 
-.PHONY : main.o
+.PHONY : ex00/megaphone.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP00.dir/build.make CMakeFiles/CPP00.dir/main.cpp.o
-.PHONY : main.cpp.o
+ex00/megaphone.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP00.dir/build.make CMakeFiles/CPP00.dir/ex00/megaphone.cpp.o
+.PHONY : ex00/megaphone.cpp.o
 
-main.i: main.cpp.i
+ex00/megaphone.i: ex00/megaphone.cpp.i
 
-.PHONY : main.i
+.PHONY : ex00/megaphone.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP00.dir/build.make CMakeFiles/CPP00.dir/main.cpp.i
-.PHONY : main.cpp.i
+ex00/megaphone.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP00.dir/build.make CMakeFiles/CPP00.dir/ex00/megaphone.cpp.i
+.PHONY : ex00/megaphone.cpp.i
 
-main.s: main.cpp.s
+ex00/megaphone.s: ex00/megaphone.cpp.s
 
-.PHONY : main.s
+.PHONY : ex00/megaphone.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP00.dir/build.make CMakeFiles/CPP00.dir/main.cpp.s
-.PHONY : main.cpp.s
+ex00/megaphone.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPP00.dir/build.make CMakeFiles/CPP00.dir/ex00/megaphone.cpp.s
+.PHONY : ex00/megaphone.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CPP00"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... ex00/megaphone.o"
+	@echo "... ex00/megaphone.i"
+	@echo "... ex00/megaphone.s"
 .PHONY : help
 
 
