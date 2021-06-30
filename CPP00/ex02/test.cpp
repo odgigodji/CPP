@@ -38,37 +38,41 @@ int		main() {
 	ints_t::iterator	wit_begin	= withdrawals.begin();
 	ints_t::iterator	wit_end		= withdrawals.end();
 
-	printf("0\n");
+	printf("-------displayAccountInfos------\n");
 
 	Account::displayAccountsInfos();
-	printf("1\n");
+	printf("-------displayStatus------\n");
+
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
-	printf("2\n");
+	printf("-------makeDeposit--------------\n");
 
 
 	for ( acc_int_t it( acc_begin, dep_begin );
 		  it.first != acc_end && it.second != dep_end;
 		  ++(it.first), ++(it.second) ) {
-
 		(*(it.first)).makeDeposit( *(it.second) );
 	}
-
+	printf("-------displayAccountInfos------\n");
 	Account::displayAccountsInfos();
-	printf("3\n");
+	printf("-------displayStatus------\n");
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
-	printf("4\n");
+	printf("-------makeWithdrawal-----\n");
 
 	for ( acc_int_t it( acc_begin, wit_begin );
 		  it.first != acc_end && it.second != wit_end;
 		  ++(it.first), ++(it.second) ) {
-
 		(*(it.first)).makeWithdrawal( *(it.second) );
 	}
+
+	printf("-------displayAccountInfos------\n");
+
 	Account::displayAccountsInfos();
-	printf("5\n");
+	printf("-------displayStatus------\n");
+
 
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
-	printf("6\n");
+	printf("-------destructor------\n");
+
 
 	return 0;
 }
