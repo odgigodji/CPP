@@ -70,7 +70,7 @@ void PhoneBook::search() {
 	std::cout << std::setw(10) << "nickname"  << "|" << std::endl;
 
 	for (int i = 0;i < BOOK_SIZE; ++i) {
-		std::cout << "|" << std::setw(10) << i + 1 << "|";
+		std::cout << CYN"|" << std::setw(10) << i + 1 << "|";
 		cont[i].print();
 	}
 	if (isCorrectLine()) {

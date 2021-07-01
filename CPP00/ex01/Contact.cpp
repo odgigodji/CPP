@@ -72,7 +72,7 @@ void Contact::printMnickName() const {
 	} else {
 		std::cout << m_nickname.substr(0, 9).append(".");
 	}
-	std::cout << "|" << std::endl;
+	std::cout << "|"RESET << std::endl;
 }
 
 //SETTERS:
