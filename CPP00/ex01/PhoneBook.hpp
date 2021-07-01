@@ -21,6 +21,7 @@ private:
 	std::string cmd;
 	int 		position;
 	int			addCounter;
+	int 		_index;
 
 public:
 	PhoneBook();
@@ -28,6 +29,8 @@ public:
 	void addContact();
 	void search();
 	void create();
+	bool isCorrectLine();
+//	bool isCorrectIndex(const std::string &str);
 };
 
 #endif //TEST_PHONEBOOK_H

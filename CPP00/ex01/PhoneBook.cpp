@@ -36,10 +36,30 @@ void PhoneBook::create() {
 			std::cout << RED"Command not exist.\n"RESET;
 			std::cout << YEL"ADD - add contact to Phonebook.\n";
 			std::cout << "SEARCH - show available contacts.\n";
-			std::cout << "EXIT - exit program.\n"RESET;
+			std::cout << "EXIT - exit program."RESET << std::endl;
 		}
 	}
 }
+
+bool PhoneBook::isCorrectLine() {
+	std::string str;
+	std::string correct[8] = {"1", "2", "3", "4", "5", "6", "7", "8"};
+	std::cout << BLU"Enter index: "RESET << std::endl;
+	if (std::getline(std::cin, str).eof())
+		exit(1);
+	for (int i = 0; i < 8; ++i) {
+		if (str == correct[i]) {
+			_index = stoi(str, nullptr, 10);
+			return true;
+		}
+	}
+	std::cout << RED"Error: Incorrect index"RESET << std::endl;
+	return false;
+}
+
+//bool PhoneBook::isCorrectIndex(const std::string &str) {
+//
+//}
 
 void PhoneBook::setCmd() {
 	std::cout << MAG"Enter command: "RESET;
@@ -57,5 +77,10 @@ void PhoneBook::search() {
 		std::cout << "|" << std::setw(10) << i + 1 << "|";
 		cont[i].print();
 	}
+	if (isCorrectLine())
+		std::cout << "is correct\n";
+	else
+		std::cout << "not correct\n";
+
 }
 
