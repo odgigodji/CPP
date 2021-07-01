@@ -14,7 +14,6 @@
 # include "PhoneBook.hpp"
 
 int main() {
-	std::cout << "helalsdf\n";
 	PhoneBook myPhoneBook;
 	myPhoneBook.create();
 	return 0;

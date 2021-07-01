@@ -39,6 +39,14 @@ void Contact::print() const {
 	printMnickName();
 }
 
+void Contact::printInfo() const {
+	std::cout << GRN"Name: " << m_firstName << std::endl;
+	std::cout << "Last name: " << m_lastName << std::endl;
+	std::cout << "Nickname: " << m_nickname << std::endl;
+	std::cout << "Number: " << m_number << std::endl;
+	std::cout << "Darkest secret 😈: " << m_secret << RESET << std::endl;
+}
+
 void Contact::printMFirstName() const {
 	std::cout  << std::setw(10);
 	if (m_firstName.length() < 10) {

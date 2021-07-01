@@ -38,6 +38,7 @@ public:
 	void setMSecret();
 
 //PRINTS
+	void printInfo() const;
 	void print() const;
 	void printMFirstName() const;
 	void printMlastName() const;

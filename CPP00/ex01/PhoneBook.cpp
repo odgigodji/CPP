@@ -44,12 +44,12 @@ void PhoneBook::create() {
 bool PhoneBook::isCorrectLine() {
 	std::string str;
 	std::string correct[8] = {"1", "2", "3", "4", "5", "6", "7", "8"};
-	std::cout << BLU"Enter index: "RESET << std::endl;
+	std::cout << BLU"Enter index: "RESET; //<< std::endl;
 	if (std::getline(std::cin, str).eof())
 		exit(1);
 	for (int i = 0; i < 8; ++i) {
 		if (str == correct[i]) {
-			_index = stoi(str, nullptr, 10);
+			_index = stoi(str, nullptr, 10) - 1;
 			return true;
 		}
 	}
@@ -78,8 +78,5 @@ void PhoneBook::search() {
 		cont[i].print();
 	}
 	if (isCorrectLine())
-		std::cout << "is correct\n";
-	else
-		std::cout << "not correct\n";
-
+		cont[_index].printInfo();
 }
