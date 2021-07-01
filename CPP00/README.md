@@ -18,8 +18,3 @@
 
 ### [ex02](https://github.com/odgigodji/CPP/tree/master/CPP00/ex02) 
 Задача заключалась в том чтобы написать "потерянный" `.cpp ` файл. У нас был хедер и файл test.cpp. Это небольшая симуляция банковских операций: создание депозита, снятие средств и тд. Тут я больше угулбился в тему классов и методов, а также встретил методы связанные с временем такие как (time и localtime).
-
-## Resources
-[Ravesli](https://ravesli.com/uroki-cpp/)
-
-[cplusplus.com](https://www.cplusplus.com/)
