@@ -4,3 +4,10 @@ cmake-build-debug/
 /CPP00/.idea/
 /CPP00/cmake-build-debug/
 /CPP00/ravesli/
+
+/CPP*/.idea
+/CPP*/cmake-build-debug
+/CPP*/CMakeLists.txt
+/CPP*/ex*/.idea
+/CPP*/ex*/cmake-build-debug
+/CPP*/ex*/CMakeLists.txt
