@@ -21,7 +21,7 @@ PhoneBook::PhoneBook() {
 
 void PhoneBook::addContact() {
 	cont[position].add();
-	position = (cont[position].ContIsEmpty()) ? position - 1 : position;
+	position = (cont[position].isEmpty()) ? position - 1 : position;
 	position = (position == BOOK_SIZE - 1) ? 0 : position + 1;
 	addCounter = (addCounter == BOOK_SIZE) ? addCounter : addCounter + 1;
 }
@@ -57,10 +57,6 @@ bool PhoneBook::isCorrectLine() {
 	return false;
 }
 
-//bool PhoneBook::isCorrectIndex(const std::string &str) {
-//
-//}
-
 void PhoneBook::setCmd() {
 	std::cout << MAG"Enter command: "RESET;
 	if (std::getline(std::cin, cmd).eof())
@@ -77,6 +73,9 @@ void PhoneBook::search() {
 		std::cout << "|" << std::setw(10) << i + 1 << "|";
 		cont[i].print();
 	}
-	if (isCorrectLine())
-		cont[_index].printInfo();
+	if (isCorrectLine()) {
+		if (cont[_index].isEmpty()) {
+			std::cout << YEL"Empty contact"RESET << std::endl;
+		} else { cont[_index].printInfo(); }
+	}
 }

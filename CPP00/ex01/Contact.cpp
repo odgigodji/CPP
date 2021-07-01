@@ -23,7 +23,7 @@ void Contact::add() {
 	setMSecret();
 }
 
-bool Contact::ContIsEmpty() {
+bool Contact::isEmpty() {
 	if (m_firstName.length() + m_nickname.length() +
 	m_lastName.length() + m_number.length() + m_secret.length()) {
 		return false;
@@ -40,11 +40,11 @@ void Contact::print() const {
 }
 
 void Contact::printInfo() const {
-	std::cout << GRN"Name: " << m_firstName << std::endl;
-	std::cout << "Last name: " << m_lastName << std::endl;
-	std::cout << "Nickname: " << m_nickname << std::endl;
-	std::cout << "Number: " << m_number << std::endl;
-	std::cout << "Darkest secret 😈: " << m_secret << RESET << std::endl;
+	std::cout << GRN"Name: "RESET << m_firstName << std::endl;
+	std::cout << GRN"Last_name: "RESET << m_lastName << std::endl;
+	std::cout << GRN"Nickname: "RESET << m_nickname << std::endl;
+	std::cout << GRN"Number: "RESET << m_number << std::endl;
+	std::cout << GRN"Darkest_secret 😈: "RESET << m_secret << RESET << std::endl;
 }
 
 void Contact::printMFirstName() const {

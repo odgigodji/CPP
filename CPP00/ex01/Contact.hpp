@@ -28,7 +28,7 @@ private:
 public:
 	Contact();
 	void add();
-	bool ContIsEmpty();
+	bool isEmpty();
 
 //SETTERS:
 	void setMFirstName();
