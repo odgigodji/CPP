@@ -16,7 +16,8 @@
 
 `EXIT` - Выход из программы.  
 
-### [ex02](https://github.com/odgigodji/CPP/tree/master/CPP00/ex02) :
+### [ex02](https://github.com/odgigodji/CPP/tree/master/CPP00/ex02) 
+Задача заключалась в том чтобы написать "потерянный" `.cpp ` файл. У нас был хедер и файл test.cpp. Это небольшая симуляция банковских операций: создание депозита, снятие средств и тд. Тут я больше угулбился в тему классов и методов, а также встретил методы связанные с времени такие как (time и localtime)ж
 
 ## Resources
 [Ravesli](https://ravesli.com/uroki-cpp/)
