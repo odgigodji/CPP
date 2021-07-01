@@ -1,6 +1,6 @@
 # "Бассейн" по С++. Погружение в Обьектно-ориентированное программирование.
 
-[Module00: Знакомство с язы](https://github.com/odgigodji/CPP/tree/master/CPP00)
+[##Module00: Знакомство с язы](https://github.com/odgigodji/CPP/tree/master/CPP00)
 
 ### Module01:
 
