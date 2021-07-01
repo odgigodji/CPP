@@ -1,5 +1,5 @@
-NAME = megaphone
-SRC = megaphone.cpp 
+NAME = ex02
+SRC = Account.cpp test.cpp
 OBJ = $(SRC:.cpp=.o)
 RM = rm -rf
 CC = clang++ -Wall -Wextra -Werror

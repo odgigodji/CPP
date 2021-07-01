@@ -1,5 +1,5 @@
-NAME = megaphone
-SRC = megaphone.cpp 
+NAME = myphonebook
+SRC = Contact.cpp PhoneBook.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 RM = rm -rf
 CC = clang++ -Wall -Wextra -Werror

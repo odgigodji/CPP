@@ -1,3 +1,7 @@
 /test/
 .idea/
 cmake-build-debug/
+
+/CPP00/.idea/
+/CPP00/cmake-build-debug/
+/CPP00/ravesli/
