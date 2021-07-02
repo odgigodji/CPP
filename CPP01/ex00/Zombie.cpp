@@ -9,7 +9,9 @@ Zombie::Zombie(const std::string& name) {
 	setName(name);
 }
 
-Zombie::~Zombie() {}
+Zombie::~Zombie() {
+	std::cout << getName() << " is dead\n";
+}
 
 void Zombie::announce(void) {
 	std::cout << "<" << getName() << "> " << "BraiiiiiiinnnzzzZ..."  << std::endl;
