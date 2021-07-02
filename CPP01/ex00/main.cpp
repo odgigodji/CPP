@@ -1,6 +1,14 @@
 #include <iostream>
+#include "Zombie.hpp"
+
+Zombie *newZombie( const std::string& name );
+void randomChump( std::string name );
 
 int main() {
-	std::cout << "Hello, Worldd!" << std::endl;
+	Zombie *sean;
+	sean = newZombie("sean");
+	sean->announce();
+//	randomChump("sean");
+	delete(sean);
 	return 0;
 }
