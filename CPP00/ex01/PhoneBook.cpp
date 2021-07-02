@@ -16,14 +16,12 @@
 
 PhoneBook::PhoneBook() {
 	this->position = 0;
-	addCounter = 0;
 }
 
 void PhoneBook::addContact() {
 	cont[position].add();
 	position = (cont[position].isEmpty()) ? position - 1 : position;
 	position = (position == BOOK_SIZE - 1) ? 0 : position + 1;
-	addCounter = (addCounter == BOOK_SIZE) ? addCounter : addCounter + 1;
 }
 
 void PhoneBook::create() {

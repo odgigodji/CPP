@@ -20,7 +20,6 @@ private:
 	Contact 	cont[BOOK_SIZE];
 	std::string cmd;
 	int 		position;
-	int			addCounter;
 	int 		_index;
 
 public:
@@ -30,7 +29,6 @@ public:
 	void search();
 	void create();
 	bool isCorrectLine();
-//	bool isCorrectIndex(const std::string &str);
 };
 
 #endif //TEST_PHONEBOOK_H
