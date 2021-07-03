@@ -5,8 +5,8 @@
 #ifndef EX03_WEAPON_HPP
 #define EX03_WEAPON_HPP
 #include <iostream>
-# define RED    "\x1B[31m"
-# define GRN    "\x1B[32m"
+# define MAG    "\x1B[35m"
+# define CYN    "\x1B[36m"
 # define RESET  "\x1B[0m"
 # define UNDLN	"\x1b[4m"
 

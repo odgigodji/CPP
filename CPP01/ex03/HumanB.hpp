@@ -14,9 +14,9 @@ private:
 
 public:
 	void attack() const;
-	HumanB(const std::string &name);
 	void setWeapon(Weapon &weapon);
-};
 
+	HumanB(const std::string &name);
+};
 
 #endif //EX03_HUMANB_HPP
