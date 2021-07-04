@@ -4,7 +4,7 @@
 
 ### [Module01](https://github.com/odgigodji/CPP/tree/master/CPP01) : Распределение памяти, ссылки, указатели на члены, switch
 
-## Для создания исполняемых файлов нужно использовать команду `make`
+#### Для создания исполняемых файлов нужно использовать команду `make`
 
 ## Resources
 1. [Ravesli](https://ravesli.com/uroki-cpp/)
