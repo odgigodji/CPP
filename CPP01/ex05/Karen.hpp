@@ -9,9 +9,9 @@
 # define RED    "\x1B[31m"
 # define YEL	"\x1B[33m"
 # define MAG    "\x1B[35m"
-# define CYN    "\x1B[36m"
+# define CYN    "\x1B[36m""\x1b[40m""\x1b[1m"
 # define RESET  "\x1B[0m"
-# define UNDRLN "\x1b[4m"
+# define THICK "\x1b[1m""\x1b[40m"
 # define PULSE  "\x1b[5m"
 
 class Karen {

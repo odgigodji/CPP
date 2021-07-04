@@ -19,20 +19,18 @@ int getIndex(std::string level)
 Karen::Karen() {}
 
 void Karen::debug(void) {
-	std::cout << CYN"I love to get extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger. "
-				 "I just love it!"RESET << std::endl;
+	std::cout << THICK"Я люблю получать больше бекона для моего бургера 7XL-двойной-сыр-тройной-соленый-специальный-кетчуп. Я просто люблю это!"RESET << std::endl;
 }
 void Karen::info(void) {
-	std::cout << MAG "I cannot believe adding extra bacon cost more money. "
-				"You don’t put enough! If you did I would not have to ask"
-				"for it!"RESET << std::endl;
+	std::cout << THICK "Не могу поверить, что добавление лишнего бекона стоит больших денег."
+				 "«Вы не положили достаточно! Если бы вы это сделали, мне бы не пришлось спрашивать»"
+				 "\"для этого!"RESET << std::endl;
 }
 void Karen::warning(void) {
-	std::cout << PULSE RED"I’ve been W"
-			    "coming here for years and you just started working here last month.\""RESET << std::endl;
+	std::cout << PULSE THICK"Я много лет приезжаю сюда, а вы только начали здесь работать в прошлом месяце!"RESET << std::endl;
 }
 void Karen::error(void) {
-	std::cout << YEL"This is unacceptable, I want to speak to the manager now.\""RESET << std::endl;
+	std::cout << THICK"Это недопустимо, я хочу поговорить с менеджером сейчас!"RESET << std::endl;
 }
 
 void Karen::complain(std::string level) {
@@ -51,7 +49,7 @@ void Karen::complain(std::string level) {
 			error();
 			break;
 		default:
-			std::cout << BLU"Incorrect argument! Try \"DEBUG\" \"INFO\" \"WARNING\" or \"ERROR\"." RESET << std::endl;
+			std::cout << CYN"Incorrect argument!...shh..shh.. Try \"DEBUG\" \"INFO\" \"WARNING\" or \"ERROR\"." RESET << std::endl;
 			break;
 	}
 }
