@@ -1,6 +1,6 @@
 ## Изучаем распределение памяти, ссылки, switch. 
 
-### [ex00](https://github.com/odgigodji/CPP/tree/master/CPP01/ex00) : Выделение памяти для класса с помощью new.
+### [ex00](https://github.com/odgigodji/CPP/tree/master/CPP01/ex00) : Выделение памяти для класса с помощью new и освобождение с помощью delete.
 ### [ex01](https://github.com/odgigodji/CPP/tree/master/CPP01/ex01): Выделение памяти для массива классов с помощью new.
 ### [ex02](https://github.com/odgigodji/CPP/tree/master/CPP01/ex02) : Знакомство с сылками.
 ### [ex03](https://github.com/odgigodji/CPP/tree/master/CPP01/ex03) : Указатели и ссылки для членов класса.
