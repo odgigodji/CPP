@@ -2,7 +2,7 @@
 
 ### [Module00](https://github.com/odgigodji/CPP/tree/master/CPP00): Знакомство с языком, понятием класса, объектами,а так же с методами стандартной библиотеки.
 
-### Module01:
+### [Module01](https://github.com/odgigodji/CPP/tree/master/CPP01) : Распределение памяти, ссылки, указатели на члены, switch
 
 ## Resources
 1. [Ravesli](https://ravesli.com/uroki-cpp/)
