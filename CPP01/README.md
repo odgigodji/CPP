@@ -7,6 +7,7 @@
 ### [ex04](https://github.com/odgigodji/CPP/tree/master/CPP01/ex04)
 Программа для замены строки на другую строку в файлe.
 программа запаршивает 3 аргумента 
+
 `[filename]``[string1]``[string2]`
 ### [ex05]
 ### [ex06]
