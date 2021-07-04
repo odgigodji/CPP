@@ -4,9 +4,8 @@
 ### [ex01](https://github.com/odgigodji/CPP/tree/master/CPP01/ex01): выделение памяти для массива классов с помощью new.
 ### [ex02](https://github.com/odgigodji/CPP/tree/master/CPP01/ex02) : знакомство с сылками.
 ### [ex03](https://github.com/odgigodji/CPP/tree/master/CPP01/ex03) : указатели и ссылки дял членов класса.
-### [ex04](https://github.com/odgigodji/CPP/tree/master/CPP01/ex04)
-Программа для замены строк в файлe.
-программа запрашивает 3 аргумента: 
+### [ex04](https://github.com/odgigodji/CPP/tree/master/CPP01/ex04) : Программа для замены строк в файле.
+Программа запрашивает 3 аргумента: 
 
 `[filename]``[string1]``[string2]`
 string1 - которую нужно заменить
