@@ -1,7 +1,15 @@
 ## Изучаем распределение памяти, ссылки, switch. 
 
-### [ex00](https://github.com/odgigodji/CPP/tree/master/CPP01/ex00) : выделение памяти для класса с помощью new
-### [ex01](https://github.com/odgigodji/CPP/tree/master/CPP01/ex01): выделение памяти для массива классов с помощью new
+### [ex00](https://github.com/odgigodji/CPP/tree/master/CPP01/ex00) : выделение памяти для класса с помощью new.
+### [ex01](https://github.com/odgigodji/CPP/tree/master/CPP01/ex01): выделение памяти для массива классов с помощью new.
+### [ex02](https://github.com/odgigodji/CPP/tree/master/CPP01/ex02) : знакомство с сылками.
+### [ex03](https://github.com/odgigodji/CPP/tree/master/CPP01/ex03) : указатели и ссылки дял членов класса.
+### [ex04](https://github.com/odgigodji/CPP/tree/master/CPP01/ex04)
+Программа для замены строки на другую строку в файлe.
+программа запаршивает 3 аргумента 
+`[filename]``[string1]``[string2]`
+### [ex05]
+### [ex06]
 Из функционала: инициализация контакта и поиск по индексу. 
 При запуске команда просит ввести нас команду: 
 
