@@ -1,7 +1,7 @@
 ## Изучаем распределение памяти, ссылки, switch. 
 
-### [ex00](https://github.com/odgigodji/CPP/tree/master/CPP01/ex00) : megaphon - простая программа которая принимает на вход строку и печатает в стандартный вывод ее же, но в верхнем регистре.
-### [ex01](https://github.com/odgigodji/CPP/tree/master/CPP01/ex01): myphonebook - программа - телефонный справочник на 8 контаков. 
+### [ex00](https://github.com/odgigodji/CPP/tree/master/CPP01/ex00) : выделение памяти для класса с помощью new
+### [ex01](https://github.com/odgigodji/CPP/tree/master/CPP01/ex01): выделение памяти для массива классов с помощью new
 Из функционала: инициализация контакта и поиск по индексу. 
 При запуске команда просит ввести нас команду: 
 
