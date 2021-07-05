@@ -1,10 +1,9 @@
 NAME = a.out
 
 SRC = Fixed.cpp	\
-      Integer.cpp	\
       main.cpp
 
-INC = Integer.hpp Fixed.hpp
+INC = Fixed.hpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 

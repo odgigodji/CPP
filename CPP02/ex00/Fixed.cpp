@@ -14,14 +14,14 @@ Fixed::~Fixed() {
 	std::cout << MAG << "Destructor called" << RESET << std::endl;
 }
 // a copy constructor
-Fixed::Fixed(const Fixed &oldInstance) {
+Fixed::Fixed(const Fixed &fixed) {
 	std::cout << GRN << "Copy constructor called" << RESET << std::endl;
-	_rawBits = oldInstance.getRawBits();
+	_rawBits = fixed.getRawBits();
 }
 // an assignation operator overload
-Fixed	&Fixed::operator=(const Fixed &oldInstance) {
+Fixed	&Fixed::operator=(const Fixed &fixed) {
 	std::cout << CYN << "Assignation operator called" << RESET << std::endl;
-	_rawBits = oldInstance.getRawBits();
+	_rawBits = fixed.getRawBits();
 	return *this;
 }
 
