@@ -26,15 +26,16 @@ public:
 	Fixed(const Fixed &fixed);
 	Fixed	&operator=(const Fixed &fixedCopy);
 	//methods for converting types
-	float toFloat( void );
+	float toFloat( void ) const;
 	int toInt( void ) const;
 	//getters and setters
 	int		getRawBits(void) const;
 	void	setRawBits(int const raw);
+
 };
 
 // an overload to the '<<' operator that inserts a floating point representation
-// of the pixed point value into the parameter output stream.
-std::ostream &operator<<(std::ostream &oS, Fixed fixed);
+// of the fixed point value into the parameter output stream.
+std::ostream &operator<<(std::ostream &oS, const Fixed  &fixed);
 
 #endif //EX00_FIXED_HPP

@@ -11,25 +11,21 @@ Fixed::Fixed() { //+
 	_rawBits = 0;
 	std::cout << MAG << "Default constructor called" << RESET << std::endl;
 }
-
 //destructor
 Fixed::~Fixed() { //+
 	std::cout << MAG << "Destructor called" << RESET << std::endl;
 }
-
 // a copy constructor
 Fixed::Fixed(const Fixed &fixedCopy) {  //+
 	std::cout << CYN << "Copy constructor called" << RESET << std::endl;
 	_rawBits = fixedCopy.getRawBits();
 }
-
 // an assignation operator overload
 Fixed	&Fixed::operator=(const Fixed &fixed) {
 	std::cout << CYN << "Assignation operator called" << RESET << std::endl;
 	_rawBits = fixed.getRawBits();
 	return *this;
 }
-
 Fixed::Fixed(const int intBits) { //+
 	std::cout << GRN << "Int constructor called" << RESET << std::endl;
 	_rawBits = intBits << _fractionalBits;
@@ -52,29 +48,25 @@ Fixed::Fixed(const float floatBits) { //+
 
 //Converting from fixed-point to floating-point is straightforward.
 //Take the rawBits and divide it by fractionalBits
-float Fixed::toFloat(void) {
+float Fixed::toFloat(void) const {
 	int power(1);
 	for (int i(0); i < _fractionalBits; i++)
 		power *= 2;
 	return (float)_rawBits / (float)power;
 }
-
 int Fixed::toInt(void) const {
 	return _rawBits >> _fractionalBits;
 }
 
-std::ostream	&operator<<(std::ostream &oS, Fixed fixed) {
-	std::cout << CYN << "Assignation operator called" << RESET << std::endl;
+std::ostream	&operator<<(std::ostream &oS, const Fixed &fixed) {
 	oS << fixed.toFloat();
 	return oS;
 }
 
 //getters and setters:
 int Fixed::getRawBits(void) const {
-//	std::cout << BLU << "getRawBits member function called" << RESET << std::endl;
 	return _rawBits;
 }
 void    Fixed::setRawBits(const int raw) {
-//	std::cout << BLU << "setRawBits member function called" << RESET << std::endl;
 	_rawBits = raw;
 }
