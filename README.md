@@ -8,7 +8,7 @@
 
 ### [Module03](https://github.com/odgigodji/CPP/tree/master/CPP03/ex00) : Наследование.
 
-## Для создания исполняемых файлов использовать команду `make`
+### Для создания исполняемых файлов использовать команду `make`
 
 ## Resources
 1. [Ravesli](https://ravesli.com/uroki-cpp/)
