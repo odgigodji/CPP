@@ -5,8 +5,9 @@
 #include "ClapTrap.hpp"
 
 
-ClapTrap::ClapTrap() {
-	std::cout << MAG"FragTrap default constructor called"RESET << std::endl;
+ClapTrap::ClapTrap() : _name("_def_"), _hitPoints(10),
+_energyPoints(10), _attackDamage(0) {
+	std::cout << MAG"ClapTrap default constructor called"RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10),
@@ -17,7 +18,7 @@ _energyPoints(10), _attackDamage(0) {
 ClapTrap::ClapTrap(const ClapTrap &t) : _name(t._name),
 _hitPoints(t._hitPoints), _energyPoints(t._energyPoints),
 _attackDamage(t._attackDamage) {
-//	std::cout << "Copy constructor of FragTrap" << std::endl;
+//	std::cout << "Copy constructor of ClapTrap" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &rhs) {
@@ -31,7 +32,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &rhs) {
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << MAG"FragTrap destructor called"RESET << std::endl;
+	std::cout << MAG"ClapTrap destructor called"RESET << std::endl;
 }
 
 void ClapTrap::attack(const std::string &target) {
