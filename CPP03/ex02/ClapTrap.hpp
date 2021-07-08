@@ -49,28 +49,6 @@ public:
 
 };
 
-class ScavTrap : public ClapTrap {
-public:
-	ScavTrap();
-	ScavTrap(const ScavTrap &scavCopy);
-	ScavTrap(std::string name);
-	ScavTrap &operator=(ScavTrap const &i);
-	~ScavTrap();
-
-	void guardGate();
-};
-
-class FragTrap : public ClapTrap {
-public:
-	FragTrap();
-	FragTrap(const FragTrap &fragCopy);
-	FragTrap(std::string name);
-	FragTrap &operator=(FragTrap const &i);
-	~FragTrap();
-
-	void highFivesGuys(void);
-};
-
 std::ostream & operator<<(std::ostream & o, ClapTrap const & rhs);
 //std::ostream & operator<<(std::ostream & o, ScavTrap const & rhs);
 
