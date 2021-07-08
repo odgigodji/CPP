@@ -4,6 +4,8 @@
 
 ### [Module01](https://github.com/odgigodji/CPP/tree/master/CPP01) : Распределение памяти, ссылки, указатели на члены, switch
 
+### [Module02](https://github.com/odgigodji/CPP/tree/master/CPP02) : Специальный полиморфизм, перегрузка операторов канонические классы
+
 ### Для создания исполняемых файлов использовать команду `make`
 
 ## Resources
