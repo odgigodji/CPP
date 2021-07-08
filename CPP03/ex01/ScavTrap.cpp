@@ -4,8 +4,6 @@
 
 #include "ScavTrap.hpp"
 
-
-//******************************************SCAVTRAP********************************:
 ScavTrap::ScavTrap() {
 	_name = "_defScav_";
 	_hitPoints = 100;
