@@ -2,9 +2,9 @@
 
 ### [Module00](https://github.com/odgigodji/CPP/tree/master/CPP00): Знакомство с языком, понятием класса, объектами,а так же с методами стандартной библиотеки.
 
-### [Module01](https://github.com/odgigodji/CPP/tree/master/CPP01) : Распределение памяти, ссылки, указатели на члены, switch
+### [Module01](https://github.com/odgigodji/CPP/tree/master/CPP01) : Распределение памяти, ссылки, указатели на члены, switch.
 
-### [Module02](https://github.com/odgigodji/CPP/tree/master/CPP02) : Специальный полиморфизм, перегрузка операторов канонические классы
+### [Module02](https://github.com/odgigodji/CPP/tree/master/CPP02) : Специальный полиморфизм, перегрузка операторов канонические классы.
 
 ### Для создания исполняемых файлов использовать команду `make`
 
