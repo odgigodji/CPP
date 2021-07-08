@@ -49,16 +49,7 @@ public:
 
 };
 
-class ScavTrap : public ClapTrap {
-public:
-	ScavTrap();
-	ScavTrap(const ScavTrap &scavCopy);
-	ScavTrap(std::string name);
-	ScavTrap &operator=(ScavTrap const &i);
-	~ScavTrap();
 
-	void guardGate();
-};
 
 std::ostream & operator<<(std::ostream & o, ClapTrap const & rhs);
 //std::ostream & operator<<(std::ostream & o, ScavTrap const & rhs);
