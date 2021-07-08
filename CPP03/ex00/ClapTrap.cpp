@@ -35,6 +35,7 @@ ClapTrap::~ClapTrap() {
 }
 
 void ClapTrap::attack(const std::string &target) {
+	setEnergyPoints(getEnergyPoints() - 3);
 	std::cout << RED"ClapTrap <" << getName() << "> attacks <"
 	<< target << "> causing <" << getAttackDamage() << "> points of damage!"RESET << std::endl;
 }
@@ -86,5 +87,6 @@ unsigned int ClapTrap::getAttackDamage() const {
 
 std::ostream & operator<<(std::ostream & o, ClapTrap const & rhs) {
 	o << BLU"|name:" << rhs.getName() << "|hitpoints:" <<  rhs.getHitPoints();
+	o << "|energyPoints:" << rhs.getEnergyPoints();
 	return o;
 }
