@@ -15,13 +15,13 @@
 # define CYN    "\x1B[36m"
 # define RESET  "\x1B[0m"
 
-class ClapTrap
+class ClapTrap //base class
 {
 protected: //private but visible by heritance
 	std::string		_name;
-	unsigned int	_hitPoints;		//10
-	unsigned int 	_energyPoints; 	//10 //-3 when attack
-	unsigned int 	_attackDamage;	//0
+	unsigned int	_hitPoints;		//100
+	unsigned int 	_energyPoints; 	//50 //-3 when attack
+	unsigned int 	_attackDamage;	//20
 
 public:
 	ClapTrap();
