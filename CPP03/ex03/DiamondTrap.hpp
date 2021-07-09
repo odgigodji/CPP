@@ -14,16 +14,14 @@ private:
 	unsigned int 	_attack;
 public:
 	DiamondTrap();
-//	void setClapName(std::string name);
-//	DiamondTrap(const DiamondTrap &diamondCopy);
 	explicit DiamondTrap(std::string name);
+	DiamondTrap &operator=(DiamondTrap const &i);
+	DiamondTrap(const DiamondTrap &diamondCopy);
+	~DiamondTrap();
 
 	std::string getDName() const;
-
 	unsigned int getAttack() const;
-//	DiamondTrap &operator=(DiamondTrap const &i);
-//	~DiamondTrap();
-
+	void whoAmI();
 };
 
 std::ostream & operator<<(std::ostream & o, DiamondTrap const & rhs);

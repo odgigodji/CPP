@@ -13,10 +13,8 @@ DiamondTrap::DiamondTrap() : ScavTrap() {
 	_attackDamage = s.getAttackDamage();
 	_attack = f.getAttackDamage();
 	_energyPoints = s.getEnergyPoints();
-	ClapTrap::_name = _d_name.append("_clap_name");
-//	std::cout << RED << ScavTrap
-	std::cout << CYN"DiamondTrap was created"RESET << std::endl;
-//	std::cout << _name << std::endl;
+	ClapTrap::_name = "_defDiamond__clap_name";
+	std::cout << CYN"Default: DiamondTrap was created"RESET << std::endl;
 }
 
 DiamondTrap::DiamondTrap(std::string name) : ScavTrap() {
@@ -26,47 +24,47 @@ DiamondTrap::DiamondTrap(std::string name) : ScavTrap() {
 	_attackDamage = s.getAttackDamage();
 	_attack = f.getAttackDamage();
 	_energyPoints = s.getEnergyPoints();
-	ClapTrap::_name = _d_name.append("_clap_name");
+	ClapTrap::_name = name.append("_clap_name");
+	std::cout << CYN"DiamondTrap was created"RESET << std::endl;
 }
 
-//void DiamondTrap::setClapName(std::string name) {
-//	setName(name);
-//}
-
-
-//DiamondTrap::DiamondTrap(std::string name)  {
-//	_name = name;
-//	_hitPoints = 100;
-//	_energyPoints = 100;
-//	_attackDamage = 30;
-//	std::cout << BLU"Frag constructor called <" << getName() << "> " << "created"RESET << std::endl;
-//}
-//
-//DiamondTrap::~DiamondTrap()  {
-//	std::cout << BLU"FragTrap destructor called"RESET << std::endl;
-//}
-//
-//DiamondTrap::DiamondTrap(const DiamondTrap &s)  : ClapTrap(s) {
-//	_hitPoints = s._hitPoints;
-//	_energyPoints = s._energyPoints;
-//	_attackDamage = s._attackDamage;
-//}
-//
 std::string DiamondTrap::getDName() const {
 	return _d_name;
 }
-//DiamondTrap &DiamondTrap::operator=(const DiamondTrap &rhs) {
-//	if ( this != &rhs ) {
-//		setHitPoints(rhs.getHitPoints());
-//		setEnergyPoints(rhs.getEnergyPoints());
-//		setName(rhs.getName());
-//		setAttackDamage(rhs.getAttackDamage());
-//	}
+
 unsigned int DiamondTrap::getAttack() const {
 	return _attack;
 }
-//	return *this;
-//}
+
+DiamondTrap::~DiamondTrap() {
+	std::cout << CYN"DiamondTrap destructor called"RESET << std::endl;
+}
+
+DiamondTrap &DiamondTrap::operator=(const DiamondTrap &rhs) {
+	if ( this != &rhs ) {
+		_d_name = rhs.getDName();
+		_attack = rhs._attack;
+		setHitPoints(rhs.getHitPoints());
+		setEnergyPoints(rhs.getEnergyPoints());
+		setName(rhs.getName());
+		setAttackDamage(rhs.getAttackDamage());
+	}
+	return *this;
+}
+
+DiamondTrap::DiamondTrap(const DiamondTrap &d)  : ClapTrap(d), ScavTrap(d), FragTrap(d) {
+	_d_name = d._d_name;
+	_name = d._name;
+	_hitPoints = d._hitPoints;
+	_energyPoints = d._energyPoints;
+	_attackDamage = d._attackDamage;
+	_attack = d._attack;
+}
+
+void DiamondTrap::whoAmI() {
+	std::cout << RED"|name: " << getDName();
+	std::cout << "|Clap::name: " << getName() << RESET << std::endl;
+}
 
 std::ostream & operator<<(std::ostream & o, DiamondTrap const & rhs) {
 	o << CYN"|name: " << rhs.getDName();

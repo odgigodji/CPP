@@ -1,11 +1,14 @@
-NAME = clapTrap
+NAME = diamondTrap
 
-SRC = ClapTrap.cpp  \
-      main.cpp
+SRC = ScavTrap.cpp		\
+      ClapTrap.cpp		\
+      main.cpp			\
+      DiamondTrap.cpp	\
+      FragTrap.cpp
 
-INC =   ClapTrap.hpp
+INC =  DiamondTrap.hpp ClapTrap.hpp FragTrap.hpp ScavTrap.hpp
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 
 all: $(NAME)
 

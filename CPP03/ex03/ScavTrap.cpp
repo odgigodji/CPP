@@ -24,7 +24,7 @@ ScavTrap::~ScavTrap() {
 }
 
 void ScavTrap::guardGate() {
-	std::cout << "ScavTrap have enterred in Gate keeper mode "<<  std::endl;
+	std::cout << "Trap have enterred in Gate-keeper mode "<<  std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &s) {

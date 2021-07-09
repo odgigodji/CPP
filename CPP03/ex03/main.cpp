@@ -1,18 +1,27 @@
 #include <iostream>
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
 
 int main() {
-	ScavTrap sc("Scav");
-	std::cout << sc.getAttackDamage() << std::endl;
-	DiamondTrap dm("DiamondBoy");
-	std::cout << dm << std::endl;
-	std::cout << dm.getDName() << std::endl;
-	std::cout << dm.getEnergyPoints() << std::endl;
-	std::cout << dm.getAttackDamage() << std::endl;
-	dm.guardGate();
-	return 0;
+	DiamondTrap dm;
 
+	std::cout << dm << std::endl;
+	dm.attack("somewhat");
+
+	dm.takeDamage(58);
+	std::cout << dm << std::endl;
+
+	dm.guardGate();
+	dm.highFivesGuys();
+
+	DiamondTrap dm1("Copy");
+	DiamondTrap dm2;
+	dm2 = dm1;
+	std::cout << dm2 << std::endl;
+
+	DiamondTrap dm3;
+	dm3 = DiamondTrap(dm1);
+	std::cout << dm3 << std::endl;
+
+	dm3.whoAmI();
+	return 0;
 }
