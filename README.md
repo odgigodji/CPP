@@ -8,6 +8,8 @@
 
 ### [Module03](https://github.com/odgigodji/CPP/tree/master/CPP03) : Наследование.
 
+### [Module04](https://github.com/odgigodji/CPP/tree/master/CPP04) : Полиморфизм подтипа, абстрактные классы, интерфейсы.
+
 ### Для создания исполняемых файлов использовать команду `make`
 
 ## Resources
