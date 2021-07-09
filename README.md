@@ -6,7 +6,7 @@
 
 ### [Module02](https://github.com/odgigodji/CPP/tree/master/CPP02) : Специальный полиморфизм, перегрузка операторов канонические классы.
 
-### [Module03](https://github.com/odgigodji/CPP/tree/master/CPP03/ex00) : Наследование.
+### [Module03](https://github.com/odgigodji/CPP/tree/master/CPP03) : Наследование.
 
 ### Для создания исполняемых файлов использовать команду `make`
 
