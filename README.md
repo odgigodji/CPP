@@ -13,3 +13,4 @@
 ## Resources
 1. [Ravesli](https://ravesli.com/uroki-cpp/)
 2. [cplusplus.com](https://www.cplusplus.com/)
+3. [Ромбовидное наследованиеъ(https://www.youtube.com/watch?v=oqpx7L5ipbw&ab_channel=%23SimpleCode)
