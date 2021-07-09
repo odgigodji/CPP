@@ -10,7 +10,8 @@
 
 class DiamondTrap : public ScavTrap, public FragTrap {
 private:
-	std::string _d_name;
+	std::string 	_d_name;
+	unsigned int 	_attack;
 public:
 	DiamondTrap();
 //	void setClapName(std::string name);
@@ -18,9 +19,13 @@ public:
 	explicit DiamondTrap(std::string name);
 
 	std::string getDName() const;
+
+	unsigned int getAttack() const;
 //	DiamondTrap &operator=(DiamondTrap const &i);
 //	~DiamondTrap();
 
 };
+
+std::ostream & operator<<(std::ostream & o, DiamondTrap const & rhs);
 
 #endif //EX03_DIAMONDTRAP_HPP

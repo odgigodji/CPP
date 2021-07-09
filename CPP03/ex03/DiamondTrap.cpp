@@ -7,14 +7,26 @@
 #include "FragTrap.hpp"
 
 DiamondTrap::DiamondTrap() : ScavTrap() {
+	FragTrap f;
+	ScavTrap s;
+	_d_name = "_defDiamond_";
+	_attackDamage = s.getAttackDamage();
+	_attack = f.getAttackDamage();
+	_energyPoints = s.getEnergyPoints();
+	ClapTrap::_name = _d_name.append("_clap_name");
 //	std::cout << RED << ScavTrap
 	std::cout << CYN"DiamondTrap was created"RESET << std::endl;
 //	std::cout << _name << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name) {
+DiamondTrap::DiamondTrap(std::string name) : ScavTrap() {
+	FragTrap f;
+	ScavTrap s;
 	_d_name = name;
-	ClapTrap::_name = name.append("_clap_name");
+	_attackDamage = s.getAttackDamage();
+	_attack = f.getAttackDamage();
+	_energyPoints = s.getEnergyPoints();
+	ClapTrap::_name = _d_name.append("_clap_name");
 }
 
 //void DiamondTrap::setClapName(std::string name) {
@@ -50,6 +62,17 @@ std::string DiamondTrap::getDName() const {
 //		setName(rhs.getName());
 //		setAttackDamage(rhs.getAttackDamage());
 //	}
+unsigned int DiamondTrap::getAttack() const {
+	return _attack;
+}
 //	return *this;
 //}
 
+std::ostream & operator<<(std::ostream & o, DiamondTrap const & rhs) {
+	o << CYN"|name: " << rhs.getDName();
+	o << "|Clap::name: " << rhs.getName() << "|hitpoints: " <<  rhs.getHitPoints();
+	o << "|energyPoints: " << rhs.getEnergyPoints();
+	o << "|attackDmg: " << rhs.getAttackDamage();
+	o << "|attack: " << rhs.getAttack() << RESET;
+	return o;
+}
