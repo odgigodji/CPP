@@ -7,7 +7,7 @@
 #include "FragTrap.hpp"
 
 DiamondTrap::DiamondTrap() : ScavTrap() {
-	std::cout << RED << ScavTrap
+//	std::cout << RED << ScavTrap
 	std::cout << CYN"DiamondTrap was created"RESET << std::endl;
 //	std::cout << _name << std::endl;
 }
