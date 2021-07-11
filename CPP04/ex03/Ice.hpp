@@ -6,17 +6,12 @@
 #define EX03_ICE_HPP
 #include "AMateria.hpp"
 
-class Ice : public AMateria {
+class Ice : public AMateria, public ICharacter {
 public:
 	Ice();
 	Ice(Ice & i);
 	Ice &operator=(Ice const &rhs);
 	~Ice();
-
-//	virtual std::string const & getName() const;
-//	virtual void equip(AMateria* m);
-//	virtual void unequip(int idx);
-//	virtual void use(int idx, ICharacter& target);
 };
 
 
