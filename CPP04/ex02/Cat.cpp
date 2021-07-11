@@ -39,7 +39,3 @@ Cat::~Cat() {
 void Cat::makeSound() const{
 	std::cout << "-Мяу-" << std::endl;
 }
-//
-//std::string Cat::getType() const {
-//	return _type;
-//}
