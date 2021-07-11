@@ -33,4 +33,3 @@ void Brain::setFirstIdea(std::string const &firstIdea) {
 std::string Brain::getFirstIdea() {
 	return _ideas[0];
 }
-

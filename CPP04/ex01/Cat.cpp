@@ -15,7 +15,6 @@ Cat::Cat(Cat &rhs)  : Animal(rhs) {
 		// Выделяем память для нашей копии
 		_brain = new Brain();
 		// Выполняем копирование
-		Brain d = Brain();
 		_brain = rhs._brain;
 	}
 }
@@ -27,7 +26,6 @@ Cat &Cat::operator=(Cat const& rhs) {
 		// Выделяем память для нашей копии
 		_brain = new Brain();
 		// Выполняем копирование
-		Brain d = Brain();
 		_brain = rhs._brain;
 	}
 	return *this;

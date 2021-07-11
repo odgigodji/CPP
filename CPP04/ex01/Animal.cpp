@@ -32,5 +32,3 @@ Animal::~Animal() {
 void Animal::makeSound() const {
 	std::cout << "-Anime-" << std::endl;
 }
-
-

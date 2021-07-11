@@ -15,7 +15,6 @@ Dog::Dog(Dog &i)  : Animal(i) {
 		// Выделяем память для нашей копии
 		_brain = new Brain();
 		// Выполняем копирование
-		Brain d = Brain();
 		_brain = i._brain;
 	}
 }
@@ -27,7 +26,6 @@ Dog &Dog::operator=(Dog const& rhs) {
 		// Выделяем память для нашей копии
 		_brain = new Brain();
 		// Выполняем копирование
-		Brain d = Brain();
 		_brain = rhs._brain;
 	}
 	return *this;
