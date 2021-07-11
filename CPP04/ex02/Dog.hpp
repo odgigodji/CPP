@@ -9,7 +9,7 @@
 class Dog : public AAnimal {
 public:
 	Dog();
-	Dog(Dog & i);
+	Dog(Dog & rhs);
 	~Dog();
 	Dog & operator=(Dog const& rhs);
 

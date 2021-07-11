@@ -12,9 +12,7 @@ Cat::Cat(Cat &rhs)  : AAnimal(rhs) {
 	_type = rhs._type;
 	if (rhs._brain)
 	{
-		// Выделяем память для нашей копии
 		_brain = new Brain();
-		// Выполняем копирование
 		_brain = rhs._brain;
 	}
 }
@@ -23,9 +21,7 @@ Cat &Cat::operator=(Cat const& rhs) {
 	_type = rhs._type;
 	if (rhs._brain)
 	{
-		// Выделяем память для нашей копии
 		_brain = new Brain();
-		// Выполняем копирование
 		_brain = rhs._brain;
 	}
 	return *this;

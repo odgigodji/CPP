@@ -8,14 +8,12 @@ Dog::Dog() : AAnimal("Dog") {
 	std::cout << RED"Dog appear"RESET << std::endl;
 }
 
-Dog::Dog(Dog &i)  : AAnimal(i) {
-	_type = i._type;
-	if (i._brain)
+Dog::Dog(Dog &rhs)  : AAnimal(rhs) {
+	_type = rhs._type;
+	if (rhs._brain)
 	{
-		// Выделяем память для нашей копии
 		_brain = new Brain();
-		// Выполняем копирование
-		_brain = i._brain;
+		_brain = rhs._brain;
 	}
 }
 
@@ -23,9 +21,7 @@ Dog &Dog::operator=(Dog const& rhs) {
 	_type = rhs._type;
 	if (rhs._brain)
 	{
-		// Выделяем память для нашей копии
 		_brain = new Brain();
-		// Выполняем копирование
 		_brain = rhs._brain;
 	}
 	return *this;
