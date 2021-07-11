@@ -9,10 +9,11 @@
 class Character {
 protected:
 	std::string _name;
-	AMateria *_materia[3];
+	AMateria *_materia[4];
+	int _idx;
 public:
 	Character();
-	Character(std::string name);
+	explicit Character(std::string &name);
 	Character(Character & i);
 	Character &operator=(Character &rhs);
 	~Character();
