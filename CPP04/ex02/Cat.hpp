@@ -14,7 +14,7 @@ public:
 	~Cat();
 
 	virtual void makeSound() const;
-	virtual std::string getType() const;
+//	virtual std::string getType() const;
 };
 
 

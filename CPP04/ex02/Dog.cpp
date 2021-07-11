@@ -39,8 +39,3 @@ Dog::~Dog() {
 void Dog::makeSound() const {
 	std::cout << "-Гав-" << std::endl;
 }
-
-
-std::string Dog::getType() const {
-	return _type;
-}

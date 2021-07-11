@@ -24,3 +24,7 @@ AAnimal &AAnimal::operator=(AAnimal const &animal) {
 AAnimal::~AAnimal() {
 	std::cout << MAG"AAnimal disappear"RESET << std::endl;
 }
+
+std::string AAnimal::getType() const {
+	return _type;
+}

@@ -21,6 +21,7 @@ int main() {
 	for(int i = 0; i < 10; ++i) {
 		a[i]->makeSound();
 	}
+//	std::cout << a[0]->getType() << std::endl;
 	for(int i = 0; i < 10; ++i) {
 		delete(a[i]);
 	}

@@ -14,7 +14,7 @@ public:
 	Dog & operator=(Dog const& rhs);
 
 	virtual void makeSound() const;
-	virtual std::string getType() const;
+//	virtual std::string getType() const;
 };
 
 
