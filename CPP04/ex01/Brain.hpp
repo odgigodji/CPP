@@ -5,6 +5,8 @@
 #ifndef EX01_BRAIN_HPP
 #define EX01_BRAIN_HPP
 #include <iostream>
+//#include "Dog.hpp"
+//#include "Cat.hpp"
 
 class Brain {
 protected:
@@ -12,10 +14,12 @@ protected:
 public:
 	Brain();
 //	Brain(std::string type);
-//	Brain(Brain & i);
-//	Brain & operator=(Brain & animal);
+	Brain(Brain const &rhs);
+	Brain & operator=(Brain const &rhs);
 	~Brain();
-};
 
+	void setFirstIdea(std::string const &firstIdea);
+	std::string getFirstIdea();
+};
 
 #endif //EX01_BRAIN_HPP

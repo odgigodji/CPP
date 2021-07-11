@@ -9,13 +9,13 @@
 class Dog : public Animal {
 public:
 	Dog();
-	Dog(std::string type);
+	explicit Dog(std::string type);
 	Dog(Dog & i);
-	Dog & operator=(Dog & rhs);
 	~Dog();
+	Dog & operator=(Dog const& rhs);
 
 	virtual void makeSound() const;
-
+//	virtual void makeIdea(std::string const &firstIdea) const;
 };
 
 

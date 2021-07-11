@@ -1,8 +1,9 @@
-NAME = animal0
+NAME = animal1
 
 SRC = Cat.cpp	\
       Dog.cpp	\
       Animal.cpp	\
+      Brain.cpp	\
       main.cpp
 
 INC =   Cat.hpp	\

@@ -9,9 +9,9 @@
 class Cat : public Animal {
 public:
 	Cat();
-	Cat(std::string type);
+	explicit Cat(std::string type);
 	Cat(Cat & i);
-	Cat & operator=(Cat & rhs);
+	Cat & operator=(Cat const& rhs);
 	~Cat();
 
 	virtual void makeSound() const;

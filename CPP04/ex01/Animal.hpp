@@ -5,6 +5,7 @@
 #ifndef EX00_ANIMAL_HPP
 #define EX00_ANIMAL_HPP
 #include <iostream>
+#include "Brain.hpp"
 # define RED    "\x1B[31m"
 # define WTH    "\x1B[38m"
 # define GRN    "\x1B[32m"
@@ -16,18 +17,23 @@
 
 
 class Animal {
+
 protected:
 	std::string _type;
+	Brain *_brain;
 
 public:
 	Animal();
-	Animal(std::string type);
+	explicit Animal(std::string const & type);
 	Animal(Animal & i);
-	Animal & operator=(Animal & animal);
-	~Animal();
+	Animal &operator=(Animal const &animal);
+	virtual ~Animal();
 
 	const std::string &getType() const;
 	virtual void makeSound() const;
+	std::string getFirstIdea();
+	void makeIdea(std::string const &firstIdea) const;
+
 };
 
 
