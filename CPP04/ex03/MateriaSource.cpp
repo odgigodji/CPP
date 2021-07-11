@@ -3,3 +3,23 @@
 //
 
 #include "MateriaSource.hpp"
+
+MateriaSource::MateriaSource() {
+
+}
+
+MateriaSource::MateriaSource(std::string &name) {
+
+}
+
+MateriaSource::MateriaSource(MateriaSource &i) {
+
+}
+
+MateriaSource &MateriaSource::operator=(MateriaSource &rhs) {
+	return *this;
+}
+
+MateriaSource::~MateriaSource() {
+
+}
