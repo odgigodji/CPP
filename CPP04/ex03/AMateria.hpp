@@ -5,12 +5,18 @@
 #ifndef EX03_AMATERIA_HPP
 #define EX03_AMATERIA_HPP
 #include <iostream>
+#include "ICharacter.hpp"
 
 class AMateria {
 protected:
+	std::string _type;
 
 public:
-	AMateria(std::string const &type);
+	AAnimal();
+	explicit AAnimal(std::string const & type);
+	AAnimal(AAnimal & i);
+	AAnimal &operator=(AAnimal const &rhs);
+	~AAnimal();
 
 	std::string const & getType() const;
 

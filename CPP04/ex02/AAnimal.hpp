@@ -26,7 +26,7 @@ public:
 	explicit AAnimal(std::string const & type);
 	AAnimal(AAnimal & i);
 	AAnimal &operator=(AAnimal const &animal);
-	virtual ~AAnimal();
+	~AAnimal();
 
 	virtual std::string getType() const;
 	virtual void makeSound() const = 0;
