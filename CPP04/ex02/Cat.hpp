@@ -13,8 +13,8 @@ public:
 	Cat & operator=(Cat const& rhs);
 	~Cat();
 
-	void makeSound() const;
-	std::string getType() const;
+	virtual void makeSound() const;
+	virtual std::string getType() const;
 };
 
 

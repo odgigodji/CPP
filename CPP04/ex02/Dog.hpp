@@ -13,8 +13,8 @@ public:
 	~Dog();
 	Dog & operator=(Dog const& rhs);
 
-	void makeSound() const;
-	std::string getType() const;
+	virtual void makeSound() const;
+	virtual std::string getType() const;
 };
 
 
