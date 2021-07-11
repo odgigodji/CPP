@@ -9,23 +9,14 @@ Brain::Brain() {
 	std::cout << BLU"Brain was created"RESET << std::endl;
 }
 
-//Brain::Brain(Brain &i) {
-//	if ( this != &i)
-//		this->_type = i._type;
-//}
-
-//Brain &Brain::operator=(Brain &animal) {
-//	return <#initializer#>;
-//}
-
-Brain::~Brain() {
-	std::cout << BLU"Brain was deleted"RESET << std::endl;
-}
-
-Brain::Brain(Brain const & rhs) {
+Brain::Brain(Brain const &rhs) {
 	for(int i = 0; rhs._ideas[i].length() != 0; ++i) {
 		_ideas[i] = rhs._ideas[i];
 	}
+}
+
+Brain::~Brain() {
+	std::cout << BLU"Brain was deleted"RESET << std::endl;
 }
 
 Brain &Brain::operator=(Brain const &rhs) {
@@ -34,8 +25,7 @@ Brain &Brain::operator=(Brain const &rhs) {
 	}
 	return *this;
 }
-//
-//
+
 void Brain::setFirstIdea(std::string const &firstIdea) {
 	_ideas[0] = firstIdea;
 }

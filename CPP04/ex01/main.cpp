@@ -18,8 +18,9 @@ int main() {
 	for(int i = 5; i < 10; ++i) {
 		a[i] = new Cat();
 	}
-	a[0]->makeSound(); //Dog
-	a[6]->makeSound();
+	for(int i = 0; i < 10; ++i) {
+		a[i]->makeSound();
+	}
 	for(int i = 0; i < 10; ++i) {
 		delete(a[i]);
 	}

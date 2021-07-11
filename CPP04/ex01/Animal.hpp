@@ -15,7 +15,6 @@
 # define CYN    "\x1B[36m"
 # define RESET  "\x1B[0m"
 
-
 class Animal {
 
 protected:
@@ -32,6 +31,5 @@ public:
 	const std::string &getType() const;
 	virtual void makeSound() const;
 };
-
 
 #endif //EX00_ANIMAL_HPP

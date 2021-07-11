@@ -5,8 +5,6 @@
 #ifndef EX01_BRAIN_HPP
 #define EX01_BRAIN_HPP
 #include <iostream>
-//#include "Dog.hpp"
-//#include "Cat.hpp"
 
 class Brain {
 protected:
