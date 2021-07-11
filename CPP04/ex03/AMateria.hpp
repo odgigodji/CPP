@@ -12,11 +12,11 @@ protected:
 	std::string _type;
 
 public:
-	AAnimal();
-	explicit AAnimal(std::string const & type);
-	AAnimal(AAnimal & i);
-	AAnimal &operator=(AAnimal const &rhs);
-	~AAnimal();
+	AMateria();
+	explicit AMateria(std::string const & type);
+	AMateria(AMateria & i);
+	AMateria &operator=(AMateria const &rhs);
+	~AMateria();
 
 	std::string const & getType() const;
 

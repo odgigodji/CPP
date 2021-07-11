@@ -6,9 +6,12 @@
 #define EX03_CURE_HPP
 #include "AMateria.hpp"
 
-class Cure : public AMateria{ //name cure
-	void clone();
+class Cure : public AMateria {
+public:
+	Cure();
+	Cure(Cure & i);
+	Cure &operator=(Cure const &rhs);
+	~Cure();
 };
-
 
 #endif //EX03_CURE_HPP

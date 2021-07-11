@@ -3,3 +3,24 @@
 //
 
 #include "AMateria.hpp"
+
+AMateria::AMateria() {
+
+}
+
+AMateria::AMateria(const std::string &type) : _type(type) {}
+
+AMateria::AMateria(AMateria &i) {
+	_type = i._type;
+}
+
+AMateria &AMateria::operator=(const AMateria &rhs) {
+	_type = rhs._type;
+	return *this;
+}
+
+AMateria::~AMateria() {}
+
+std::string const &AMateria::getType() const {
+	return _type;
+}
