@@ -13,7 +13,6 @@ protected:
 	std::string _ideas[100];
 public:
 	Brain();
-//	Brain(std::string type);
 	Brain(Brain const &rhs);
 	Brain & operator=(Brain const &rhs);
 	~Brain();

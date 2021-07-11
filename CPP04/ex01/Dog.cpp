@@ -5,21 +5,31 @@
 #include "Dog.hpp"
 
 Dog::Dog() : Animal("Dog") {
-//	_brain->setFirstIdea("i love bones");
-//	_type = "Dog";
-//	_brain = new Brain();
 	std::cout << RED"Dog appear"RESET << std::endl;
 }
 
-Dog::Dog(std::string type) : Animal(type) {}
-
 Dog::Dog(Dog &i)  : Animal(i) {
-	if ( this != &i)
-		this->_type = i._type;
+	_type = i._type;
+	if (i._brain)
+	{
+		// Выделяем память для нашей копии
+		_brain = new Brain();
+		// Выполняем копирование
+		Brain d = Brain();
+		_brain = i._brain;
+	}
 }
 
 Dog &Dog::operator=(Dog const& rhs) {
-	this->_type = rhs._type;
+	_type = rhs._type;
+	if (rhs._brain)
+	{
+		// Выделяем память для нашей копии
+		_brain = new Brain();
+		// Выполняем копирование
+		Brain d = Brain();
+		_brain = rhs._brain;
+	}
 	return *this;
 }
 
@@ -32,7 +42,4 @@ void Dog::makeSound() const {
 	std::cout << "-Гав-" << std::endl;
 }
 
-//void Dog::makeIdea(std::string const &firstIdea) const {
-//	_brain->setFirstIdea(firstIdea);
-//}
 

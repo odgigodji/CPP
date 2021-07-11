@@ -9,11 +9,11 @@ Animal::Animal() : _brain() {
 }
 
 Animal::Animal(std::string const & type) : _type(type), _brain(new Brain) {
+	std::cout << MAG"Animal appear"RESET << std::endl;
 }
 
 Animal::Animal(Animal &i) : _brain() {
 	this->_type = i._type;
-//	_brain = i.
 }
 
 Animal &Animal::operator=(Animal const &animal) {
@@ -31,14 +31,6 @@ Animal::~Animal() {
 
 void Animal::makeSound() const {
 	std::cout << "-Anime-" << std::endl;
-}
-
-std::string Animal::getFirstIdea() {
-	return _brain->getFirstIdea();
-}
-
-void Animal::makeIdea(std::string const &firstIdea) const {
-	_brain->setFirstIdea(firstIdea);
 }
 
 

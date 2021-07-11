@@ -9,8 +9,7 @@
 class Cat : public Animal {
 public:
 	Cat();
-	explicit Cat(std::string type);
-	Cat(Cat & i);
+	Cat(Cat & rhs);
 	Cat & operator=(Cat const& rhs);
 	~Cat();
 
