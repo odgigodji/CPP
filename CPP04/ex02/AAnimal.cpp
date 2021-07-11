@@ -24,7 +24,3 @@ AAnimal &AAnimal::operator=(AAnimal const &animal) {
 AAnimal::~AAnimal() {
 	std::cout << MAG"AAnimal disappear"RESET << std::endl;
 }
-
-void AAnimal::makeSound() const {
-	std::cout << "-Anime-" << std::endl;
-}
