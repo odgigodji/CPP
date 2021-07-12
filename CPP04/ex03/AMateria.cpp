@@ -5,7 +5,6 @@
 #include "AMateria.hpp"
 
 AMateria::AMateria() {
-
 }
 
 AMateria::AMateria(const std::string &type) : _type(type) {}

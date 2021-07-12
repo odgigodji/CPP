@@ -4,7 +4,7 @@
 
 #ifndef EX03_ICHARACTER_HPP
 #define EX03_ICHARACTER_HPP
-#include "AMateria.hpp"
+//#include "AMateria.hpp"
 //#include "Ice.hpp"
 class AMateria;
 

@@ -6,7 +6,15 @@
 #define EX03_AMATERIA_HPP
 #include <iostream>
 #include "ICharacter.hpp"
-//#include "Ice.hpp"
+
+# define GRN  	"\x1B[32m"
+# define RED  	"\x1B[31m"
+# define WTH  	"\x1B[38m"
+# define YEL  	"\x1B[33m"
+# define BLU  	"\x1B[34m"
+# define MAG  	"\x1B[35m"
+# define CYN  	"\x1B[36m"
+# define RESET	"\x1B[0m"
 
 class AMateria {
 protected:
@@ -19,10 +27,11 @@ public:
 	AMateria &operator=(AMateria const &rhs);
 	~AMateria();
 
-	std::string const & getType() const;
+	std::string const & getType() const; //Returns the materia type
 
 	virtual AMateria* clone() const = 0;
-	virtual void use(ICharacter& target);
+
+	virtual void use(ICharacter& target); //get name of target
 };
 
 

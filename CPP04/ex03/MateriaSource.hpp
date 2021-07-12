@@ -7,11 +7,11 @@
 #include "Character.hpp"
 #include "IMateriaSource.hpp"
 
-class MateriaSource : public IMateriaSource {
-protected:
-	std::string _name;
-	AMateria *_materia[4];
-	int _idx;
+class MateriaSource : public IMateriaSource , public Character {
+//protected:
+//	std::string _name;
+//	AMateria *_materia[4];
+//	int _idx;
 public:
 	MateriaSource();
 	explicit MateriaSource(std::string &name);

@@ -5,7 +5,7 @@
 #include "Ice.hpp"
 
 Ice::Ice() : AMateria("ice") {
-	std::cout << "ICE is " << _type << std::endl;
+	std::cout << GRN"+Ice"RESET << std::endl;
 }
 
 Ice::Ice(Ice &i)  : AMateria(i) {

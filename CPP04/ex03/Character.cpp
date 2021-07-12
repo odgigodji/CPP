@@ -6,11 +6,12 @@
 
 
 Character::Character() : _inventory(), _idx(0) {
-
+	std::cout << GRN"+Character"RESET << std::endl;
 }
 
 Character::Character(std::string name) : _inventory(), _idx(0), _name(name) {
-
+	_name = name;
+	std::cout << GRN"+Character \"" << _name << "\"" << RESET << std::endl;
 }
 
 Character::Character(Character &i) {

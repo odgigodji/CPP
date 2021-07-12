@@ -5,7 +5,7 @@
 #include "Cure.hpp"
 
 Cure::Cure() : AMateria("cure") {
-	std::cout << "CURE is " << _type << std::endl;
+	std::cout << GRN"+Cure"RESET << std::endl;
 }
 
 Cure::Cure(Cure &i)  : AMateria(i) {
