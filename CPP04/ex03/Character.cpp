@@ -24,7 +24,7 @@ Character &Character::operator=(Character &rhs) {
 }
 
 Character::~Character() {
-	//delete character
+	std::cout << RED"-Character"RESET << std::endl;
 }
 
 const std::string &Character::getName() const { return _name; }

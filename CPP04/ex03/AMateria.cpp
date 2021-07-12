@@ -18,7 +18,9 @@ AMateria &AMateria::operator=(const AMateria &rhs) {
 	return *this;
 }
 
-AMateria::~AMateria() {}
+AMateria::~AMateria() {
+	std::cout << RED"-AMateria"RESET << std::endl;
+}
 
 std::string const &AMateria::getType() const {
 	return _type;

@@ -25,7 +25,7 @@ MateriaSource &MateriaSource::operator=(MateriaSource &rhs) {
 }
 
 MateriaSource::~MateriaSource() {
-
+	std::cout << RED"-MateriaSource"RESET << std::endl;
 }
 
 void MateriaSource::learnMateria(AMateria *materia) {
