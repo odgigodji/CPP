@@ -31,7 +31,7 @@ MateriaSource::~MateriaSource() {
 	std::cout << RED"-MateriaSource"RESET << std::endl;
 }
 
-void MateriaSource::learnMateria(AMateria *materia) {
+void MateriaSource::learnMateria(AMateria *materia) { //check
 	static int idx = 0;
 	std::cout << "learn " << materia->getType() << std::endl;
 	if (idx < 4 ) {

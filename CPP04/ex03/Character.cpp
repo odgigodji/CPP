@@ -30,9 +30,16 @@ Character::~Character() {
 const std::string &Character::getName() const { return _name; }
 
 void Character::equip(AMateria *m) {
-	if (m && _idx >= 0 && _idx < 4 && m->getType().length() != 0) {
-		_inventory[_idx] = m;
-		_idx++;
+	static int idx = 0;
+//	if (m && _idx >= 0 && _idx < 4 && m->getType().length() != 0) {
+//		_inventory[_idx] = m;
+//		_idx++;
+//	}
+//	for(;_idx < 4, _inventory[_idx] != nullptr; ++_idx);
+	if (_inventory[idx] == nullptr) {
+		std::cout << BLU"equip materia in idx " << idx << RESET << std::endl;
+		_inventory[idx] = m;
+		idx++;
 	}
 }
 
