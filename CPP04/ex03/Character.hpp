@@ -13,7 +13,7 @@ protected:
 	int _idx;
 public:
 	Character();
-	explicit Character(std::string &name);
+	explicit Character(std::string name);
 	Character(Character & i);
 	Character &operator=(Character &rhs);
 	~Character();
@@ -26,10 +26,16 @@ public:
 	//Materia, don’t do a thing.
 	void equip(AMateria *m);
 
+	void unequip(int idx);
 
+	//use method will have to use the Materia at the idx slot,
+	//and pass target as parameter to the AMateria::use method.
+	void use(int idx, ICharacter &target);
 };
 
 
 #endif //EX03_CHARACTER_HPP
+
+
 
 

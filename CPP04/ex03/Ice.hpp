@@ -16,7 +16,7 @@ public:
 	//return a new instance of the real Materia’s type.
 	AMateria *clone() const;
 
-	void use(ICharacter &target) override;
+	void use(ICharacter &target);
 };
 
 

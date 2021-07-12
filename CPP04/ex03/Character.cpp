@@ -9,7 +9,7 @@ Character::Character() : _inventory(), _idx(0) {
 
 }
 
-Character::Character(std::string &name) : _inventory(), _idx(0), _name(name) {
+Character::Character(std::string name) : _inventory(), _idx(0), _name(name) {
 
 }
 
@@ -26,13 +26,21 @@ Character::~Character() {
 	//delete character
 }
 
-const std::string &Character::getName() const {
-	return _name;
-}
+const std::string &Character::getName() const { return _name; }
 
 void Character::equip(AMateria *m) {
 	if (m && _idx >= 0 && _idx < 4 && m->getType().length() != 0) {
 		_inventory[_idx] = m;
 		_idx++;
 	}
+}
+
+void Character::unequip(int idx) {
+	if (_inventory[idx]) {
+		_inventory[idx] = nullptr;
+	}
+}
+
+void Character::use(int idx, ICharacter &target) {
+	_inventory[idx]->use(target);
 }

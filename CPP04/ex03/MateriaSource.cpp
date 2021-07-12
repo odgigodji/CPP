@@ -23,3 +23,11 @@ MateriaSource &MateriaSource::operator=(MateriaSource &rhs) {
 MateriaSource::~MateriaSource() {
 
 }
+
+void MateriaSource::learnMateria(AMateria *materia) {
+
+}
+
+AMateria *MateriaSource::createMateria(const std::string &type) {
+	return NULL;
+}
