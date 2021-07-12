@@ -5,11 +5,11 @@
 #include "Character.hpp"
 
 
-Character::Character() : _materia(), _idx(0) {
+Character::Character() : _inventory(), _idx(0) {
 
 }
 
-Character::Character(std::string &name) : _materia(), _idx(0), _name(name) {
+Character::Character(std::string &name) : _inventory(), _idx(0), _name(name) {
 
 }
 
@@ -28,4 +28,11 @@ Character::~Character() {
 
 const std::string &Character::getName() const {
 	return _name;
+}
+
+void Character::equip(AMateria *m) {
+	if (m && _idx >= 0 && _idx < 4 && m->getType().length() != 0) {
+		_inventory[_idx] = m;
+		_idx++;
+	}
 }

@@ -6,10 +6,10 @@
 #define EX03_CHARACTER_HPP
 #include "AMateria.hpp"
 
-class Character {
+class Character : public ICharacter {
 protected:
 	std::string _name;
-	AMateria *_materia[4];
+	AMateria *_inventory[4];
 	int _idx;
 public:
 	Character();
@@ -19,7 +19,17 @@ public:
 	~Character();
 
 	const std::string &getName() const;
+
+	//The Character possesses an inventory of 4 Materia at most, empty at the start. He’ll
+	//equip the Materia in slots 0 to 3, in this order.
+	//In case we try to equip a Materia in a full inventory, or use/unequip a nonexistent
+	//Materia, don’t do a thing.
+	void equip(AMateria *m);
+
+
 };
 
 
 #endif //EX03_CHARACTER_HPP
+
+

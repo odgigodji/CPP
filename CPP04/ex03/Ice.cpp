@@ -15,7 +15,6 @@ Ice::Ice(Ice &i)  : AMateria(i) {
 Ice::~Ice() {}
 
 Ice &Ice::operator=(const Ice &rhs) {
-//	Ice i =
 	_type = rhs._type;
 	return *this;
 }
@@ -23,4 +22,10 @@ Ice &Ice::operator=(const Ice &rhs) {
 AMateria *Ice::clone() const {
 	AMateria *materia = new Ice;
 	return materia;
+}
+
+void Ice::use(ICharacter &target) {
+	std::cout << " * shoots an ice bolt at ";  //<< getname
+	AMateria::use(target);
+	std::cout << " *" << std::endl;
 }

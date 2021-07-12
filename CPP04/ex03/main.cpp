@@ -9,6 +9,12 @@
 
 int main()
 {
+//	AMateria *a = new Ice();
+//	Character b();
+//	a->use(b)
+
+
+//-------------------------------------------------intra -----------------------------
 //	IMateriaSource* src = new MateriaSource();
 //	src->learnMateria(new Ice());
 //	src->learnMateria(new Cure());
