@@ -11,6 +11,7 @@ protected:
 	std::string _name;
 	AMateria *_inventory[4];
 	int _idx;
+//	static int s_idx;
 public:
 	Character();
 	explicit Character(std::string name);

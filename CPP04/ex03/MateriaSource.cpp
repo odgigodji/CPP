@@ -5,6 +5,9 @@
 #include "MateriaSource.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
+#include "Character.hpp"
+
+//int Character::s_idx = 0;
 
 MateriaSource::MateriaSource() : Character() {
 	std::cout << GRN"+MateriaSource"RESET << std::endl;
@@ -29,12 +32,13 @@ MateriaSource::~MateriaSource() {
 }
 
 void MateriaSource::learnMateria(AMateria *materia) {
+	static int idx = 0;
 	std::cout << "learn " << materia->getType() << std::endl;
-	if (_idx < 4 ) {
-		_inventory[_idx] = materia;
-		if (_inventory[_idx + 1] == nullptr) { _idx++; }
+	if (idx < 4 ) {
+		_inventory[idx] = materia;
+		if (_inventory[idx + 1] == nullptr) { idx++; }
 	}
-	std::cout << "idx is " << _idx << std::endl;
+	std::cout << "s_idx is " << idx << std::endl;
 }
 
 AMateria *MateriaSource::createMateria(const std::string &type) {
