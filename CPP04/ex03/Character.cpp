@@ -25,3 +25,7 @@ Character &Character::operator=(Character &rhs) {
 Character::~Character() {
 	//delete character
 }
+
+const std::string &Character::getName() const {
+	return _name;
+}

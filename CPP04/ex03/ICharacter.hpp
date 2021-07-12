@@ -5,6 +5,8 @@
 #ifndef EX03_ICHARACTER_HPP
 #define EX03_ICHARACTER_HPP
 #include "AMateria.hpp"
+//#include "Ice.hpp"
+class AMateria;
 
 class ICharacter {
 public:
@@ -14,6 +16,5 @@ public:
 	virtual void unequip(int idx) = 0;
 	virtual void use(int idx, ICharacter& target) = 0;
 };
-
 
 #endif //EX03_ICHARACTER_HPP

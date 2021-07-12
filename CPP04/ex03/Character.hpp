@@ -17,6 +17,8 @@ public:
 	Character(Character & i);
 	Character &operator=(Character &rhs);
 	~Character();
+
+	const std::string &getName() const;
 };
 
 

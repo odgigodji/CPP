@@ -6,12 +6,14 @@
 #define EX03_ICE_HPP
 #include "AMateria.hpp"
 
-class Ice : public AMateria, public ICharacter {
+class Ice : public AMateria {
 public:
 	Ice();
 	Ice(Ice & i);
 	Ice &operator=(Ice const &rhs);
 	~Ice();
+
+	AMateria *clone() const;
 };
 
 
