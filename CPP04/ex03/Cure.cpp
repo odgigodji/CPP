@@ -18,3 +18,14 @@ Cure &Cure::operator=(const Cure &rhs) {
 	_type = rhs._type;
 	return *this;
 }
+
+AMateria *Cure::clone() const {
+	AMateria *materia = new Cure;
+	return materia;
+}
+
+void Cure::use(ICharacter &target) {
+	std::cout << " *  heals ";
+	AMateria::use(target);
+	std::cout << "’s wounds" << std::endl;
+}

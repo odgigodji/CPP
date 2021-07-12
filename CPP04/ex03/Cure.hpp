@@ -12,6 +12,12 @@ public:
 	Cure(Cure & i);
 	Cure &operator=(Cure const &rhs);
 	~Cure();
+
+	AMateria *clone() const override;
+
+	void use(ICharacter &target) override;
 };
 
 #endif //EX03_CURE_HPP
+
+
