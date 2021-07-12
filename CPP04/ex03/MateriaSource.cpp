@@ -30,16 +30,16 @@ MateriaSource::~MateriaSource() {
 
 void MateriaSource::learnMateria(AMateria *materia) {
 	std::cout << "learn " << materia->getType() << std::endl;
-	if (_idx < 4) {
+	if (_idx < 4 ) {
 		_inventory[_idx] = materia;
-		_idx++;
+		if (_inventory[_idx + 1] == nullptr) { _idx++; }
 	}
 	std::cout << "idx is " << _idx << std::endl;
 }
 
 AMateria *MateriaSource::createMateria(const std::string &type) {
 	for(int i = 0; i < 4; ++i) {
-		if (_inventory[i]->getType() == type) {
+		if (_inventory[i] && _inventory[i]->getType() == type) {
 			std::cout << "createMateria " << type << " and " << _inventory[i]->getType() << std::endl;
 			return (_inventory[i]);
 		}
