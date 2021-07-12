@@ -40,7 +40,12 @@ int main()
 	me->use(1, *bob);
 	me->use(2, *bob);
 	me->use(3, *bob);
-//	me->unequip()
+	me->unequip(2);
+	me->equip(tmp);
+	me->use(0, *bob);
+	me->use(1, *bob);
+	me->use(2, *bob);
+	me->use(3, *bob);
 //	delete bob;
 //	delete me;
 //	delete src;
