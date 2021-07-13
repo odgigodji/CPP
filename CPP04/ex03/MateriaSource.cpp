@@ -31,20 +31,21 @@ MateriaSource::~MateriaSource() {
 	std::cout << RED"-MateriaSource"RESET << std::endl;
 }
 
-void MateriaSource::learnMateria(AMateria *materia) { //check
+void MateriaSource::learnMateria(AMateria *materia) {
 	static int idx = 0;
-	std::cout << "learn " << materia->getType() << std::endl;
+//	std::cout << "learn " << materia->getType() << " and ";
 	if (idx < 4 ) {
 		_inventory[idx] = materia;
 		if (_inventory[idx + 1] == nullptr) { idx++; }
 	}
-	std::cout << "s_idx is " << idx << std::endl;
+//	std::cout << "s_idx is " << idx << std::endl;
 }
 
 AMateria *MateriaSource::createMateria(const std::string &type) {
 	for(int i = 0; i < 4; ++i) {
+		//if we have that materia we'll create
 		if (_inventory[i] && _inventory[i]->getType() == type) {
-			std::cout << "createMateria " << type << " == " << _inventory[i]->getType() << std::endl;
+//			std::cout << "createMateria " << type << " == " << _inventory[i]->getType() << std::endl;
 			return (_inventory[i]);
 		}
 	}

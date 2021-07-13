@@ -37,7 +37,6 @@ void Character::equip(AMateria *m) {
 	if (_idx < 4 && _inventory[_idx] == nullptr) {
 		std::cout << BLU"equip materia in idx " << _idx << RESET << std::endl;
 		_inventory[_idx] = m;
-//		_idx++;
 	}
 }
 
