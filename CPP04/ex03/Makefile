@@ -1,14 +1,18 @@
 NAME = animal2
 
-SRC = Cat.cpp	\
-      Dog.cpp	\
-      Animal.cpp	\
-      Brain.cpp	\
-      main.cpp
+SRC =AMateria.cpp		\
+     Character.cpp		\
+     Cure.cpp		\
+     Ice.cpp		\
+     main.cpp		\
+     MateriaSource.cpp
 
-INC =   Cat.hpp	\
-        Animal.hpp	\
-        Dog.hpp
+INC =   Ice.hpp	\
+        Cure.hpp	\
+        AMateria.hpp	\
+        Character.hpp	\
+        IMateriaSource.hpp	\
+        MateriaSource.hpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
