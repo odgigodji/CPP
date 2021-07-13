@@ -57,7 +57,8 @@ AMateria *MateriaSource::createMateria(const std::string &type) {
 		//if we have that materia we'll create
 		if (_inventory[i] && _inventory[i]->getType() == type) {
 //			std::cout << "createMateria " << type << " == " << _inventory[i]->getType() << std::endl;
-			return (_inventory[i]);
+			AMateria *n = _inventory[i]->clone();
+			return (n);
 		}
 	}
 	return nullptr;
