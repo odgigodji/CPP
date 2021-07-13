@@ -11,7 +11,7 @@
 
 ### [Module04](https://github.com/odgigodji/CPP/tree/master/CPP04) : Полиморфизм подтипа, абстрактные классы, интерфейсы.
 
-### [Module05](https://github.com/odgigodji/CPP/tree/master/CPP05) : Полиморфизм подтипа, абстрактные классы, интерфейсы.
+### [Module05](https://github.com/odgigodji/CPP/tree/master/CPP05) : Повторение и исключения.
 
 ### Для создания исполняемых файлов использовать команду `make`
 
