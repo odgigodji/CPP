@@ -1,4 +1,4 @@
-NAME = animal2
+NAME = materia0
 
 SRC =AMateria.cpp		\
      Character.cpp		\
