@@ -44,7 +44,7 @@ void MateriaSource::learnMateria(AMateria *materia) { //check
 AMateria *MateriaSource::createMateria(const std::string &type) {
 	for(int i = 0; i < 4; ++i) {
 		if (_inventory[i] && _inventory[i]->getType() == type) {
-			std::cout << "createMateria " << type << " and " << _inventory[i]->getType() << std::endl;
+			std::cout << "createMateria " << type << " == " << _inventory[i]->getType() << std::endl;
 			return (_inventory[i]);
 		}
 	}

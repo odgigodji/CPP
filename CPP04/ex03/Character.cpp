@@ -30,26 +30,27 @@ Character::~Character() {
 const std::string &Character::getName() const { return _name; }
 
 void Character::equip(AMateria *m) {
-//	static int _idx = 0;
-//	if (m && _idx >= 0 && _idx < 4 && m->getType().length() != 0) {
-//		_inventory[_idx] = m;
-//		_idx++;
-//	}
-//	for(;_idx < 4, _inventory[_idx] != nullptr; ++_idx);
-	if (_inventory[_idx] == nullptr) {
+	//skip equiped cells
+	for(_idx = 0;_inventory[_idx] != nullptr; ++_idx);
+
+	//equip in empty cell
+	if (_idx < 4 && _inventory[_idx] == nullptr) {
 		std::cout << BLU"equip materia in idx " << _idx << RESET << std::endl;
 		_inventory[_idx] = m;
-		_idx++;
+//		_idx++;
 	}
 }
 
 void Character::unequip(int idx) {
-	if (_inventory[idx]) {
+	if (idx >= 0 && idx < 4 && _inventory[idx]) {
+		std::cout << RED"unequip materia from idx " << idx << RESET << std::endl;
 		_inventory[idx] = nullptr;
-		_idx = idx;
+//		_idx = idx;
 	}
 }
 
 void Character::use(int idx, ICharacter &target) {
-	_inventory[idx]->use(target);
+	if (idx >= 0 && idx < 4 && _inventory[idx]) {
+		_inventory[idx]->use(target);
+	}
 }
