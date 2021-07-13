@@ -14,8 +14,8 @@ protected:
 public:
 	Character();
 	explicit Character(std::string name);
-	Character(Character & i);
-	Character &operator=(Character &rhs);
+	Character(Character & rhs);
+	Character &operator=(Character const&rhs);
 	~Character();
 
 	const std::string &getName() const;

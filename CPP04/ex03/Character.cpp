@@ -4,7 +4,6 @@
 
 #include "Character.hpp"
 
-
 Character::Character() : _inventory(), _idx(0) {
 	std::cout << GRN"+Character"RESET << std::endl;
 }
@@ -14,12 +13,29 @@ Character::Character(std::string name) : _inventory(), _idx(0), _name(name) {
 	std::cout << GRN"+Character \"" << _name << "\"" << RESET << std::endl;
 }
 
-Character::Character(Character &i) {
-	//deep copy
+Character::Character(Character &rhs) : _inventory() {
+	_idx = rhs._idx;
+	if (rhs._inventory != nullptr) {
+		AMateria *m[4];
+		for(int i = 0; i < 4 && rhs._inventory[i]; ++i) {
+			m[i] = rhs._inventory[i]->clone();
+			_inventory[i] = m[i];
+		}
+	}
 }
 
-Character &Character::operator=(Character &rhs) {
-	//deep copy
+Character &Character::operator=(Character const&rhs) {
+//	_name = rhs._name;
+	if (this == &rhs)
+		return (*this);
+	_idx = rhs._idx;
+	if (rhs._inventory != nullptr) {
+		AMateria *m[4];
+		for(int i = 0; i < 4 && rhs._inventory[i]; ++i) {
+			m[i] = rhs._inventory[i]->clone();
+			_inventory[i] = m[i];
+		}
+	}
 	return *this;
 }
 

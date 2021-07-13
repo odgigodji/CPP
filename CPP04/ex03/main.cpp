@@ -76,6 +76,20 @@ int main()
 	me->use(2, *bob);
 	me->use(3, *bob);
 
+	std::cout << "\n----------check copy Character -----------" << std::endl;
+	Character sasha("sasha");
+	Character sasha2("sasha2");
+	tmp = src->createMateria("ice");
+	sasha2.equip(tmp);
+
+	sasha = sasha2;
+	std::cout << sasha.getName() << std::endl;
+
+	sasha.use(0, *bob);
+	sasha.use(1, *bob);
+	sasha.use(2, *bob);
+	sasha.use(3, *bob);
+
 	delete bob;
 	delete me;
 	delete src;
