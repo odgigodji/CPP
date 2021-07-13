@@ -1,13 +1,9 @@
 NAME = animal0
 
-SRC = Cat.cpp	\
-      Dog.cpp	\
-      Animal.cpp	\
+SRC = Bureaucrat.cpp \
       main.cpp
 
-INC =   Cat.hpp	\
-        Animal.hpp	\
-        Dog.hpp
+INC =   Bureaucrat.hpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
