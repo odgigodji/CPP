@@ -13,7 +13,7 @@ public:
 	Ice &operator=(Ice const &rhs);
 	~Ice();
 
-	//return a new instance of the real Materia’s type.
+//return a new instance of the real Materia’s type.
 	AMateria *clone() const;
 
 	void use(ICharacter &target);

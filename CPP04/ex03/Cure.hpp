@@ -13,6 +13,7 @@ public:
 	Cure &operator=(Cure const &rhs);
 	~Cure();
 
+//clone() method will, return a new instance of the real Materia’s type.
 	AMateria *clone() const override;
 
 	void use(ICharacter &target) override;
