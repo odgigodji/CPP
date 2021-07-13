@@ -3,32 +3,43 @@
 //
 
 #include "MateriaSource.hpp"
-#include "Ice.hpp"
-#include "Cure.hpp"
 #include "Character.hpp"
 
-//int Character::s_idx = 0;
-
 MateriaSource::MateriaSource() : Character() {
-	std::cout << GRN"+MateriaSource"RESET << std::endl;
+//	std::cout << GRN"+MateriaSource"RESET << std::endl;
 }
 
-MateriaSource::MateriaSource(std::string &name) {
-	_name = name;
-	std::cout << GRN"+MateriaSource"RESET << _name << std::endl;
+MateriaSource::MateriaSource(std::string &name) : Character(name) {
+//	std::cout << GRN"+MateriaSource"RESET << _name << std::endl;
 }
 
-MateriaSource::MateriaSource(MateriaSource &i) {
-
+MateriaSource::MateriaSource(MateriaSource &rhs)  : Character(rhs) {
+	_idx = rhs._idx;
+	if (rhs._inventory != nullptr) {
+		AMateria *m[4];
+		for(int i = 0; i < 4 && rhs._inventory[i]; ++i) {
+			m[i] = rhs._inventory[i]->clone();
+			_inventory[i] = m[i];
+		}
+	}
 }
 
-MateriaSource &MateriaSource::operator=(MateriaSource &rhs) {
-
+MateriaSource &MateriaSource::operator=(MateriaSource const &rhs) {
+	if (this == &rhs)
+		return (*this);
+	_idx = rhs._idx;
+	if (rhs._inventory != nullptr) {
+		AMateria *m[4];
+		for(int i = 0; i < 4 && rhs._inventory[i]; ++i) {
+			m[i] = rhs._inventory[i]->clone();
+			_inventory[i] = m[i];
+		}
+	}
 	return *this;
 }
 
 MateriaSource::~MateriaSource() {
-	std::cout << RED"-MateriaSource"RESET << std::endl;
+//	std::cout << RED"-MateriaSource"RESET << std::endl;
 }
 
 void MateriaSource::learnMateria(AMateria *materia) {

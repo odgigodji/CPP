@@ -11,8 +11,8 @@ class MateriaSource : public IMateriaSource , public Character {
 public:
 	MateriaSource();
 	explicit MateriaSource(std::string &name);
-	MateriaSource(MateriaSource & i);
-	MateriaSource &operator=(MateriaSource &rhs);
+	MateriaSource(MateriaSource & rhs);
+	MateriaSource &operator=(MateriaSource const &rhs);
 	~MateriaSource();
 
 //learnMateria must copy the Materia passed as a parameter, and store it in memory

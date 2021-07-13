@@ -14,9 +14,9 @@ public:
 	~Cure();
 
 //clone() method will, return a new instance of the real Materia’s type.
-	AMateria *clone() const override;
+	AMateria *clone() const;
 
-	void use(ICharacter &target) override;
+	void use(ICharacter &target);
 };
 
 #endif //EX03_CURE_HPP

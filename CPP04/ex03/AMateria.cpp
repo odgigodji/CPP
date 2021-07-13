@@ -14,12 +14,14 @@ AMateria::AMateria(AMateria &i) {
 }
 
 AMateria &AMateria::operator=(const AMateria &rhs) {
-	_type = rhs._type;
+	if (_type != rhs._type) {
+		_type = rhs._type;
+	}
 	return *this;
 }
 
 AMateria::~AMateria() {
-	std::cout << RED"-AMateria"RESET << std::endl;
+//	std::cout << RED"-AMateria"RESET << std::endl;
 }
 
 std::string const &AMateria::getType() const {

@@ -5,12 +5,12 @@
 #include "Character.hpp"
 
 Character::Character() : _inventory(), _idx(0) {
-	std::cout << GRN"+Character"RESET << std::endl;
+//	std::cout << GRN"+Character"RESET << std::endl;
 }
 
 Character::Character(std::string name) : _inventory(), _idx(0), _name(name) {
 	_name = name;
-	std::cout << GRN"+Character \"" << _name << "\"" << RESET << std::endl;
+//	std::cout << GRN"+Character \"" << _name << "\"" << RESET << std::endl;
 }
 
 Character::Character(Character &rhs) : _inventory() {
@@ -40,7 +40,7 @@ Character &Character::operator=(Character const&rhs) {
 }
 
 Character::~Character() {
-	std::cout << RED"-Character"RESET << std::endl;
+//	std::cout << RED"-Character"RESET << std::endl;
 }
 
 const std::string &Character::getName() const { return _name; }
@@ -60,7 +60,6 @@ void Character::unequip(int idx) {
 	if (idx >= 0 && idx < 4 && _inventory[idx]) {
 		std::cout << RED"unequip materia from idx " << idx << RESET << std::endl;
 		_inventory[idx] = nullptr;
-//		_idx = idx;
 	}
 }
 

@@ -27,7 +27,7 @@ public:
 	AMateria &operator=(AMateria const &rhs);
 	~AMateria();
 
-	std::string const & getType() const; //Returns the materia type
+	std::string const & getType() const; //Returns the materia's type
 
 	virtual AMateria* clone() const = 0;
 

@@ -76,7 +76,7 @@ int main()
 	me->use(2, *bob);
 	me->use(3, *bob);
 
-	std::cout << "\n----------check copy Character -----------" << std::endl;
+	std::cout << CYN"\n----------check copy Character -----------"RESET << std::endl;
 	Character sasha("sasha");
 	Character sasha2("sasha2");
 	tmp = src->createMateria("ice");
