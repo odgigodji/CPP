@@ -15,6 +15,7 @@ Character::Character(std::string name) : _name(name), _inventory(), _idx(0)  {
 Character::Character(Character &rhs) : _inventory() {
 	_idx = rhs._idx;
 	if (rhs._inventory != nullptr) {
+		for(int i = 0; i < 4; ++i) { if (_inventory[i] != nullptr) { delete _inventory[i]; } }
 		AMateria *m[4];
 		for(int i = 0; i < 4 && rhs._inventory[i]; ++i) {
 			m[i] = rhs._inventory[i]->clone();
@@ -29,6 +30,7 @@ Character &Character::operator=(Character const&rhs) {
 		return (*this);
 	_idx = rhs._idx;
 	if (rhs._inventory != nullptr) {
+		for(int i = 0; i < 4; ++i) { if (_inventory[i] != nullptr) { delete _inventory[i]; } }
 		AMateria *m[4];
 		for(int i = 0; i < 4 && rhs._inventory[i]; ++i) {
 			m[i] = rhs._inventory[i]->clone();
@@ -39,6 +41,11 @@ Character &Character::operator=(Character const&rhs) {
 }
 
 Character::~Character() {
+	if (_inventory != nullptr) {
+		for(int i = 0; i < 4; ++i) {
+			if (_inventory[i] != nullptr) { delete _inventory[i]; }
+		}
+	}
 //	std::cout << RED"-Character"RESET << std::endl;
 }
 
