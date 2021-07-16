@@ -1,7 +1,9 @@
 #include <iostream>
+#include "Bureaucrat.hpp"
 
 int main() {
     int a = 5;
-	std::cout << "Hello, World! and a is " << a << std::endl;
+//	Bureaucrat a();
+	std::cout << "hello" << std::endl;
 	return 0;
 }
