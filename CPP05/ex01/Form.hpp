@@ -26,5 +26,6 @@ public:
 	unsigned short get_execGradeNeed() const;
 };
 
+std::ostream &operator<<(std::ostream &o, const Form &f);
 
 #endif //EX01_FORM_HPP

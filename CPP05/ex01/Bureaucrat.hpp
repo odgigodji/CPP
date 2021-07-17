@@ -37,6 +37,6 @@ public:
 	unsigned short get_grade() const;
 };
 
-std::ostream &operator<<(std::ostream &o, const Bureaucrat &fixed);
+std::ostream &operator<<(std::ostream &o, const Bureaucrat &bob);
 
 #endif //EX00_BUREAUCRAT_HPP

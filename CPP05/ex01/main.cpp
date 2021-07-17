@@ -1,6 +1,8 @@
 #include <iostream>
+#include "Form.hpp"
 
 int main() {
-	std::cout << "Hello, World!" << std::endl;
+	Form f1("f1", 42, 51);
+
 	return 0;
 }

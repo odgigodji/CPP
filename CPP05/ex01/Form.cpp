@@ -17,12 +17,12 @@ const unsigned short int execGradeNeed) {
 			_signGradeNeed = signGradeNeed;
 			_execGradeNeed = execGradeNeed;
 			std::cout << "Form <" << name << "> was created";
-			std::cout << " with signGradeNeed <" << signGradeNeed << "> and ";
-			std::cout << "with execGradeNeed <" << execGradeNeed << ">" << std::endl;
+			std::cout << " with grade to sign <" << signGradeNeed << "> and ";
+			std::cout << "with grade to execute <" << execGradeNeed << ">" << std::endl;
 		}
 	}
 	catch (std::exception &e) {
-		std::cout << "Constructor: " << e.what() << std::endl;
+		std::cout << "Form constructor: " << e.what() << std::endl;
 	}
 }
 
@@ -53,4 +53,11 @@ unsigned short Form::get_signGradeNeed() const {
 }
 unsigned short Form::get_execGradeNeed() const {
 	return _execGradeNeed;
+}
+
+std::ostream &operator<<(std::ostream &o, const Form &f) {
+	o << "Form <" << f.get_name() << "> grade to sign <";
+	o << f.get_signGradeNeed() << "> grade to execute <";
+	o << f.get_execGradeNeed() << ">" << std::endl;
+	return o;
 }
