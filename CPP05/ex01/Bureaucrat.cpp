@@ -19,7 +19,7 @@ Bureaucrat::Bureaucrat(const std::string &name, const unsigned short int grade) 
 		}
 	}
 	catch (std::exception &e) {
-		std::cout << "Constructor: " << e.what() << std::endl;
+		std::cout << "Bureaucrat constructor: " << e.what() << std::endl;
 	}
 }
 
