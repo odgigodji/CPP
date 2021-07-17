@@ -2,13 +2,6 @@
 // Created by Nelson Amerei on 7/13/21.
 //
 
-//class PEBKASException : public std::exception {
-//public:
-//virtual const char* what()  const throw() {
-//	return ("problem exist between keyboard and chair");
-//}
-//};
-
 #ifndef EX00_BUREAUCRAT_HPP
 #define EX00_BUREAUCRAT_HPP
 #include <iostream>
@@ -30,7 +23,7 @@ public:
 			virtual const char* what() const throw() {
 				return ("Grade too high");
 			}
-		};
+	};
 	class GradeTooLowException : public std::exception {
 		public:
 			virtual const char* what() const throw() {
