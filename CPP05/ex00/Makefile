@@ -1,4 +1,4 @@
-NAME = animal0
+NAME = bureaucrat0
 
 SRC = Bureaucrat.cpp \
       main.cpp

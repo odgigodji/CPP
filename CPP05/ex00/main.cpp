@@ -5,15 +5,16 @@
 
 
 int main() {
-	Bureaucrat rick("rick", 149);
-	std::cout << rick << std::endl;
-	rick.downGrade();
-	std::cout << rick << std::endl;
-	rick.downGrade();
-	std::cout << rick << std::endl;
+	Bureaucrat beth("Beth", 1);
+	std::cout << std::endl;
 
-	Bureaucrat morty("morty", 2);
-	std::cout << morty << std::endl;
+	Bureaucrat rick("Rick", 149);
+	rick.downGrade();
+	std::cout << rick << std::endl;
+	rick.downGrade();
+	std::cout << rick << std::endl << std::endl;
+
+	Bureaucrat morty("Morty", 2);
 	morty.upGrade();
 	std::cout << morty << std::endl;
 	morty.upGrade();

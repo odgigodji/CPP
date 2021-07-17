@@ -23,10 +23,8 @@ public:
     Bureaucrat(const std::string &name, const unsigned short int grade);
 	Bureaucrat(Bureaucrat &i);
 	Bureaucrat &operator=(Bureaucrat const &rhs);
-//	~Bureaucrat();
-//    Bureaucrat(const Bureaucrat &orig);
-//    void GradeTooHighException(const unsigned short int grade) const;
-//    void GradeTooLowException(const unsigned short int grade) const ;
+	~Bureaucrat();
+
 	class GradeTooHighException : public std::exception {
 		public:
 			virtual const char* what() const throw() {
