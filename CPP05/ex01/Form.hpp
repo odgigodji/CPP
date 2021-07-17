@@ -24,6 +24,19 @@ public:
 	bool is_signed() const;
 	unsigned short get_signGradeNeed() const;
 	unsigned short get_execGradeNeed() const;
+
+	class GradeTooHighException : public std::exception {
+	public:
+		virtual const char* what() const throw() {
+			return ("Grade too high.");
+		}
+	};
+	class GradeTooLowException : public std::exception {
+	public:
+		virtual const char* what() const throw() {
+			return ("Grade too low.");
+		}
+	};
 };
 
 std::ostream &operator<<(std::ostream &o, const Form &f);

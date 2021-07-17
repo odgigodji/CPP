@@ -8,14 +8,16 @@ Form::Form(const std::string &name, const unsigned short int signGradeNeed,
 const unsigned short int execGradeNeed) {
 	try {
 		if (signGradeNeed < 1 || execGradeNeed < 1) {
-			throw Bureaucrat::GradeTooHighException();
+			throw GradeTooHighException();
+//			throw Bureaucrat::GradeTooHighException();
 		}
 		if (signGradeNeed > 150 || execGradeNeed > 150) {
-			throw Bureaucrat::GradeTooLowException();
+			throw GradeTooLowException();
 		} else {
 			_name = name;
 			_signGradeNeed = signGradeNeed;
 			_execGradeNeed = execGradeNeed;
+			_signed = false;
 			std::cout << "Form <" << name << "> was created";
 			std::cout << " with grade to sign <" << signGradeNeed << "> and ";
 			std::cout << "with grade to execute <" << execGradeNeed << ">" << std::endl;
