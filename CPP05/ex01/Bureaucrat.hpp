@@ -14,7 +14,7 @@ private:
 
 public:
     Bureaucrat(const std::string &name, const unsigned short int grade);
-	Bureaucrat(Bureaucrat &i);
+	Bureaucrat(Bureaucrat const &i);
 	Bureaucrat &operator=(Bureaucrat const &rhs);
 	~Bureaucrat();
 

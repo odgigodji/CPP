@@ -26,7 +26,7 @@ const unsigned short int execGradeNeed) {
 	}
 }
 
-Form::Form(Form &i) {
+Form::Form(Form const &i) {
 	_name = i._name;
 	_signGradeNeed = i._signGradeNeed;
 	_execGradeNeed = i._execGradeNeed;
@@ -40,3 +40,17 @@ Form &Form::operator=(Form const &rhs) {
 }
 
 Form::~Form() {}
+
+//getters:
+const std::string &Form::get_name() const {
+	return _name;
+}
+bool Form::is_signed() const {
+	return _signed;
+}
+unsigned short Form::get_signGradeNeed() const {
+	return _signGradeNeed;
+}
+unsigned short Form::get_execGradeNeed() const {
+	return _execGradeNeed;
+}

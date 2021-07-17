@@ -27,7 +27,7 @@ const std::string &Bureaucrat::get_name() const { return _name; }
 
 unsigned short Bureaucrat::get_grade() const { return _grade; }
 
-Bureaucrat::Bureaucrat(Bureaucrat &i) {
+Bureaucrat::Bureaucrat(Bureaucrat const &i) {
 	_grade = i._grade;
 	_name = i._name;
 }
