@@ -1,10 +1,24 @@
 #include <iostream>
+#include <stdexcept>
 #include "Bureaucrat.hpp"
 
+
+
 int main() {
-//    int a = 5;
-	Bureaucrat bob("bob", 42);
-	std::cout << bob << std::endl;
-//	std::cout << "hello" << std::endl;
+	Bureaucrat rick("rick", 149);
+	std::cout << rick << std::endl;
+	rick.downGrade();
+	std::cout << rick << std::endl;
+	rick.downGrade();
+	std::cout << rick << std::endl;
+
+	Bureaucrat morty("morty", 2);
+	std::cout << morty << std::endl;
+	morty.upGrade();
+	std::cout << morty << std::endl;
+	morty.upGrade();
+	std::cout << morty << std::endl;
+
+
 	return 0;
 }
