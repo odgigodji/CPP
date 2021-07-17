@@ -1,9 +1,11 @@
-NAME = bureaucrat0
+NAME = form0
 
-SRC = Bureaucrat.cpp \
-      main.cpp
+SRC = 	Bureaucrat.cpp \
+		Form.cpp	\
+      	main.cpp
 
-INC =   Bureaucrat.hpp
+INC =   Bureaucrat.hpp \
+		Form.hpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 

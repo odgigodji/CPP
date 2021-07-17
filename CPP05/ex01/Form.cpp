@@ -9,7 +9,6 @@ const unsigned short int execGradeNeed) {
 	try {
 		if (signGradeNeed < 1 || execGradeNeed < 1) {
 			throw GradeTooHighException();
-//			throw Bureaucrat::GradeTooHighException();
 		}
 		if (signGradeNeed > 150 || execGradeNeed > 150) {
 			throw GradeTooLowException();
