@@ -16,7 +16,8 @@ int main() {
 	f.execute(bob);
 	f.execute(jim);
 	std::cout << std::endl;
-	AForm *form = new ShrubberyCreationForm("form");
+	AForm *form = new ShrubberyCreationForm("formaa");
+	bob.executeForm(*form);
 //	try
 //	{
 //		bob->signForm(*form);

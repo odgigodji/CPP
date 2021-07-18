@@ -52,7 +52,7 @@ void Bureaucrat::set_grade(unsigned short _grade) {
 }
 
 void Bureaucrat::executeForm(AForm const &form) {
-
+	std::cout << "HELLO FROM " << form.get_target() << std::endl;
 }
 
 std::ostream &operator<<(std::ostream &o, const Bureaucrat &bob) {
