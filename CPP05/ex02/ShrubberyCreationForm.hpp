@@ -10,9 +10,7 @@
 
 class ShrubberyCreationForm : public AForm { //sign 145 //ex 137
 public:
-	ShrubberyCreationForm(const std::string &name,
-	                      const unsigned short int signGradeNeed,
-	                      const unsigned short int execGradeNeed);
+	ShrubberyCreationForm(const std::string &target);
 	ShrubberyCreationForm(ShrubberyCreationForm const &i);
 	ShrubberyCreationForm &operator=(ShrubberyCreationForm const &rhs);
 	~ShrubberyCreationForm();

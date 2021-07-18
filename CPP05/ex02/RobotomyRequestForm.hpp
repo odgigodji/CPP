@@ -8,9 +8,7 @@
 
 class RobotomyRequestForm : public AForm { //72, 45
 public:
-	RobotomyRequestForm(const std::string &name,
-	                    const unsigned short int signGradeNeed,
-	                    const unsigned short int execGradeNeed);
+	RobotomyRequestForm(const std::string &target);
 	RobotomyRequestForm(RobotomyRequestForm const &i);
 	RobotomyRequestForm &operator=(RobotomyRequestForm const &rhs);
 	~RobotomyRequestForm();

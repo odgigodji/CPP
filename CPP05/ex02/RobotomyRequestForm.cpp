@@ -5,26 +5,24 @@
 #include "RobotomyRequestForm.hpp"
 #include <unistd.h>
 
-RobotomyRequestForm::RobotomyRequestForm(const std::string &name,
-        const unsigned short int signGradeNeed,
-        const unsigned short int execGradeNeed)
-		: AForm(name, signGradeNeed, execGradeNeed) {
-	try {
-		if (signGradeNeed != 72) {
-			throw GradeNotValid();
-		}
-		if (execGradeNeed != 45) {
-			throw GradeNotValid();
-		} else {
-			std::cout << MAG"RobotomyRequestForm <" << get_name() << "> was created";
-			std::cout << " with grade to sign <" << get_signGradeNeed() << "> and ";
-			std::cout << "with grade to execute <" << get_execGradeNeed() << ">"RESET << std::endl;
-		}
-	}
-	catch (std::exception &e) {
-		std::cout << RED"RobotomyRequestForm constructor: " << e.what();
-		std::cout << RESET << std::endl;
-	}
+RobotomyRequestForm::RobotomyRequestForm(const std::string &target) {
+	set_target(target);
+
+	std::cout << MAG"RobotomyRequestForm with target <" << get_target() << "> was created.";
+	std::cout << RESET << std::endl;
+//	try {
+//		if (signGradeNeed != 72) {
+//			throw GradeNotValid();
+//		}
+//		if (execGradeNeed != 45) {
+//			throw GradeNotValid();
+//		} else {
+//		}
+//	}
+//	catch (std::exception &e) {
+//		std::cout << RED"RobotomyRequestForm constructor: " << e.what();
+//		std::cout << RESET << std::endl;
+//	}
 }
 
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &i) {
@@ -52,6 +50,6 @@ void RobotomyRequestForm::doAction() const {
 	std::cout << "\a zzzz" << std::endl;
 	sleep(1);
 
-	std::cout << "<target> has been ";
+	std::cout << "<" << get_target() << "> has been ";
 	std::cout << "robotomized successfully 50% of the time." << std::endl;
 }

@@ -4,27 +4,27 @@
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(
-		const std::string &name,
-		const unsigned short int signGradeNeed,
-        const unsigned short int execGradeNeed)
-		: AForm(name, signGradeNeed, execGradeNeed) {
-	try {
-		if (signGradeNeed != 145) {
-			throw GradeNotValid();
-		}
-		if (execGradeNeed != 137) {
-			throw GradeNotValid();
-		} else {
-			std::cout << MAG"ShrubberyCreationForm <" << get_name() << "> was created";
-			std::cout << " with grade to sign <" << get_signGradeNeed() << "> and ";
-			std::cout << "with grade to execute <" << get_execGradeNeed() << ">"RESET << std::endl;
-		}
-	}
-	catch (std::exception &e) {
-		std::cout << RED"ShrubberyCreationForm constructor: " << e.what();
-		std::cout << RESET << std::endl;
-	}
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target) {
+	set_target(target);
+
+	std::cout << MAG"ShrubberyCreationForm with target <" << get_target() << "> was created.";
+	std::cout << RESET << std::endl;
+//	try {
+//		if (signGradeNeed != 145) {
+//			throw GradeNotValid();
+//		}
+//		if (execGradeNeed != 137) {
+//			throw GradeNotValid();
+//		} else {
+//			std::cout << MAG"ShrubberyCreationForm <" << get_name() << "> was created";
+//			std::cout << " with grade to sign <" << get_signGradeNeed() << "> and ";
+//			std::cout << "with grade to execute <" << get_execGradeNeed() << ">"RESET << std::endl;
+//		}
+//	}
+//	catch (std::exception &e) {
+//		std::cout << RED"ShrubberyCreationForm constructor: " << e.what();
+//		std::cout << RESET << std::endl;
+//	}
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &i) {
@@ -49,7 +49,9 @@ void ShrubberyCreationForm::doAction() const {
 	std::cout << " - check file \"<target>_shrubbery.\"";
 	std::cout << RESET << std::endl;
 
-	std::ofstream outf("<target>_shrubbery");
+	std::string f = "<";
+	f+= get_target();
+	std::ofstream outf(f.append("_shrubbery").c_str());
 
 	outf << " 		  *                \n";
 	outf << " 		 /|\\              \n";
