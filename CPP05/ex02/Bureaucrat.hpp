@@ -16,6 +16,11 @@ public:
     Bureaucrat(const std::string &name, const unsigned short int grade);
 	Bureaucrat(Bureaucrat const &i);
 	Bureaucrat &operator=(Bureaucrat const &rhs);
+
+	void set_name(const std::string &_name);
+
+	void set_grade(unsigned short _grade);
+
 	~Bureaucrat();
 
 	class GradeTooHighException : public std::exception {

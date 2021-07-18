@@ -29,13 +29,14 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
 void ShrubberyCreationForm::doAction() const {
-	std::cout << CYN"ShrubberyCreationForm: doAction";
-	std::cout << " - check file \"<target>_shrubbery.\"";
-	std::cout << RESET << std::endl;
 
-	std::string f = "<";
+	std::string f = "<"; //name of file for output
 	f+= get_target();
-	std::ofstream outf(f.append("_shrubbery").c_str());
+	std::ofstream outf(f.append(">_shrubbery").c_str());
+
+	std::cout << CYN"ShrubberyCreationForm: doAction";
+	std::cout << " - check file \"" << f << "\".";
+	std::cout << RESET << std::endl;
 
 	outf << " 		  *                \n";
 	outf << " 		 /|\\              \n";

@@ -3,6 +3,7 @@
 //
 
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat(const std::string &name, const unsigned short int grade) {
 	try {
@@ -19,7 +20,7 @@ Bureaucrat::Bureaucrat(const std::string &name, const unsigned short int grade) 
 		}
 	}
 	catch (std::exception &e) {
-		std::cout << "Bureaucrat constructor: " << e.what() << std::endl;
+		std::cout << RED"Bureaucrat constructor: " << e.what() << "."RESET << std::endl;
 	}
 }
 
@@ -39,7 +40,15 @@ Bureaucrat &Bureaucrat::operator=(Bureaucrat const &rhs) {
 }
 
 Bureaucrat::~Bureaucrat() {
-	std::cout << "-Bureaucrat\n";
+//	std::cout << "-Bureaucrat\n";
+}
+
+void Bureaucrat::set_name(const std::string &_name) {
+	Bureaucrat::_name = _name;
+}
+
+void Bureaucrat::set_grade(unsigned short _grade) {
+	Bureaucrat::_grade = _grade;
 }
 
 std::ostream &operator<<(std::ostream &o, const Bureaucrat &bob) {
