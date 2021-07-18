@@ -17,9 +17,6 @@ const unsigned short int execGradeNeed) {
 			_signGradeNeed = signGradeNeed;
 			_execGradeNeed = execGradeNeed;
 			_signed = false;
-//			std::cout << "AForm <" << name << "> was created";
-//			std::cout << " with grade to sign <" << signGradeNeed << "> and ";
-//			std::cout << "with grade to execute <" << execGradeNeed << ">" << std::endl;
 		}
 	}
 	catch (std::exception &e) {
@@ -75,6 +72,14 @@ void AForm::set_signGradeNeed(unsigned short _signGradeNeed) {
 
 void AForm::set_execGradeNeed(unsigned short _execGradeNeed) {
 	AForm::_execGradeNeed = _execGradeNeed;
+}
+
+const std::string &AForm::get_target() const {
+	return _target;
+}
+
+void AForm::set_target(const std::string &_target) {
+	AForm::_target = _target;
 }
 
 std::ostream &operator<<(std::ostream &o, const AForm &f) {

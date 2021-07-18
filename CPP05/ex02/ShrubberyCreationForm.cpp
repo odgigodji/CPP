@@ -16,9 +16,9 @@ ShrubberyCreationForm::ShrubberyCreationForm(
 		if (execGradeNeed != 137) {
 			throw GradeNotValid();
 		} else {
-			std::cout << MAG"ShrubberyCreationForm <" << name << "> was created";
-			std::cout << " with grade to sign <" << signGradeNeed << "> and ";
-			std::cout << "with grade to execute <" << execGradeNeed << ">"RESET << std::endl;
+			std::cout << MAG"ShrubberyCreationForm <" << get_name() << "> was created";
+			std::cout << " with grade to sign <" << get_signGradeNeed() << "> and ";
+			std::cout << "with grade to execute <" << get_execGradeNeed() << ">"RESET << std::endl;
 		}
 	}
 	catch (std::exception &e) {
@@ -29,16 +29,16 @@ ShrubberyCreationForm::ShrubberyCreationForm(
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &i) {
 	set_name(i.get_name());
-//	_signGradeNeed = i._signGradeNeed;
-//	_execGradeNeed = i._execGradeNeed;
-//	_signed = i._signed;
+	set_signGradeNeed(i.get_signGradeNeed());
+	set_execGradeNeed(i.get_execGradeNeed());
+	set_signed(i.is_signed());
 }
 
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm const &rhs) {
-//	_name = rhs._name;
-//	_signGradeNeed = rhs._signGradeNeed;
-//	_execGradeNeed = rhs._execGradeNeed;
-//	_signed = rhs._signed;
+	set_name(rhs.get_name());
+	set_signGradeNeed(rhs.get_signGradeNeed());
+	set_execGradeNeed(rhs.get_execGradeNeed());
+	set_signed(rhs.is_signed());
 	return *this;
 }
 

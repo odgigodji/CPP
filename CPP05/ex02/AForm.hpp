@@ -22,6 +22,7 @@ private:
 	unsigned short int  _signGradeNeed;
 	unsigned short int  _execGradeNeed;
 
+	std::string         _target;
 public:
 	AForm();
 	AForm(const std::string &name, const unsigned short int signGradeNeed,
@@ -29,11 +30,6 @@ public:
 	AForm(AForm const &i);
 	AForm &operator=(AForm const &rhs);
 	virtual ~AForm();
-
-	const std::string &get_name() const;
-	bool is_signed() const;
-	unsigned short get_signGradeNeed() const;
-	unsigned short get_execGradeNeed() const;
 
 	class GradeTooHighException : public std::exception {
 	public:
@@ -58,6 +54,13 @@ public:
 	void set_signed(bool _signed);
 	void set_signGradeNeed(unsigned short _signGradeNeed);
 	void set_execGradeNeed(unsigned short _execGradeNeed);
+	void set_target(const std::string &_target);
+
+	const std::string &get_target() const;
+	const std::string &get_name() const;
+	bool is_signed() const;
+	unsigned short get_signGradeNeed() const;
+	unsigned short get_execGradeNeed() const;
 
 	virtual void doAction() const = 0;
 };

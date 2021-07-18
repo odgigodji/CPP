@@ -16,9 +16,9 @@ RobotomyRequestForm::RobotomyRequestForm(const std::string &name,
 		if (execGradeNeed != 45) {
 			throw GradeNotValid();
 		} else {
-			std::cout << MAG"RobotomyRequestForm <" << name << "> was created";
-			std::cout << " with grade to sign <" << signGradeNeed << "> and ";
-			std::cout << "with grade to execute <" << execGradeNeed << ">"RESET << std::endl;
+			std::cout << MAG"RobotomyRequestForm <" << get_name() << "> was created";
+			std::cout << " with grade to sign <" << get_signGradeNeed() << "> and ";
+			std::cout << "with grade to execute <" << get_execGradeNeed() << ">"RESET << std::endl;
 		}
 	}
 	catch (std::exception &e) {
@@ -28,17 +28,17 @@ RobotomyRequestForm::RobotomyRequestForm(const std::string &name,
 }
 
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &i) {
-//	_name = i._name;
-//	_signGradeNeed = i._signGradeNeed;
-//	_execGradeNeed = i._execGradeNeed;
-//	_signed = i._signed;
+	set_name(i.get_name());
+	set_signGradeNeed(i.get_signGradeNeed());
+	set_execGradeNeed(i.get_execGradeNeed());
+	set_signed(i.is_signed());
 }
 
 RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm const &rhs) {
-//	_name = rhs._name;
-//	_signGradeNeed = rhs._signGradeNeed;
-//	_execGradeNeed = rhs._execGradeNeed;
-//	_signed = rhs._signed;
+	set_name(rhs.get_name());
+	set_signGradeNeed(rhs.get_signGradeNeed());
+	set_execGradeNeed(rhs.get_execGradeNeed());
+	set_signed(rhs.is_signed());
 	return *this;
 }
 
