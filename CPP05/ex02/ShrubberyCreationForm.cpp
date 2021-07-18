@@ -27,9 +27,12 @@ ShrubberyCreationForm::ShrubberyCreationForm(
 	}
 }
 
-//ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &i) {
-//
-//}
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &i) {
+	_name = i._name;
+	_signGradeNeed = i._signGradeNeed;
+	_execGradeNeed = i._execGradeNeed;
+	_signed = i._signed;
+}
 
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm const &rhs) {
 	_name = rhs._name;

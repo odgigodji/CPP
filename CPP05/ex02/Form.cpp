@@ -59,6 +59,8 @@ unsigned short Form::get_execGradeNeed() const {
 	return _execGradeNeed;
 }
 
+Form::Form() {}
+
 std::ostream &operator<<(std::ostream &o, const Form &f) {
 	o << "ShrubberyCreationForm <" << f.get_name() << "> grade to sign <";
 	o << f.get_signGradeNeed() << "> grade to execute <";

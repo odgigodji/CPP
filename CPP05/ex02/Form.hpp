@@ -22,6 +22,7 @@ protected:
 	unsigned short int  _signGradeNeed;
 	unsigned short int  _execGradeNeed;
 public:
+	Form();
 	Form(const std::string &name, const unsigned short int signGradeNeed,
 	     const unsigned short int execGradeNeed);
 	Form(Form const &i);
