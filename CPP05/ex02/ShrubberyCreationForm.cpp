@@ -45,5 +45,18 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
 void ShrubberyCreationForm::doAction() const {
-	std::cout << "doAction\n";
+//	std::cout << "doAction\n";
+	std::ofstream outf("<target>_shrubbery");
+outf << " 		  *                \n";
+outf << " 		 /|\\              \n";
+outf << "        /*|O\\             \n";
+outf << "       /*/|\\*\\           \n";
+outf << "      /X/O|*\\X\\          \n";
+outf << "     /*/X/|\\X\\*\\        \n";
+outf << "    /O/*/X|*\\O\\X\\       \n";
+outf << "   /*/O/X/|\\X\\O\\*\\     \n";
+outf << "  /X/O/*/X|O\\X\\*\\O\\    \n";
+outf << " /O/X/*/O/|\\X\\*\\O\\X\\  \n";
+outf << "         |X|               \n";
+outf << "         |X|               \0";
 }
