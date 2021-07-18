@@ -27,28 +27,16 @@ ShrubberyCreationForm::ShrubberyCreationForm(
 	}
 }
 
-//void ShrubberyCreationForm::doAction() {
-//	;
-//}
-
-//ShrubberyCreationForm::~ShrubberyCreationForm() {
-//
-//}
-
 //ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &i) {
 //
 //}
 
+ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm const &rhs) {
+	_name = rhs._name;
+	_signGradeNeed = rhs._signGradeNeed;
+	_execGradeNeed = rhs._execGradeNeed;
+	_signed = rhs._signed;
+	return *this;
+}
 
-//ShrubberyCreationForm::~ShrubberyCreationForm() {
-//
-//}
-//
-//void ShrubberyCreationForm::doAction() {
-//
-//}
-//
-//ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm const &rhs) {
-//	return <#initializer#>;
-//}
-
+ShrubberyCreationForm::~ShrubberyCreationForm() {}

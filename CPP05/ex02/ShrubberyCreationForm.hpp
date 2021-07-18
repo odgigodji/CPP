@@ -15,7 +15,7 @@ public:
 	                      const unsigned short int execGradeNeed);
 	ShrubberyCreationForm(ShrubberyCreationForm const &i);
 	ShrubberyCreationForm &operator=(ShrubberyCreationForm const &rhs);
-//	~ShrubberyCreationForm();
+	~ShrubberyCreationForm();
 
 //	virtual void doAction();
 };

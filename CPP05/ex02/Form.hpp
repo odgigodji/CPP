@@ -26,7 +26,7 @@ public:
 	     const unsigned short int execGradeNeed);
 	Form(Form const &i);
 	Form &operator=(Form const &rhs);
-	~Form();
+	virtual ~Form();
 
 	const std::string &get_name() const;
 	bool is_signed() const;

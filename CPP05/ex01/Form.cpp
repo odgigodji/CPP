@@ -31,12 +31,14 @@ Form::Form(Form const &i) {
 	_name = i._name;
 	_signGradeNeed = i._signGradeNeed;
 	_execGradeNeed = i._execGradeNeed;
+	_signed = i._signed;
 }
 
 Form &Form::operator=(Form const &rhs) {
 	_name = rhs._name;
 	_signGradeNeed = rhs._signGradeNeed;
 	_execGradeNeed = rhs._execGradeNeed;
+	_signed = rhs._signed;
 	return *this;
 }
 
