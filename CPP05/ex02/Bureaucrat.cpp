@@ -51,8 +51,9 @@ void Bureaucrat::set_grade(unsigned short _grade) {
 	Bureaucrat::_grade = _grade;
 }
 
-void Bureaucrat::executeForm(AForm const &form) {
+void Bureaucrat::executeForm(AForm  &form) {
 	std::cout << "HELLO FROM " << form.get_target() << std::endl;
+	form.execute(*this);
 }
 
 std::ostream &operator<<(std::ostream &o, const Bureaucrat &bob) {

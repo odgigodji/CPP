@@ -42,7 +42,7 @@ public:
     const std::string &get_name() const;
 	unsigned short get_grade() const;
 
-	void executeForm(AForm const & form);
+	void executeForm(AForm & form);
 };
 
 std::ostream &operator<<(std::ostream &o, const Bureaucrat &bob);

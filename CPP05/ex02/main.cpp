@@ -13,11 +13,13 @@ int main() {
 	Bureaucrat bob("bob", 143);
 	Bureaucrat jim("jim", 135);
 //	std::cout << bob.get_grade() << bob.get_name() << std::endl;
-	f.execute(bob);
-	f.execute(jim);
+//	f.execute(bob);
+//	f.execute(jim);
 	std::cout << std::endl;
 	AForm *form = new ShrubberyCreationForm("formaa");
+//	form->doAction();
 	bob.executeForm(*form);
+	jim.executeForm(*form);
 //	try
 //	{
 //		bob->signForm(*form);

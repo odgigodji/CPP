@@ -42,5 +42,5 @@ void RobotomyRequestForm::doAction() const {
 }
 
 void RobotomyRequestForm::execute(Bureaucrat const &executor) {
-
+	(void)executor;
 }

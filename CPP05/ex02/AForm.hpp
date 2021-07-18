@@ -20,7 +20,7 @@ class Bureaucrat;
 class AForm {
 private:
 	std::string         _name;
-	bool                _signed; //in begini is not
+	bool                _signed; //in begin is not
 	unsigned short int  _signGradeNeed;
 	unsigned short int  _execGradeNeed;
 
