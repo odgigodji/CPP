@@ -31,8 +31,6 @@ public:
 			}
 	};
 
-	void upGrade();
-	void downGrade();
     const std::string &get_name() const;
 	unsigned short get_grade() const;
 };

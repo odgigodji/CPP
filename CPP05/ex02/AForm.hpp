@@ -43,12 +43,12 @@ public:
 			return ("Grade too low.");
 		}
 	};
-	class GradeNotValid : public std::exception {
-	public:
-		virtual const char* what() const throw() {
-			return ("Required grade not valid.");
-		}
-	};
+//	class GradeNotValid : public std::exception {
+//	public:
+//		virtual const char* what() const throw() {
+//			return ("Required grade not valid.");
+//		}
+//	};
 
 	void set_name(const std::string &_name);
 	void set_signed(bool _signed);
@@ -63,7 +63,7 @@ public:
 	unsigned short get_execGradeNeed() const;
 
 	virtual void doAction() const = 0;
-	virtual void execute(Bureaucrat const & executor) const = 0;
+	virtual void execute(Bureaucrat const & executor) = 0;
 };
 
 std::ostream &operator<<(std::ostream &o, const AForm &f);

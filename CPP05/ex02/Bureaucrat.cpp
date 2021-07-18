@@ -38,33 +38,9 @@ Bureaucrat &Bureaucrat::operator=(Bureaucrat const &rhs) {
 	return *this;
 }
 
-void Bureaucrat::upGrade() {
-	std::cout << "upGrade";
-	try {
-		if (_grade - 1 < 1) {
-			throw GradeTooHighException();
-		} else { _grade--; }
-	}
-	catch (std::exception& e) {
-		std::cout << ": " << e.what();
-	}
-	std::cout << std::endl;
+Bureaucrat::~Bureaucrat() {
+	std::cout << "-Bureaucrat\n";
 }
-
-void Bureaucrat::downGrade() {
-	std::cout << "downGrade";
-	try {
-		if (_grade + 1 > 150) {
-			throw GradeTooLowException();
-		} else { _grade++; }
-	}
-	catch (std::exception& e) {
-		std::cout << ": " << e.what() << std::endl;
-	}
-	std::cout << std::endl;
-}
-
-Bureaucrat::~Bureaucrat() {}
 
 std::ostream &operator<<(std::ostream &o, const Bureaucrat &bob) {
     o << "<" << bob.get_name() << "> bureacrat grade <" << bob.get_grade() << ">";
