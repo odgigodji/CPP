@@ -46,7 +46,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
 void ShrubberyCreationForm::doAction() const {
 	std::cout << CYN"ShrubberyCreationForm: doAction";
-	std::cout << " - check file <target>_shrubbery.";
+	std::cout << " - check file \"<target>_shrubbery.\"";
 	std::cout << RESET << std::endl;
 
 	std::ofstream outf("<target>_shrubbery");

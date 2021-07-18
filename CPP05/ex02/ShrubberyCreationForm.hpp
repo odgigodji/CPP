@@ -20,19 +20,4 @@ public:
 	virtual void doAction() const;
 };
 
-
-
 #endif //EX02_SHRUBBERYCREATIONFORM_HPP
-//
-//		   *
-//		  /|\
-//       /*|O\
-//      /*/|\*\
-//     /X/O|*\X\
-//    /*/X/|\X\*\
-//   /O/*/X|*\O\X\
-//  /*/O/X/|\X\O\*\
-// /X/O/*/X|O\X\*\O\
-///O/X/*/O/|\X\*\O\X\
-//        |X|
-//        |X|
