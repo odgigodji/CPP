@@ -14,6 +14,7 @@ public:
 	~RobotomyRequestForm();
 
 	virtual void doAction() const;
+	virtual void execute(Bureaucrat const & executor) const;
 };
 
 

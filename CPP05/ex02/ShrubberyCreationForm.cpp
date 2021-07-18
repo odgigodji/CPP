@@ -53,19 +53,23 @@ void ShrubberyCreationForm::doAction() const {
 	outf.close();
 }
 
-//	try {
+void ShrubberyCreationForm::execute(Bureaucrat const &executor) const {
+	try {
 //		if (signGradeNeed != 145) {
 //			throw GradeNotValid();
 //		}
-//		if (execGradeNeed != 137) {
-//			throw GradeNotValid();
-//		} else {
+		if (executor.get_grade() > 137) {
+			throw GradeNotValid();
+		} else {
+			std::cout << MAG"Executor Shrubbery succeec" << RESET << std::endl;
 //			std::cout << MAG"ShrubberyCreationForm <" << get_name() << "> was created";
 //			std::cout << " with grade to sign <" << get_signGradeNeed() << "> and ";
 //			std::cout << "with grade to execute <" << get_execGradeNeed() << ">"RESET << std::endl;
-//		}
-//	}
-//	catch (std::exception &e) {
-//		std::cout << RED"ShrubberyCreationForm constructor: " << e.what();
-//		std::cout << RESET << std::endl;
-//	}
+		}
+	}
+	catch (std::exception &e) {
+		std::cout << RED"Executor Shrubbery: " << e.what();
+		std::cout << RESET << std::endl;
+	}
+}
+

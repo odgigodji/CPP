@@ -9,6 +9,9 @@ int main() {
 	std::cout << std::endl;
 
 	RobotomyRequestForm r("lala"); //72, 45
-	r.doAction();
+//	r.doAction();
+	Bureaucrat bob("bob", 145);
+	f.execute(bob);
+
 	return 0;
 }

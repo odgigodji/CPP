@@ -40,3 +40,7 @@ void RobotomyRequestForm::doAction() const {
 	std::cout << "<" << get_target() << "> has been ";
 	std::cout << "robotomized successfully 50% of the time." << std::endl;
 }
+
+void RobotomyRequestForm::execute(Bureaucrat const &executor) const {
+
+}

@@ -63,6 +63,7 @@ public:
 	unsigned short get_execGradeNeed() const;
 
 	virtual void doAction() const = 0;
+	virtual void execute(Bureaucrat const & executor) const = 0;
 };
 
 std::ostream &operator<<(std::ostream &o, const AForm &f);
