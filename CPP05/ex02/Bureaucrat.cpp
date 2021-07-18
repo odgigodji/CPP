@@ -52,7 +52,6 @@ void Bureaucrat::set_grade(unsigned short _grade) {
 }
 
 void Bureaucrat::executeForm(AForm  &form) {
-	std::cout << "HELLO FROM " << form.get_target() << std::endl;
 	form.execute(*this);
 }
 

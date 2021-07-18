@@ -61,7 +61,9 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) {
 		}
 		else {
 			if (!is_signed()) {
-				std::cout << GRN"Executor Shrubbery successfully signed." << RESET << std::endl;
+//<bureaucrat> executes <form>
+				std::cout << GRN"<" << executor.get_name() << "> successfully signed <";
+				std::cout << get_target() << ">"RESET << std::endl;
 			}
 			set_signed(true);
 		}
@@ -76,8 +78,9 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) {
 			throw GradeTooLowException();
 		}
 		else {
-			std::cout << GRN"Executor Shrubbery successfully executed.";
-			std::cout << RESET << std::endl;
+//<bureaucrat> executes <form>
+			std::cout << GRN"<" << executor.get_name() << "> successfully executed <";
+			std::cout << get_target() << ">"RESET << std::endl;
 		}
 	}
 	catch (std::exception &e) {

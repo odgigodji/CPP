@@ -20,13 +20,6 @@ int main() {
 //	form->doAction();
 	bob.executeForm(*form);
 	jim.executeForm(*form);
-//	try
-//	{
-//		bob->signForm(*form);
-//	}
-//	catch (std::exception & e)
-//	{
-//		std::cerr << e.what() << std::endl;
-//	}
+	
 	return 0;
 }
