@@ -10,19 +10,6 @@ RobotomyRequestForm::RobotomyRequestForm(const std::string &target) {
 
 	std::cout << MAG"RobotomyRequestForm with target <" << get_target() << "> was created.";
 	std::cout << RESET << std::endl;
-//	try {
-//		if (signGradeNeed != 72) {
-//			throw GradeNotValid();
-//		}
-//		if (execGradeNeed != 45) {
-//			throw GradeNotValid();
-//		} else {
-//		}
-//	}
-//	catch (std::exception &e) {
-//		std::cout << RED"RobotomyRequestForm constructor: " << e.what();
-//		std::cout << RESET << std::endl;
-//	}
 }
 
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &i) {
