@@ -6,9 +6,9 @@
 #define EX02_SHRUBBERYCREATIONFORM_HPP
 #include <iostream>
 #include <fstream>
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class ShrubberyCreationForm : public Form { //sign 145 //ex 137
+class ShrubberyCreationForm : public AForm { //sign 145 //ex 137
 public:
 	ShrubberyCreationForm(const std::string &name,
 	                      const unsigned short int signGradeNeed,
@@ -17,8 +17,9 @@ public:
 	ShrubberyCreationForm &operator=(ShrubberyCreationForm const &rhs);
 	~ShrubberyCreationForm();
 
-//	virtual void doAction();
+	virtual void doAction() const;
 };
+
 
 
 #endif //EX02_SHRUBBERYCREATIONFORM_HPP

@@ -2,9 +2,9 @@
 // Created by Nelson Amerei on 17.07.21.
 //
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
-Form::Form(const std::string &name, const unsigned short int signGradeNeed,
+AForm::AForm(const std::string &name, const unsigned short int signGradeNeed,
 const unsigned short int execGradeNeed) {
 	try {
 		if (signGradeNeed < 1 || execGradeNeed < 1) {
@@ -17,25 +17,25 @@ const unsigned short int execGradeNeed) {
 			_signGradeNeed = signGradeNeed;
 			_execGradeNeed = execGradeNeed;
 			_signed = false;
-//			std::cout << "Form <" << name << "> was created";
+//			std::cout << "AForm <" << name << "> was created";
 //			std::cout << " with grade to sign <" << signGradeNeed << "> and ";
 //			std::cout << "with grade to execute <" << execGradeNeed << ">" << std::endl;
 		}
 	}
 	catch (std::exception &e) {
-		std::cout << YEL"Form constructor: " << e.what();
+		std::cout << YEL"AForm constructor: " << e.what();
 		std::cout << RESET << std::endl;
 	}
 }
 
-Form::Form(Form const &i) {
+AForm::AForm(AForm const &i) {
 	_name = i._name;
 	_signGradeNeed = i._signGradeNeed;
 	_execGradeNeed = i._execGradeNeed;
 	_signed = i._signed;
 }
 
-Form &Form::operator=(Form const &rhs) {
+AForm &AForm::operator=(AForm const &rhs) {
 	_name = rhs._name;
 	_signGradeNeed = rhs._signGradeNeed;
 	_execGradeNeed = rhs._execGradeNeed;
@@ -43,25 +43,25 @@ Form &Form::operator=(Form const &rhs) {
 	return *this;
 }
 
-Form::~Form() {}
+AForm::~AForm() {}
 
 //getters:
-const std::string &Form::get_name() const {
+const std::string &AForm::get_name() const {
 	return _name;
 }
-bool Form::is_signed() const {
+bool AForm::is_signed() const {
 	return _signed;
 }
-unsigned short Form::get_signGradeNeed() const {
+unsigned short AForm::get_signGradeNeed() const {
 	return _signGradeNeed;
 }
-unsigned short Form::get_execGradeNeed() const {
+unsigned short AForm::get_execGradeNeed() const {
 	return _execGradeNeed;
 }
 
-Form::Form() {}
+AForm::AForm() {}
 
-std::ostream &operator<<(std::ostream &o, const Form &f) {
+std::ostream &operator<<(std::ostream &o, const AForm &f) {
 	o << "ShrubberyCreationForm <" << f.get_name() << "> grade to sign <";
 	o << f.get_signGradeNeed() << "> grade to execute <";
 	o << f.get_execGradeNeed() << ">" << std::endl;

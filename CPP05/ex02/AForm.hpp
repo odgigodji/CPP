@@ -15,19 +15,19 @@
 # define CYN    "\x1B[36m"
 # define RESET  "\x1B[0m"
 
-class Form {
+class AForm {
 protected:
 	std::string         _name;
 	bool                _signed; //in begini is not
 	unsigned short int  _signGradeNeed;
 	unsigned short int  _execGradeNeed;
 public:
-	Form();
-	Form(const std::string &name, const unsigned short int signGradeNeed,
+	AForm();
+	AForm(const std::string &name, const unsigned short int signGradeNeed,
 	     const unsigned short int execGradeNeed);
-	Form(Form const &i);
-	Form &operator=(Form const &rhs);
-	virtual ~Form();
+	AForm(AForm const &i);
+	AForm &operator=(AForm const &rhs);
+	virtual ~AForm();
 
 	const std::string &get_name() const;
 	bool is_signed() const;
@@ -53,9 +53,9 @@ public:
 		}
 	};
 
-//	virtual void doAction() const = 0;
+	virtual void doAction() const = 0;
 };
 
-std::ostream &operator<<(std::ostream &o, const Form &f);
+std::ostream &operator<<(std::ostream &o, const AForm &f);
 
 #endif //EX01_FORM_HPP

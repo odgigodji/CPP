@@ -8,7 +8,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(
 		const std::string &name,
 		const unsigned short int signGradeNeed,
         const unsigned short int execGradeNeed)
-		: Form(name, signGradeNeed, execGradeNeed) {
+		: AForm(name, signGradeNeed, execGradeNeed) {
 	try {
 		if (signGradeNeed != 145) {
 			throw GradeNotValid();
@@ -43,3 +43,7 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
+
+void ShrubberyCreationForm::doAction() const {
+	std::cout << "doAction\n";
+}
