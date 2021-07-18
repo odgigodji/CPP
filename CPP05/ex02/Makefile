@@ -1,9 +1,16 @@
-NAME = bureaucrat0
+NAME = bureaucrat2
 
-SRC = Bureaucrat.cpp \
-      main.cpp
+SRC = ShrubberyCreationForm.cpp		\
+	  Bureaucrat.cpp		\
+	  RobotomyRequestForm.cpp		\
+	  main.cpp		\
+	  PresidentialPardonForm.cpp		\
+	  Form.cpp
 
-INC =   Bureaucrat.hpp
+INC =   Bureaucrat.hpp	\
+		PresidentialPardonForm.hpp	\
+		RobotomyRequestForm.hpp	\
+		Form.hpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 

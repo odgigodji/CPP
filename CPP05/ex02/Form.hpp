@@ -8,12 +8,13 @@
 #include "Bureaucrat.hpp"
 
 class Form {
-private:
+protected:
 	std::string         _name;
 	bool                _signed; //in begini is not
 	unsigned short int  _signGradeNeed;
 	unsigned short int  _execGradeNeed;
 public:
+	Form();
 	Form(const std::string &name, const unsigned short int signGradeNeed,
 	     const unsigned short int execGradeNeed);
 	Form(Form const &i);
@@ -37,6 +38,14 @@ public:
 			return ("Grade too low.");
 		}
 	};
+	class GradeNotValid : public std::exception {
+	public:
+		virtual const char* what() const throw() {
+			return ("Required grade not valid.");
+		}
+	};
+
+	virtual void doAction() const = 0;
 };
 
 std::ostream &operator<<(std::ostream &o, const Form &f);

@@ -7,10 +7,10 @@
 Form::Form(const std::string &name, const unsigned short int signGradeNeed,
 const unsigned short int execGradeNeed) {
 	try {
-		if (signGradeNeed < 1 || execGradeNeed < 1) {
+		if (signGradeNeed != 137) {
 			throw GradeTooHighException();
 		}
-		if (signGradeNeed > 150 || execGradeNeed > 150) {
+		if (execGradeNeed != 145) {
 			throw GradeTooLowException();
 		} else {
 			_name = name;
@@ -54,6 +54,10 @@ unsigned short Form::get_signGradeNeed() const {
 }
 unsigned short Form::get_execGradeNeed() const {
 	return _execGradeNeed;
+}
+
+Form::Form() {
+
 }
 
 std::ostream &operator<<(std::ostream &o, const Form &f) {
