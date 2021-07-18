@@ -14,7 +14,6 @@ protected:
 	unsigned short int  _signGradeNeed;
 	unsigned short int  _execGradeNeed;
 public:
-	Form();
 	Form(const std::string &name, const unsigned short int signGradeNeed,
 	     const unsigned short int execGradeNeed);
 	Form(Form const &i);
@@ -45,7 +44,7 @@ public:
 		}
 	};
 
-	virtual void doAction() const = 0;
+//	virtual void doAction() const = 0;
 };
 
 std::ostream &operator<<(std::ostream &o, const Form &f);

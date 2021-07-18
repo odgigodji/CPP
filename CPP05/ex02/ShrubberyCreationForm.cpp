@@ -11,25 +11,33 @@ ShrubberyCreationForm::ShrubberyCreationForm(
 		: Form(name, signGradeNeed, execGradeNeed){
 	try {
 		if (signGradeNeed != 145) {
-			throw GradeTooHighException();
+			throw GradeNotValid();
 		}
 		if (execGradeNeed != 137) {
-			throw GradeTooLowException();
+			throw GradeNotValid();
 		} else {
 //			Form(name, signGradeNeed, execGradeNeed);
-			_name = name;
-			_signGradeNeed = signGradeNeed;
-			_execGradeNeed = execGradeNeed;
-			_signed = false;
-			std::cout << "Form <" << name << "> was created";
+//			_name = name;
+//			_signGradeNeed = signGradeNeed;
+//			_execGradeNeed = execGradeNeed;
+//			_signed = false;
+			std::cout << "ShrubberyCreationForm <" << name << "> was created";
 			std::cout << " with grade to sign <" << signGradeNeed << "> and ";
 			std::cout << "with grade to execute <" << execGradeNeed << ">" << std::endl;
 		}
 	}
 	catch (std::exception &e) {
-		std::cout << "Form constructor: " << e.what() << std::endl;
+		std::cout << "ShrubberyCreationForm constructor: " << e.what() << std::endl;
 	}
 }
+
+//void ShrubberyCreationForm::doAction() {
+//	;
+//}
+
+//ShrubberyCreationForm::~ShrubberyCreationForm() {
+//
+//}
 
 //ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &i) {
 //
@@ -47,3 +55,4 @@ ShrubberyCreationForm::ShrubberyCreationForm(
 //ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm const &rhs) {
 //	return <#initializer#>;
 //}
+

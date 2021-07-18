@@ -7,19 +7,19 @@
 Form::Form(const std::string &name, const unsigned short int signGradeNeed,
 const unsigned short int execGradeNeed) {
 	try {
-		if (signGradeNeed != 137) {
+		if (signGradeNeed < 1 || execGradeNeed < 1) {
 			throw GradeTooHighException();
 		}
-		if (execGradeNeed != 145) {
+		if (signGradeNeed > 150 || execGradeNeed > 150) {
 			throw GradeTooLowException();
 		} else {
 			_name = name;
 			_signGradeNeed = signGradeNeed;
 			_execGradeNeed = execGradeNeed;
 			_signed = false;
-			std::cout << "Form <" << name << "> was created";
-			std::cout << " with grade to sign <" << signGradeNeed << "> and ";
-			std::cout << "with grade to execute <" << execGradeNeed << ">" << std::endl;
+//			std::cout << "Form <" << name << "> was created";
+//			std::cout << " with grade to sign <" << signGradeNeed << "> and ";
+//			std::cout << "with grade to execute <" << execGradeNeed << ">" << std::endl;
 		}
 	}
 	catch (std::exception &e) {
@@ -56,12 +56,8 @@ unsigned short Form::get_execGradeNeed() const {
 	return _execGradeNeed;
 }
 
-Form::Form() {
-
-}
-
 std::ostream &operator<<(std::ostream &o, const Form &f) {
-	o << "Form <" << f.get_name() << "> grade to sign <";
+	o << "ShrubberyCreationForm <" << f.get_name() << "> grade to sign <";
 	o << f.get_signGradeNeed() << "> grade to execute <";
 	o << f.get_execGradeNeed() << ">" << std::endl;
 	return o;
