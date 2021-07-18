@@ -10,9 +10,10 @@ int main() {
 
 	RobotomyRequestForm r("lala"); //72, 45
 //	r.doAction();
-	Bureaucrat bob("bob", 155);
+	Bureaucrat bob("bob", 143);
+	Bureaucrat jim("jim", 135);
 //	std::cout << bob.get_grade() << bob.get_name() << std::endl;
-//	f.execute(bob);
-
+	f.execute(bob);
+	f.execute(jim);
 	return 0;
 }

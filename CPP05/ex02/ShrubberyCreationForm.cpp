@@ -58,9 +58,10 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) {
 	try {
 		if (executor.get_grade() > 145) { //cant sign
 			throw GradeTooLowException();
-		}  else {
+		}
+		else {
 			set_signed(true);
-			std::cout << GRN"Executor Shrubbery signed." << RESET << std::endl;
+			std::cout << GRN"Executor Shrubbery successfully signed." << RESET << std::endl;
 		}
 	}
 	catch (std::exception &e) {
@@ -71,8 +72,10 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) {
 	try {
 		if (executor.get_grade() > 137) { //cant execute
 			throw GradeTooLowException();
-		}  else {
-			std::cout << GRN"Executor Shrubbery executed." << RESET << std::endl;
+		}
+		else {
+			std::cout << GRN"Executor Shrubbery successfully executed.";
+			std::cout << RESET << std::endl;
 		}
 	}
 	catch (std::exception &e) {
