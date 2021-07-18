@@ -16,11 +16,12 @@
 # define RESET  "\x1B[0m"
 
 class AForm {
-protected:
+private:
 	std::string         _name;
 	bool                _signed; //in begini is not
 	unsigned short int  _signGradeNeed;
 	unsigned short int  _execGradeNeed;
+
 public:
 	AForm();
 	AForm(const std::string &name, const unsigned short int signGradeNeed,
@@ -52,6 +53,11 @@ public:
 			return ("Required grade not valid.");
 		}
 	};
+
+	void set_name(const std::string &_name);
+	void set_signed(bool _signed);
+	void set_signGradeNeed(unsigned short _signGradeNeed);
+	void set_execGradeNeed(unsigned short _execGradeNeed);
 
 	virtual void doAction() const = 0;
 };

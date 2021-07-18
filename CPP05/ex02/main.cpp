@@ -9,6 +9,6 @@ int main() {
 	std::cout << std::endl;
 
 	RobotomyRequestForm r("r1", 72, 45); //72, 45
-	r.doAction();
+//	r.doAction();
 	return 0;
 }

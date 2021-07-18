@@ -3,6 +3,7 @@
 //
 
 #include "RobotomyRequestForm.hpp"
+#include <unistd.h>
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string &name,
         const unsigned short int signGradeNeed,
@@ -27,22 +28,30 @@ RobotomyRequestForm::RobotomyRequestForm(const std::string &name,
 }
 
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &i) {
-	_name = i._name;
-	_signGradeNeed = i._signGradeNeed;
-	_execGradeNeed = i._execGradeNeed;
-	_signed = i._signed;
+//	_name = i._name;
+//	_signGradeNeed = i._signGradeNeed;
+//	_execGradeNeed = i._execGradeNeed;
+//	_signed = i._signed;
 }
 
 RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm const &rhs) {
-	_name = rhs._name;
-	_signGradeNeed = rhs._signGradeNeed;
-	_execGradeNeed = rhs._execGradeNeed;
-	_signed = rhs._signed;
+//	_name = rhs._name;
+//	_signGradeNeed = rhs._signGradeNeed;
+//	_execGradeNeed = rhs._execGradeNeed;
+//	_signed = rhs._signed;
 	return *this;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
 void RobotomyRequestForm::doAction() const {
-;
+	std::cout << "\a zzz" << std::endl;
+	sleep(1);
+	std::cout << "\a thhhh" << std::endl;
+	sleep(1);
+	std::cout << "\a zzzz" << std::endl;
+	sleep(1);
+
+	std::cout << "<target> has been ";
+	std::cout << "robotomized successfully 50% of the time." << std::endl;
 }

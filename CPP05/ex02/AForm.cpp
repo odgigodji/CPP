@@ -61,6 +61,22 @@ unsigned short AForm::get_execGradeNeed() const {
 
 AForm::AForm() {}
 
+void AForm::set_name(const std::string &_name) {
+	AForm::_name = _name;
+}
+
+void AForm::set_signed(bool _signed) {
+	AForm::_signed = _signed;
+}
+
+void AForm::set_signGradeNeed(unsigned short _signGradeNeed) {
+	AForm::_signGradeNeed = _signGradeNeed;
+}
+
+void AForm::set_execGradeNeed(unsigned short _execGradeNeed) {
+	AForm::_execGradeNeed = _execGradeNeed;
+}
+
 std::ostream &operator<<(std::ostream &o, const AForm &f) {
 	o << "ShrubberyCreationForm <" << f.get_name() << "> grade to sign <";
 	o << f.get_signGradeNeed() << "> grade to execute <";
