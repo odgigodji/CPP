@@ -15,5 +15,15 @@ int main() {
 //	std::cout << bob.get_grade() << bob.get_name() << std::endl;
 	f.execute(bob);
 	f.execute(jim);
+	std::cout << std::endl;
+	AForm *form = new ShrubberyCreationForm("form");
+//	try
+//	{
+//		bob->signForm(*form);
+//	}
+//	catch (std::exception & e)
+//	{
+//		std::cerr << e.what() << std::endl;
+//	}
 	return 0;
 }

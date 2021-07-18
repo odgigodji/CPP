@@ -15,6 +15,8 @@
 # define CYN    "\x1B[36m"
 # define RESET  "\x1B[0m"
 
+class Bureaucrat;
+
 class AForm {
 private:
 	std::string         _name;

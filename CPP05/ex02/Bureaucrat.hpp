@@ -6,6 +6,9 @@
 #define EX00_BUREAUCRAT_HPP
 #include <iostream>
 #include <stdexcept>
+#include "AForm.hpp"
+
+class AForm;
 
 class Bureaucrat {
 private:
@@ -38,6 +41,8 @@ public:
 
     const std::string &get_name() const;
 	unsigned short get_grade() const;
+
+	void executeForm(AForm const & form);
 };
 
 std::ostream &operator<<(std::ostream &o, const Bureaucrat &bob);

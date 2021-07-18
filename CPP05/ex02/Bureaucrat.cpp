@@ -51,6 +51,10 @@ void Bureaucrat::set_grade(unsigned short _grade) {
 	Bureaucrat::_grade = _grade;
 }
 
+void Bureaucrat::executeForm(AForm const &form) {
+
+}
+
 std::ostream &operator<<(std::ostream &o, const Bureaucrat &bob) {
     o << "<" << bob.get_name() << "> bureacrat grade <" << bob.get_grade() << ">";
     return o;
