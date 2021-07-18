@@ -8,7 +8,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(
 		const std::string &name,
 		const unsigned short int signGradeNeed,
         const unsigned short int execGradeNeed)
-		: Form(name, signGradeNeed, execGradeNeed){
+		: Form(name, signGradeNeed, execGradeNeed) {
 	try {
 		if (signGradeNeed != 145) {
 			throw GradeNotValid();
@@ -16,18 +16,14 @@ ShrubberyCreationForm::ShrubberyCreationForm(
 		if (execGradeNeed != 137) {
 			throw GradeNotValid();
 		} else {
-//			Form(name, signGradeNeed, execGradeNeed);
-//			_name = name;
-//			_signGradeNeed = signGradeNeed;
-//			_execGradeNeed = execGradeNeed;
-//			_signed = false;
-			std::cout << "ShrubberyCreationForm <" << name << "> was created";
+			std::cout << MAG"ShrubberyCreationForm <" << name << "> was created";
 			std::cout << " with grade to sign <" << signGradeNeed << "> and ";
-			std::cout << "with grade to execute <" << execGradeNeed << ">" << std::endl;
+			std::cout << "with grade to execute <" << execGradeNeed << ">"RESET << std::endl;
 		}
 	}
 	catch (std::exception &e) {
-		std::cout << "ShrubberyCreationForm constructor: " << e.what() << std::endl;
+		std::cout << RED"ShrubberyCreationForm constructor: " << e.what();
+		std::cout << RESET << std::endl;
 	}
 }
 

@@ -23,7 +23,8 @@ const unsigned short int execGradeNeed) {
 		}
 	}
 	catch (std::exception &e) {
-		std::cout << "Form constructor: " << e.what() << std::endl;
+		std::cout << YEL"Form constructor: " << e.what();
+		std::cout << RESET << std::endl;
 	}
 }
 
