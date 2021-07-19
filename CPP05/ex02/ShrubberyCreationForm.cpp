@@ -6,6 +6,8 @@
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target) {
 	set_target(target);
+	set_signGradeNeed(145);
+	set_execGradeNeed(137);
 
 	std::cout << MAG"ShrubberyCreationForm with target <" << get_target() << "> was created.";
 	std::cout << RESET << std::endl;
@@ -54,9 +56,9 @@ void ShrubberyCreationForm::doAction() const {
 	outf.close();
 }
 
-void ShrubberyCreationForm::execute(Bureaucrat const &executor) {
+bool ShrubberyCreationForm::execute(Bureaucrat const &executor) {
 	try {
-		if (executor.get_grade() > 145 && !is_signed()) { //cant sign
+		if (executor.get_grade() > get_signGradeNeed() && !is_signed()) { //cant sign
 			throw GradeTooLowException();
 		}
 		else {
@@ -72,5 +74,23 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) {
 		std::cout << executor.get_name() << ">'s " << e.what();
 		std::cout << RESET << std::endl;
 	}
+
+	try {
+		//check grade and is signed
+		if (executor.get_grade() > get_execGradeNeed() || !is_signed()) {
+			throw GradeTooLowException();
+		}
+		else {
+			std::cout << GRN"<" << executor.get_name() << "> execution permit <";
+			std::cout << get_target() << ">"RESET << std::endl;
+//			doAction();
+		}
+	}
+	catch (std::exception &e) {
+//		std::cout << RED"Executor Shrubbery: can't execute, <";
+//		std::cout << executor.get_name() << ">'s " << e.what();
+//		std::cout << RESET << std::endl;
+	}
+	return (is_signed());
 }
 

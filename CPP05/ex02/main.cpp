@@ -10,7 +10,7 @@ int main() {
 
 //	RobotomyRequestForm r("lala"); //72, 45
 //	r.doAction();
-//	std::cout << std::endl;
+	std::cout << std::endl;
 
 
 	Bureaucrat bob("bob", 146);
@@ -19,13 +19,13 @@ int main() {
 	std::cout << std::endl;
 
 	//check execute
-	AForm *shruberry_form_0 = new ShrubberyCreationForm("shruberry_form_0");
+	AForm *shruberry_0 = new ShrubberyCreationForm("shrubberry_0");
 //	form->doAction();
-	bob.executeForm(*shruberry_form_0);
-	jim.executeForm(*shruberry_form_0);
+	bob.executeForm(*shruberry_0);
+	jim.executeForm(*shruberry_0);
 	std::cout << std::endl;
 
-	AForm *robotomy_0 = new RobotomyRequestForm("robotomy_0");
-	bob.executeForm(*robotomy_0);
+//	AForm *robotomy_0 = new RobotomyRequestForm("robotomy_0");
+//	bob.executeForm(*robotomy_0);
 	return 0;
 }

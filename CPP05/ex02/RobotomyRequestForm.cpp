@@ -41,7 +41,7 @@ void RobotomyRequestForm::doAction() const {
 	std::cout << "robotomized successfully 50% of the time." << std::endl;
 }
 
-void RobotomyRequestForm::execute(Bureaucrat const &executor) {
+bool RobotomyRequestForm::execute(Bureaucrat const &executor) {
 	try {
 		if (executor.get_grade() > 72 && !is_signed()) { //cant sign
 			throw GradeTooLowException();
