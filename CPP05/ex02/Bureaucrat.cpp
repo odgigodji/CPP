@@ -63,7 +63,7 @@ void Bureaucrat::executeForm(AForm  &form) {
 		}
 	}
 	catch (std::exception &e) {
-		std::cout << RED"ExecuteForm: can't execute, <";
+		std::cout << RED"Error: ExecuteForm: can't execute, <";
 		std::cout << get_name() << ">'s " << e.what();
 		std::cout << RESET << std::endl;
 	}

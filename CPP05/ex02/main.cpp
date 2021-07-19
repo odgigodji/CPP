@@ -15,6 +15,7 @@ int main() {
 
 	Bureaucrat bob("bob", 146);
 	Bureaucrat jim("jim", 135);
+	Bureaucrat jack("Jack", 42);
 //
 	std::cout << std::endl;
 
@@ -25,7 +26,9 @@ int main() {
 	jim.executeForm(*shruberry_0);
 	std::cout << std::endl;
 
-//	AForm *robotomy_0 = new RobotomyRequestForm("robotomy_0");
-//	bob.executeForm(*robotomy_0);
+	AForm *robotomy_0 = new RobotomyRequestForm("robotomy_0");
+	bob.executeForm(*robotomy_0);
+	jim.executeForm(*robotomy_0);
+	jack.executeForm(*robotomy_0);
 	return 0;
 }

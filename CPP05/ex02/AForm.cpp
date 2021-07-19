@@ -89,16 +89,16 @@ bool AForm::execute(Bureaucrat const &executor) {
 		}
 		else {
 			if (!is_signed()) {
-//				std::cout << GRN"<" << executor.get_name() << "> successfully signed <";
-//				std::cout << get_target() << ">"RESET << std::endl;
+				std::cout << GRN"<" << executor.get_name() << "> successfully signed <";
+				std::cout << get_target() << ">"RESET << std::endl;
 			}
 			set_signed(true);
 		}
 	}
 	catch (std::exception &e) {
-		std::cout << RED"Form <" << get_target() << "> can't sign, <";
-		std::cout << executor.get_name() << ">'s " << e.what();
-		std::cout << RESET << std::endl;
+//		std::cout << RED"Error: Form <" << get_target() << "> can't sign, <";
+//		std::cout << executor.get_name() << ">'s " << e.what();
+//		std::cout << RESET << std::endl;
 	}
 
 	try {
