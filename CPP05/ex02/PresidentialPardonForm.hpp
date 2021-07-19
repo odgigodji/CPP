@@ -4,10 +4,17 @@
 
 #ifndef EX02_PRESIDENTIALPARDONFORM_HPP
 #define EX02_PRESIDENTIALPARDONFORM_HPP
+#include <iostream>
+#include "AForm.hpp"
 
+class PresidentialPardonForm : public AForm {
+public:
+	PresidentialPardonForm(const std::string &target);
+	PresidentialPardonForm(PresidentialPardonForm const& i);
+	PresidentialPardonForm &operator=(PresidentialPardonForm const &rhs);
+	~PresidentialPardonForm();
 
-class PresidentialPardonForm {
-
+	virtual void doAction() const;
 };
 
 

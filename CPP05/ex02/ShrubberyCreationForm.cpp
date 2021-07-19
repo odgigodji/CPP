@@ -18,6 +18,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &i) {
 	set_signGradeNeed(i.get_signGradeNeed());
 	set_execGradeNeed(i.get_execGradeNeed());
 	set_signed(i.is_signed());
+	set_target(i.get_target());
 }
 
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm const &rhs) {
@@ -25,6 +26,7 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 	set_signGradeNeed(rhs.get_signGradeNeed());
 	set_execGradeNeed(rhs.get_execGradeNeed());
 	set_signed(rhs.is_signed());
+	set_target(rhs.get_target());
 	return *this;
 }
 
