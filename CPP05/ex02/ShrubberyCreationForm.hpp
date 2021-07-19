@@ -16,7 +16,7 @@ public:
 	~ShrubberyCreationForm();
 
 	virtual void doAction() const;
-	virtual bool execute(Bureaucrat const &executor);
+//	virtual bool execute(Bureaucrat const &executor);
 };
 
 #endif //EX02_SHRUBBERYCREATIONFORM_HPP
