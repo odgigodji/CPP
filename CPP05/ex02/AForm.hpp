@@ -45,12 +45,6 @@ public:
 			return ("Grade too low.");
 		}
 	};
-//	class GradeNotValid : public std::exception {
-//	public:
-//		virtual const char* what() const throw() {
-//			return ("Required grade not valid.");
-//		}
-//	};
 
 	void set_name(const std::string &_name);
 	void set_signed(bool _signed);

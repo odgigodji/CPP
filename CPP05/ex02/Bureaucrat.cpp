@@ -53,6 +53,22 @@ void Bureaucrat::set_grade(unsigned short _grade) {
 
 void Bureaucrat::executeForm(AForm  &form) {
 	form.execute(*this);
+	try {
+		//check grade and is signed
+		if (this->get_grade() > 137 || !form.is_signed()) {
+			throw GradeTooLowException();
+		}
+		else {
+			std::cout << GRN"<" << this->get_name() << "> successfully executed <";
+			std::cout << form.get_target() << ">"RESET << std::endl;
+			form.doAction();
+		}
+	}
+	catch (std::exception &e) {
+		std::cout << RED"Executor Shrubbery: can't execute <";
+		std::cout << this->get_name() << ">'s " << e.what();
+		std::cout << RESET << std::endl;
+	}
 }
 
 std::ostream &operator<<(std::ostream &o, const Bureaucrat &bob) {
