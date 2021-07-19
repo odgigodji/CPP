@@ -68,7 +68,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) {
 		}
 	}
 	catch (std::exception &e) {
-		std::cout << RED"Executor Shrubbery: can't sign. <";
+		std::cout << RED"Executor Shrubbery: can't sign, <";
 		std::cout << executor.get_name() << ">'s " << e.what();
 		std::cout << RESET << std::endl;
 	}

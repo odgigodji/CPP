@@ -42,5 +42,21 @@ void RobotomyRequestForm::doAction() const {
 }
 
 void RobotomyRequestForm::execute(Bureaucrat const &executor) {
-	(void)executor;
+	try {
+		if (executor.get_grade() > 72 && !is_signed()) { //cant sign
+			throw GradeTooLowException();
+		}
+		else {
+			if (!is_signed()) {
+				std::cout << GRN"<" << executor.get_name() << "> successfully signed <";
+				std::cout << get_target() << ">"RESET << std::endl;
+			}
+			set_signed(true);
+		}
+	}
+	catch (std::exception &e) {
+		std::cout << RED"Executor Shrubbery: can't sign, <";
+		std::cout << executor.get_name() << ">'s " << e.what();
+		std::cout << RESET << std::endl;
+	}
 }

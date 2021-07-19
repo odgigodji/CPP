@@ -61,11 +61,11 @@ void Bureaucrat::executeForm(AForm  &form) {
 		else {
 			std::cout << GRN"<" << this->get_name() << "> successfully executed <";
 			std::cout << form.get_target() << ">"RESET << std::endl;
-			form.doAction();
+//			form.doAction();
 		}
 	}
 	catch (std::exception &e) {
-		std::cout << RED"Executor Shrubbery: can't execute <";
+		std::cout << RED"Executor Shrubbery: can't execute, <";
 		std::cout << this->get_name() << ">'s " << e.what();
 		std::cout << RESET << std::endl;
 	}

@@ -13,16 +13,19 @@ int main() {
 //	std::cout << std::endl;
 
 
-	Bureaucrat bob("bob", 142);
+	Bureaucrat bob("bob", 146);
 	Bureaucrat jim("jim", 135);
 //
 	std::cout << std::endl;
 
 	//check execute
-	AForm *form = new ShrubberyCreationForm("formaa");
+	AForm *shruberry_form_0 = new ShrubberyCreationForm("shruberry_form_0");
 //	form->doAction();
-	bob.executeForm(*form);
-	jim.executeForm(*form);
+	bob.executeForm(*shruberry_form_0);
+	jim.executeForm(*shruberry_form_0);
+	std::cout << std::endl;
 
+	AForm *robotomy_0 = new RobotomyRequestForm("robotomy_0");
+	bob.executeForm(*robotomy_0);
 	return 0;
 }
