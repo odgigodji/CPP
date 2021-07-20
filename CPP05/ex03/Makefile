@@ -5,11 +5,13 @@ SRC = ShrubberyCreationForm.cpp		\
 	  RobotomyRequestForm.cpp		\
 	  main.cpp		\
 	  PresidentialPardonForm.cpp		\
+	  Intern.cpp \
 	  AForm.cpp
 
 INC =   Bureaucrat.hpp	\
 		PresidentialPardonForm.hpp	\
 		RobotomyRequestForm.hpp	\
+		Intern.hpp \
 		AForm.hpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98

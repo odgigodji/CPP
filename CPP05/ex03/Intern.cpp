@@ -9,12 +9,6 @@
 
 Intern::Intern() {}
 
-Intern::Intern(Intern const &i) {}
-
-Intern &Intern::operator=(Intern const &rhs) {
-	return *this;
-}
-
 Intern::~Intern() {}
 
 int Intern::formIs(std::string form) {
