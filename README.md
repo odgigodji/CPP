@@ -13,6 +13,8 @@
 
 ### [Module05](https://github.com/odgigodji/CPP/tree/master/CPP05) : Повторение и исключения.
 
+### [Module06](https://github.com/odgigodji/CPP/tree/master/CPP06) : Приведение типов.
+
 ### Для создания исполняемых файлов использовать команду `make`
 
 ## Resources
