@@ -13,8 +13,15 @@ public:
 	Intern(Intern const &i);
 	Intern &operator=(Intern const &rhs);
 	~Intern();
+	class IncorrectForm : public std::exception {
+	public:
+		virtual const char* what() const throw() {
+			return ("Incorrect form");
+		}
+	};
 
 //	AMateria *clone() const;
+	int formIs(std::string form);
 	AForm *makeForm(std::string const form, std::string const target);
 };
 

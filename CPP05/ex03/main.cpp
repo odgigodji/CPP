@@ -7,7 +7,13 @@
 
 int main() {
 	Intern someRandomIntern;
+
 	AForm *rrf;
-	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	//shrubbery request/robotomy request/presidential request
+	rrf = someRandomIntern.makeForm("presidential request", "Bender");
+
+	Bureaucrat john("john", 20);
+	john.executeForm(*rrf);
+
 	return 0;
 }
