@@ -49,8 +49,8 @@ int main(int ac, char **av) {
 //	std::cout << "input: " << av[1] << std::endl;
 //	getType(static_cast<std::string>(av[1]));
 
-	Convert a("42");
-//	std::cout << "int: " << a.ConvertToInt() << std::endl;
+	Convert a("12348812348182349819238401120438042");
+//	std::cout << "int: " << a.convertToInt() << std::endl;
 	a.printInt();
 
 	return 0;

@@ -6,7 +6,7 @@
 
 Convert::Convert(const std::string str) {
 	_string = str;
-	ConvertToInt();
+//		convertToInt();
 }
 
 Convert::Convert(const Convert &i) {
@@ -30,27 +30,45 @@ Convert::~Convert() {}
 
 Convert::Convert() {}
 
-const std::string &Convert::get_string() const {
-	return _string;
+//INT:
+void Convert::convertToInt() {
+	set_int(atoi(_string.c_str()));
+	if (_int == -1 && _string != "-1") { throw ("too long num"); }
+	if (_int == 0 && _string != "0") { throw ("impossible"); }
 }
-
-void Convert::ConvertToInt() {
-	_int = atoi(_string.c_str());
-}
-
-void Convert::convertToChar() {
-	_char = _string.c_str()[0];
-
-}
-
-void Convert::printInt() const {
+void Convert::printInt() {
 	std::cout << "int: ";
+
 	try {
-		if (_string == "0") { std::cout << "0"; }
-		else if (_int == 0) { throw (RED"impossible"); }
-		else { std::cout << _int; }
-	} catch (const char *e) {
-		std::cout << e << RESET;
+		convertToInt();
+		std::cout << get_int();
 	}
+	catch (const char *e) { std::cout << RED << e << RESET; }
+
 	std::cout << std::endl;
 }
+
+//CHAR:
+void Convert::convertToChar() {
+	if (get_string().length() == 2) { //if just char
+		set_char(get_string()[0]);
+		if (get_char() < 32 || get_char()> 122) { throw "Non displayable"; }
+	}
+}
+void Convert::printChar() {
+
+}
+
+//getters:
+const std::string &Convert::get_string() const { return _string; }
+int Convert::get_int() const { return _int; }
+char Convert::get_char() const { return _char; }
+float Convert::get_float() const { return _float; }
+double Convert::get_double() const { return _double; }
+
+//setters:
+void Convert::set_int(int _int) { Convert::_int = _int; }
+void Convert::set_char(char _char) { Convert::_char = _char; }
+void Convert::set_float(float _float) { Convert::_float = _float; }
+void Convert::set_double(double _double) { Convert::_double = _double; }
+
