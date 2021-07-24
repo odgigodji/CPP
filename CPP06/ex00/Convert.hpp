@@ -10,14 +10,7 @@
 #include <cctype>
 
 # define RED    "\x1B[31m"
-# define WTH    "\x1B[38m"
-# define GRN    "\x1B[32m"
-# define YEL    "\x1B[33m"
-# define BLU    "\x1B[34m"
-# define MAG    "\x1B[35m"
-# define CYN    "\x1B[36m"
 # define RESET  "\x1B[0m"
-
 
 class Convert {
 private:
@@ -28,14 +21,11 @@ private:
 	double      _double;
 
 	Convert();
-	const std::string &get_string() const;
 public:
 	Convert(const std::string str);
 	Convert(const Convert &i);
 	Convert &operator=(const Convert &rhs);
 	~Convert();
-
-	void set_string(const std::string &_string);
 
 	void convertToInt();
 	void printInt();
@@ -50,10 +40,13 @@ public:
 	void printDouble();
 
 //getters and ssetters:
+	void set_string(const std::string &_string);
 	void set_int(int _int);
 	void set_char(char _char);
 	void set_float(float _float);
 	void set_double(double _double);
+
+	const std::string &get_string() const;
 	int get_int() const;
 	char get_char() const;
 	float get_float() const;

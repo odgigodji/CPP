@@ -4,25 +4,22 @@
 
 #include "Convert.hpp"
 
-Convert::Convert(const std::string str) {
-	_string = str;
-//		convertToInt();
-}
+Convert::Convert(const std::string str) : _string(str) {}
 
 Convert::Convert(const Convert &i) {
-	_string = i._string;
-	_char   = i._char;
-	_int    = i._int;
-	_float  = i._float;
-	_double = i._double;
+	set_string(i.get_string());
+	set_char(i.get_char());
+	set_double(i.get_double());
+	set_float(i.get_float());
+	set_int(i.get_int());
 }
 
 Convert &Convert::operator=(const Convert &rhs) {
-	_string = rhs._string;
-	_char   = rhs._char;
-	_int    = rhs._int;
-	_float  = rhs._float;
-	_double = rhs._double;
+	set_string(rhs.get_string());
+	set_char(rhs.get_char());
+	set_double(rhs.get_double());
+	set_float(rhs.get_float());
+	set_int(rhs.get_int());
 	return *this;
 }
 
@@ -38,27 +35,22 @@ void Convert::convertToInt() {
 }
 void Convert::printInt() {
 	std::cout << "int: ";
-
 	try {
 		convertToInt();
 		std::cout << get_int();
 	}
 	catch (const char *e) { std::cout << RED << e << RESET; }
-
 	std::cout << std::endl;
 }
 
 //CHAR:
 void Convert::convertToChar() {
-//	std::cout << "string lengt is " << get_string().length() << std::endl;
 	if (get_string().length() < 2 && !isdigit(get_string()[0])) { //if just char
 		set_char(static_cast<char>(get_string()[0]));
 	}
-	//if num in string
-	else {
+	else { 	//if num in string
 		set_char(static_cast<char>(atoi(get_string().c_str())));
 	}
-//	else { set_char(static_cast<char>(-1)); }
 	if (static_cast<int>(get_char()) <= 32 || static_cast<int>(get_char()) >= 127) {
 		throw "Non displayable"; }
 }
