@@ -23,7 +23,7 @@ Data* deserialize(uintptr_t raw) {
 
 	tmp = (void *)raw;
 	ptr = static_cast<Data *>(tmp);
-	std::cout << "last pointer is " << ptr << std::endl;
+	std::cout << "last pointer is  " << ptr << std::endl;
 	return ptr;
 }
 
