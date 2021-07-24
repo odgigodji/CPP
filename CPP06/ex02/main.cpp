@@ -26,6 +26,7 @@ Base *generate(void) {
 /*
  * identify: displays "A", "B" or "C" accord-
 ing to the real type of p.
+ + приведением к базовому типу
  */
 
 void identify(Base* p) {

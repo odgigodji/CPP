@@ -1,6 +1,6 @@
 #include <iostream>
 #include <z3.h>
-#include <cstdint>
+//#include <cstdint>
 
 struct Data {
 	std::string name;
@@ -38,8 +38,10 @@ int main() {
 	std::cout << "Raw is " << raw << std::endl;
 
 //call deserialize
-	Data *b = new Data;
+	Data *b;
 	b = deserialize(raw);
 	std::cout << "Data b: type: \"" << b->name << "\" age: " << b->age << std::endl;
+
+	delete b;
 	return 0;
 }
