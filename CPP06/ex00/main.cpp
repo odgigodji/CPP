@@ -22,39 +22,20 @@ double getDouble(std::string av) {
 	return tmp;
 }
 
-int getInt(std::string av) {
-	int i;
-	std::string num = "-42";
-	//approach one
-//	std::istringstream(av) >> i;
-//	i = atoi(av.c_str());
-	i = atoi(num.c_str());
-	std::cout << "getInt: int res is " << i << std::endl;
-
-	return i;
-}
-
-int getType(std::string av) {
-//	getInt(av);
-	getFloat(av);
-//	getDouble(av);
-	return 0;
-}
-
 int main(int ac, char **av) {
 //	if (ac != 2) {return 1;}
-//	const char a[] = "hello";
-//	std::string = a;
-//	std::cout << a << std::endl;
-//	std::cout << "input: " << av[1] << std::endl;
-//	getType(static_cast<std::string>(av[1]));
 
-	Convert a("1d8");
+	Convert a("42.00001f");
 //	std::cout << "int: " << a.convertToInt() << std::endl;
-	a.printInt();
+	a.printChar();
 
 //	a.set_string("-42"); //-42 , 0, 1, ad, a, 123, 200 ,
-	a.printChar();
+	a.printInt();
+
+//	a.set_string("-42.00051");
+	a.printFloat();
+
+	a.printDouble();
 	return 0;
 }
 

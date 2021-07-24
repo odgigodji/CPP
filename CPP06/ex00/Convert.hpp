@@ -26,10 +26,6 @@ private:
 	char        _char;
 	float       _float;
 	double      _double;
-public:
-	int get_int() const;
-
-private:
 
 	Convert();
 	const std::string &get_string() const;
@@ -47,11 +43,18 @@ public:
 	void convertToChar();
 	void printChar();
 
+	void convertToFloat();
+	void printFloat();
+
+	void convertToDouble();
+	void printDouble();
+
 //getters and ssetters:
 	void set_int(int _int);
 	void set_char(char _char);
 	void set_float(float _float);
 	void set_double(double _double);
+	int get_int() const;
 	char get_char() const;
 	float get_float() const;
 	double get_double() const;

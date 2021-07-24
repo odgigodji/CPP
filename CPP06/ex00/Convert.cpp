@@ -53,9 +53,12 @@ void Convert::convertToChar() {
 //	std::cout << "string lengt is " << get_string().length() << std::endl;
 	if (get_string().length() < 2 && !isdigit(get_string()[0])) { //if just char
 		set_char(static_cast<char>(get_string()[0]));
-	} else if (get_string().length() <= 3) { //if num in string
+	}
+	//if num in string
+	else {
 		set_char(static_cast<char>(atoi(get_string().c_str())));
-	} else { set_char(static_cast<char>(1)); }
+	}
+//	else { set_char(static_cast<char>(-1)); }
 	if (static_cast<int>(get_char()) <= 32 || static_cast<int>(get_char()) >= 127) {
 		throw "Non displayable"; }
 }
@@ -68,6 +71,40 @@ void Convert::printChar() {
 	}
 	catch (const char *e) { std::cout << RED << e << RESET; }
 
+	std::cout << std::endl;
+}
+
+//FLOAT:
+void Convert::convertToFloat() {
+	set_float(static_cast<float>(atof(_string.c_str())));
+	if (_int == -1 && _string != "-1") { throw ("too long float"); }
+	if (_int == 0 && _string != "0") { throw ("impossible"); }
+}
+void Convert::printFloat() {
+	std::cout << "float: ";
+	try {
+		convertToFloat();
+		std::cout.precision(7);
+		std::cout << static_cast<float>(get_float());
+	}
+	catch (const char *e) { std::cout << RED << e << RESET; }
+	std::cout << std::endl;
+}
+
+//DOUBLE:
+void Convert::convertToDouble() {
+	set_double(atof(_string.c_str()));
+	if (_int == -1 && _string != "-1") { throw ("too long double"); }
+	if (_int == 0 && _string != "0") { throw ("impossible"); }
+}
+void Convert::printDouble() {
+	std::cout << "double: ";
+	try {
+		convertToDouble();
+		std::cout.precision(7);
+		std::cout << get_double();
+	}
+	catch (const char *e) { std::cout << RED << e << RESET; }
 	std::cout << std::endl;
 }
 
@@ -84,5 +121,9 @@ void Convert::set_int(int _int) { Convert::_int = _int; }
 void Convert::set_char(char _char) { Convert::_char = _char; }
 void Convert::set_float(float _float) { Convert::_float = _float; }
 void Convert::set_double(double _double) { Convert::_double = _double; }
+
+
+
+
 
 
