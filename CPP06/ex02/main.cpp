@@ -19,9 +19,11 @@ Base *generate(void) {
 		case 2:
 			std::cout << "new B" << std::endl;
 			return (res = new B);
-		default:
+		case 3:
 			std::cout << "new C" << std::endl;
 			return (res = new C);
+		default:
+			return (res = new Base);
 	}
 }
 
@@ -33,33 +35,38 @@ ing to the real type of p.
 
 void identify(Base* p) {
 	std::cout << "identyfy PTR: ";
-	A *a;
-	B *b;
-	C *c;
 
 //dynamic cast return null if casting failed
-	if ((a = dynamic_cast<A *>(p))) { std::cout << "it's A" << std::endl; }
-	else if ((b = dynamic_cast<B *>(p))) { std::cout << "it's B" << std::endl; }
-	else if ((c = dynamic_cast<C *>(p))) {std::cout << "it's C" << std::endl; }
+	if ((dynamic_cast<A *>(p))) {
+		std::cout << "it's A" << std::endl;
+	} else if ((dynamic_cast<B *>(p))) {
+		std::cout << "it's B" << std::endl;
+	} else if ((dynamic_cast<C *>(p))) {
+		std::cout << "it's C" << std::endl;
+	}
 }
 
 //with reference dynamic cast can't return null, but throw exception bad_cast
 void identify(Base& p) {
 	std::cout << "identyfy REf: ";
+
 	try {
 		A &a = dynamic_cast<A &>(p);
+		(void)a;
 		std::cout << "it's A" << std::endl;
 	}
 	catch (std::bad_cast &e) {}
 
 	try {
-		B &a = dynamic_cast<B &>(p);
+		B &b = dynamic_cast<B &>(p);
+		(void)b;
 		std::cout << "it's B" << std::endl;
 	}
 	catch (std::bad_cast &e) {}
 
 	try {
 		C &c = dynamic_cast<C &>(p);
+		(void)c;
 		std::cout << "it's C" << std::endl;
 	}
 	catch (std::bad_cast &e) {}
