@@ -1,9 +1,9 @@
 NAME = convert
 
-SRC = Bureaucrat.cpp \
+SRC = Convert.cpp \
       main.cpp
 
-INC =   Bureaucrat.hpp
+INC =  Convert.hpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 

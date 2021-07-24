@@ -53,5 +53,4 @@ public:
 	double get_double() const;
 };
 
-
 #endif //EX00_CASTING_HPP

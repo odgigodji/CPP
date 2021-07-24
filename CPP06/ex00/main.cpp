@@ -2,9 +2,11 @@
 #include "Convert.hpp"
 
 int main(int ac, char **av) {
-//	if (ac != 2) {return 1;}
+	if (ac != 2) {
+		std::cout << RED"One argument needed."RESET << std::endl;
+		return 1;
+	}
 
-	av[1] = static_cast<char *>("0.00000000000001234");
 	Convert a(av[1]);
 	a.printChar();
 	a.printInt(); //-42 , 0, 1, ad, a, 123, 200 ,
