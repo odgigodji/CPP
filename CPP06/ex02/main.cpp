@@ -35,9 +35,13 @@ void identify(Base* p) {
 	C *c;
 
 //dynamic cast return null if casting failed
-	if ((a = dynamic_cast<A *>(p))) { std::cout << "its A" << std::endl; }
-	else if ((b = dynamic_cast<B *>(p))) { std::cout << "its B" << std::endl; }
+	if ((a = dynamic_cast<A *>(p))) { std::cout << "it's A" << std::endl; }
+	else if ((b = dynamic_cast<B *>(p))) { std::cout << "it's B" << std::endl; }
 	else {std::cout << "it's C" << std::endl; }
+}
+
+void identify(Base& p) {
+
 }
 
 int main() {
