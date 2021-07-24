@@ -7,6 +7,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <cmath>
+#include <cctype>
+
 # define RED    "\x1B[31m"
 # define WTH    "\x1B[38m"
 # define GRN    "\x1B[32m"
@@ -36,6 +38,8 @@ public:
 	Convert(const Convert &i);
 	Convert &operator=(const Convert &rhs);
 	~Convert();
+
+	void set_string(const std::string &_string);
 
 	void convertToInt();
 	void printInt();

@@ -49,10 +49,12 @@ int main(int ac, char **av) {
 //	std::cout << "input: " << av[1] << std::endl;
 //	getType(static_cast<std::string>(av[1]));
 
-	Convert a("12348812348182349819238401120438042");
+	Convert a("1d8");
 //	std::cout << "int: " << a.convertToInt() << std::endl;
 	a.printInt();
 
+//	a.set_string("-42"); //-42 , 0, 1, ad, a, 123, 200 ,
+	a.printChar();
 	return 0;
 }
 

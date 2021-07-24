@@ -50,13 +50,25 @@ void Convert::printInt() {
 
 //CHAR:
 void Convert::convertToChar() {
-	if (get_string().length() == 2) { //if just char
-		set_char(get_string()[0]);
-		if (get_char() < 32 || get_char()> 122) { throw "Non displayable"; }
-	}
+//	std::cout << "string lengt is " << get_string().length() << std::endl;
+	if (get_string().length() < 2 && !isdigit(get_string()[0])) { //if just char
+		set_char(static_cast<char>(get_string()[0]));
+	} else if (get_string().length() <= 3) { //if num in string
+		set_char(static_cast<char>(atoi(get_string().c_str())));
+	} else { set_char(static_cast<char>(1)); }
+	if (static_cast<int>(get_char()) <= 32 || static_cast<int>(get_char()) >= 127) {
+		throw "Non displayable"; }
 }
 void Convert::printChar() {
+	std::cout << "char: ";
 
+	try {
+		convertToChar();
+		std::cout << get_char();
+	}
+	catch (const char *e) { std::cout << RED << e << RESET; }
+
+	std::cout << std::endl;
 }
 
 //getters:
@@ -67,8 +79,10 @@ float Convert::get_float() const { return _float; }
 double Convert::get_double() const { return _double; }
 
 //setters:
+void Convert::set_string(const std::string &_string) { Convert::_string = _string; }
 void Convert::set_int(int _int) { Convert::_int = _int; }
 void Convert::set_char(char _char) { Convert::_char = _char; }
 void Convert::set_float(float _float) { Convert::_float = _float; }
 void Convert::set_double(double _double) { Convert::_double = _double; }
+
 
