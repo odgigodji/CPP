@@ -25,7 +25,8 @@ double getDouble(std::string av) {
 int main(int ac, char **av) {
 //	if (ac != 2) {return 1;}
 
-	Convert a("42.00001f");
+	av[1] = static_cast<char *>("0.0000054785");
+	Convert a(av[1]);
 //	std::cout << "int: " << a.convertToInt() << std::endl;
 	a.printChar();
 

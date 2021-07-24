@@ -77,8 +77,8 @@ void Convert::printChar() {
 //FLOAT:
 void Convert::convertToFloat() {
 	set_float(static_cast<float>(atof(_string.c_str())));
-	if (_int == -1 && _string != "-1") { throw ("too long float"); }
-	if (_int == 0 && _string != "0") { throw ("impossible"); }
+	if (_float == -1 && _string != "-1") { throw ("too long float"); }
+	if (_float == 0 && _string != "0") { throw ("impossible"); }
 }
 void Convert::printFloat() {
 	std::cout << "float: ";
@@ -94,8 +94,8 @@ void Convert::printFloat() {
 //DOUBLE:
 void Convert::convertToDouble() {
 	set_double(atof(_string.c_str()));
-	if (_int == -1 && _string != "-1") { throw ("too long double"); }
-	if (_int == 0 && _string != "0") { throw ("impossible"); }
+	if (_double == -1 && _string != "-1") { throw ("too long double"); }
+	if (_double == 0 && _string != "0") { throw ("impossible"); }
 }
 void Convert::printDouble() {
 	std::cout << "double: ";
