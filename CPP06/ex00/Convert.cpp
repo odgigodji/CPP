@@ -56,13 +56,11 @@ void Convert::convertToChar() {
 }
 void Convert::printChar() {
 	std::cout << "char: ";
-
 	try {
 		convertToChar();
 		std::cout << get_char();
 	}
 	catch (const char *e) { std::cout << RED << e << RESET; }
-
 	std::cout << std::endl;
 }
 
@@ -76,7 +74,7 @@ void Convert::printFloat() {
 	std::cout << "float: ";
 	try {
 		convertToFloat();
-		std::cout.precision(7);
+//		std::cout.precision(13);
 		std::cout << static_cast<float>(get_float());
 	}
 	catch (const char *e) { std::cout << RED << e << RESET; }
@@ -93,7 +91,7 @@ void Convert::printDouble() {
 	std::cout << "double: ";
 	try {
 		convertToDouble();
-		std::cout.precision(7);
+//		std::cout.precision(13);
 		std::cout << get_double();
 	}
 	catch (const char *e) { std::cout << RED << e << RESET; }
