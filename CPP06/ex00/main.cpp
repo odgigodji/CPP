@@ -51,7 +51,7 @@ int main(int ac, char **av) {
 
 	Convert a("42");
 //	std::cout << "int: " << a.ConvertToInt() << std::endl;
-	a.pringInt();
+	a.printInt();
 
 	return 0;
 }

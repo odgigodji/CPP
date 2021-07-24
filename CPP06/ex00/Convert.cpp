@@ -6,6 +6,7 @@
 
 Convert::Convert(const std::string str) {
 	_string = str;
+	ConvertToInt();
 }
 
 Convert::Convert(const Convert &i) {
@@ -33,19 +34,23 @@ const std::string &Convert::get_string() const {
 	return _string;
 }
 
-int Convert::ConvertToInt() {
-	int i;
-	i = atoi(_string.c_str());
-
-	return i;
+void Convert::ConvertToInt() {
+	_int = atoi(_string.c_str());
 }
 
 void Convert::convertToChar() {
-	char c;
-	c = _string.c_str()[0];
+	_char = _string.c_str()[0];
 
 }
 
-void Convert::pringInt() const {
-
+void Convert::printInt() const {
+	std::cout << "int: ";
+	try {
+		if (_string == "0") { std::cout << "0"; }
+		else if (_int == 0) { throw (RED"impossible"); }
+		else { std::cout << _int; }
+	} catch (const char *e) {
+		std::cout << e << RESET;
+	}
+	std::cout << std::endl;
 }
