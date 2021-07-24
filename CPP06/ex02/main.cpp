@@ -11,6 +11,7 @@ Base *generate(void) {
 	Base *res;
 	std::srand(static_cast<unsigned int>(std::time(NULL)));
 
+	std::cout << "generate: ";
 	switch ((rand() % 3) + 1) {
 		case 1:
 			std::cout << "new A" << std::endl;
@@ -31,6 +32,7 @@ ing to the real type of p.
  */
 
 void identify(Base* p) {
+	std::cout << "identyfy PTR: ";
 	A *a;
 	B *b;
 	C *c;
@@ -38,17 +40,29 @@ void identify(Base* p) {
 //dynamic cast return null if casting failed
 	if ((a = dynamic_cast<A *>(p))) { std::cout << "it's A" << std::endl; }
 	else if ((b = dynamic_cast<B *>(p))) { std::cout << "it's B" << std::endl; }
-	else {std::cout << "it's C" << std::endl; }
+	else if ((c = dynamic_cast<C *>(p))) {std::cout << "it's C" << std::endl; }
 }
 
+//with reference dynamic cast can't return null, but throw exception bad_cast
 void identify(Base& p) {
+	std::cout << "identyfy REf: ";
 	try {
 		A &a = dynamic_cast<A &>(p);
 		std::cout << "it's A" << std::endl;
 	}
-	catch (std::bad_cast &e) {
-		std::cout << e.what() << std::endl;
+	catch (std::bad_cast &e) {}
+
+	try {
+		B &a = dynamic_cast<B &>(p);
+		std::cout << "it's B" << std::endl;
 	}
+	catch (std::bad_cast &e) {}
+
+	try {
+		C &c = dynamic_cast<C &>(p);
+		std::cout << "it's C" << std::endl;
+	}
+	catch (std::bad_cast &e) {}
 }
 
 int main() {
