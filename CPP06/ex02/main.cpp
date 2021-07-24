@@ -12,10 +12,13 @@ Base *generate(void) {
 
 	switch ((rand() % 3) + 1) {
 		case 1:
+			std::cout << "new A" << std::endl;
 			return (res = new A);
 		case 2:
+			std::cout << "new B" << std::endl;
 			return (res = new B);
 		default:
+			std::cout << "new C" << std::endl;
 			return (res = new C);
 	}
 }
@@ -32,6 +35,6 @@ void identify(Base* p) {
 int main() {
 	Base *a;
 	a = generate();
-	identify(a);
+//	identify(a);
 	return 0;
 }
