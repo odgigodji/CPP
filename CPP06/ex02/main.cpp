@@ -79,5 +79,6 @@ int main() {
 
 	Base &b = *a;
 	identify(b);
+	delete a;
 	return 0;
 }
