@@ -5,6 +5,7 @@
 #include "C.hpp"
 #include <ctime>
 #include <cstdlib>
+#include <typeinfo>
 
 Base *generate(void) {
 	Base *res;
@@ -41,12 +42,21 @@ void identify(Base* p) {
 }
 
 void identify(Base& p) {
-
+	try {
+		A &a = dynamic_cast<A &>(p);
+		std::cout << "it's A" << std::endl;
+	}
+	catch (std::bad_cast &e) {
+		std::cout << e.what() << std::endl;
+	}
 }
 
 int main() {
 	Base *a;
 	a = generate();
 	identify(a);
+
+	Base &b = *a;
+	identify(b);
 	return 0;
 }
