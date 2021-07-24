@@ -3,6 +3,7 @@
 #include <sstream>
 #include <cstdlib>
 #include <cmath>
+#include "Convert.hpp"
 
 float getFloat(std::string av) {
 	std::string num = "0.62f";
@@ -45,8 +46,13 @@ int main(int ac, char **av) {
 //	const char a[] = "hello";
 //	std::string = a;
 //	std::cout << a << std::endl;
-	std::cout << "input: " << av[1] << std::endl;
-	getType(static_cast<std::string>(av[1]));
+//	std::cout << "input: " << av[1] << std::endl;
+//	getType(static_cast<std::string>(av[1]));
+
+	Convert a("42");
+//	std::cout << "int: " << a.ConvertToInt() << std::endl;
+	a.pringInt();
+
 	return 0;
 }
 
