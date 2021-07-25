@@ -1,5 +1,5 @@
 #include <iostream>
-#include <z3.h>
+#include <z3.h> //for linux
 //#include <cstdint>
 
 struct Data {
@@ -8,21 +8,22 @@ struct Data {
 };
 
 uintptr_t serialize(Data* ptr) {
-	void *tmp;
+//	void *tmp;
 	uintptr_t res;
 
 	std::cout << "first pointer is " << ptr << std::endl;
-	tmp = static_cast<void *>(ptr);
-	res = (uintptr_t )(tmp);
+	res = reinterpret_cast<uintptr_t >(ptr);
+//	tmp = static_cast<void *>(ptr);
+//	res = (uintptr_t )(tmp);
 	return res;
 }
 
 Data* deserialize(uintptr_t raw) {
-	void *tmp;
+//	void *tmp;
 	Data *ptr;
 
-	tmp = (void *)raw;
-	ptr = static_cast<Data *>(tmp);
+//	tmp = (void *)raw;
+	ptr = reinterpret_cast<Data *>(raw);
 	std::cout << "last pointer is  " << ptr << std::endl;
 	return ptr;
 }

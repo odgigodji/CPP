@@ -9,7 +9,7 @@ int main(int ac, char **av) {
 
 	Convert a(av[1]);
 	a.printChar();
-	a.printInt();
+	a.printInt(); //-42 , 0, 1, ad, a, 123, 200 ,
 	a.printFloat();
 	a.printDouble();
 	return 0;
