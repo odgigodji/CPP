@@ -5,7 +5,7 @@
 #include "C.hpp"
 #include <ctime>
 #include <cstdlib>
-#include <typeinfo>
+#include <stdexcept>
 
 Base *generate(void) {
 	Base *res;
@@ -19,11 +19,9 @@ Base *generate(void) {
 		case 2:
 			std::cout << "new B" << std::endl;
 			return (res = new B);
-		case 3:
+		default:
 			std::cout << "new C" << std::endl;
 			return (res = new C);
-		default:
-			return (res = new Base);
 	}
 }
 
@@ -50,26 +48,27 @@ void identify(Base* p) {
 void identify(Base& p) {
 	std::cout << "identyfy REf: ";
 
+//	if ((A &a = dynamic_cast<A &>(p))) { std::cout << "it's A" << std::endl; }
 	try {
 		A &a = dynamic_cast<A &>(p);
 		(void)a;
 		std::cout << "it's A" << std::endl;
 	}
-	catch (std::bad_cast &e) {}
+	catch (std::exception &e) {}
 
 	try {
 		B &b = dynamic_cast<B &>(p);
 		(void)b;
 		std::cout << "it's B" << std::endl;
 	}
-	catch (std::bad_cast &e) {}
+	catch (std::exception &e) {}
 
 	try {
 		C &c = dynamic_cast<C &>(p);
 		(void)c;
 		std::cout << "it's C" << std::endl;
 	}
-	catch (std::bad_cast &e) {}
+	catch (std::exception &e) {}
 }
 
 int main() {
@@ -80,5 +79,6 @@ int main() {
 	Base &b = *a;
 	identify(b);
 	delete a;
+
 	return 0;
 }
