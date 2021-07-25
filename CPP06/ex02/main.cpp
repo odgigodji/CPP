@@ -5,7 +5,6 @@
 #include "C.hpp"
 #include <ctime>
 #include <cstdlib>
-#include <stdexcept>
 
 Base *generate(void) {
 	Base *res;
@@ -48,7 +47,6 @@ void identify(Base* p) {
 void identify(Base& p) {
 	std::cout << "identyfy REf: ";
 
-//	if ((A &a = dynamic_cast<A &>(p))) { std::cout << "it's A" << std::endl; }
 	try {
 		A &a = dynamic_cast<A &>(p);
 		(void)a;

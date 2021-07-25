@@ -1,4 +1,4 @@
-NAME = realtype
+NAME = identify
 
 SRC = 	main.cpp \
 		Base.cpp	\
