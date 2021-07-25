@@ -11,9 +11,9 @@
 
 ### [Module04](https://github.com/odgigodji/CPP/tree/master/CPP04) : Полиморфизм подтипа, абстрактные классы, интерфейсы.
 
-### [Module05](https://github.com/odgigodji/CPP/tree/master/CPP05) : Повторение и исключения.
+### [Module05](https://github.com/odgigodji/CPP/tree/master/CPP05) : Повторение и исключения. Exceptions.
 
-### [Module06](https://github.com/odgigodji/CPP/tree/master/CPP06) : Приведение типов.
+### [Module06](https://github.com/odgigodji/CPP/tree/master/CPP06) : Приведение типов. static_cast, reinterpret_cast, dynamic_cast.
 
 ### Для создания исполняемых файлов использовать команду `make`
 
