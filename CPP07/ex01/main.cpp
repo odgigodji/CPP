@@ -15,7 +15,7 @@ void div_3(double &d) {
 }
 
 int main() {
-	std::string s[5] = {"0", "1", "2", "3", "4"};
+	std::string s[5] = {"0", "1", "2", "3"};
 	iter(s, 5, add_a);
 	std::cout << std::endl;
 

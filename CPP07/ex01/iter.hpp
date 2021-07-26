@@ -6,9 +6,9 @@
 #define EX01_ITER_HPP
 #include <iostream>
 
-template <typename T, typename T1>
-void	iter(T *array, T1 len, void(func)(T &)) {
-	for (T1 i = 0; i < len; i++) {
+template <typename T>
+void	iter(T *array, const size_t &len, void(func)(T &)) {
+	for (size_t i = 0; i < len; ++i) {
 		func(array[i]);
 	}
 }
