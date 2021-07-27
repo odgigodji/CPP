@@ -26,10 +26,7 @@ public:
 	}
 
 	~Array() {
-		if (_arr) {
-			delete[] _arr;
-			std::cout << "del in destructor" << std::endl;
-		}
+		delete[] _arr;
 		std::cout << "~Array()" << std::endl;
 	};
 
