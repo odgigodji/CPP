@@ -12,66 +12,70 @@
 template <class T>
 class Array {
 private:
-	T       *_array;
+	T       *_arr;
 	size_t  _size;
 
 public:
-	Array() : _size(0), _array(NULL) {
-		std::cout << "check 1.5\n";
+	Array() : _size(0), _arr(new T[0]) {
+		std::cout << "+Array() size: " << _size << " arr: " << _arr << std::endl;
 	}
 
-	Array(unsigned int n) : _size(n), _array(new T[n]) {
-		if (n == 0) { _array = NULL; }
-		"check 1.6\n";
+	Array(unsigned int n) : _size(n) , _arr(new T[n]) {
+		std::cout << "+Array(n) size: " << _size << " _arr: ";
+		std::cout << _arr << "_arr[0]: " << _arr[0] << std::endl;
 	}
 
-	Array(const Array &origin) {
-		std::cout << "check1.9 \n";
-		if (_array[0]) {
-			std::cout << "check2.0 \n";
-			delete[] _array;
-//			_array = NULL;
-			std::cout << _array[1] << std::endl;
+	~Array() {
+		if (_arr) {
+			delete[] _arr;
+			std::cout << "del in destructor" << std::endl;
 		}
-		std::cout << "check2.1 \n";
-		_size = origin._size;
-		_array = new T[_size];
-		for (unsigned int i = 0; i < _size; ++i) {
-			_array[i] = origin._array[i];
-		}
+		std::cout << "~Array()" << std::endl;
+	};
+
+	Array<T>(const Array<T> &origin) {
+		*this = origin;
+//		std::cout << "check1.9 \n";
+//		if (_arr[0]) {
+//			std::cout << "check2.0 \n";
+//			delete[] _arr;
+////			_array = NULL;
+//			std::cout << _arr[1] << std::endl;
+//		}
+//		std::cout << "check2.1 \n";
+//		_size = origin._size;
+//		_arr = new T[_size];
+//		for (unsigned int i = 0; i < _size; ++i) {
+//			_arr[i] = origin._arr[i];
+//		}
 	}
 
-	Array &operator=(const Array &rhs) {
+	Array<T> &operator=(const Array<T> &rhs) {
 		std::cout << "check2 \n";
-		std::cout << _size << std::endl;
+		std::cout << rhs._size << std::endl;
 		if (this == &rhs) {
 			return *this;
 		}
-		if (_array[0]) {
-			delete[] _array;
-			_array = NULL;
-		}
+//		if (_arr[0]) {
+//			delete[] _arr;
+////			_arr = NULL;
+//		}
 		_size = rhs._size;
-		_array = new T[rhs._size];
+		_arr = new T[rhs._size];
 		for (unsigned int i = 0; i < _size; ++i) {
-			_array[i] = rhs._array[i];
+			_arr[i] = rhs._arr[i];
 		}
 		return *this;
 	}
 
-	~Array() {
-		if (_array != NULL)
-			delete[] _array;
-	};
-
 	class OutOfLimit : public std::exception {
 		virtual const char* what() const throw() {
-			return (RED"Out of limits" RESET);
+			return (RED"Out of limits"RESET);
 		}
 	};
 
 	T &operator[](const int idx) {
-		if (idx >= 0 && idx < _size) { return _array[idx]; }
+		if (idx >= 0 && idx < _size) { return _arr[idx]; }
 		throw OutOfLimit();
 	}
 
@@ -85,7 +89,7 @@ size_t Array<T>::size() const { return _size; }
 
 template <typename T>
 T *Array<T>::get_array() const {
-	return _array;
+	return _arr;
 }
 
 
