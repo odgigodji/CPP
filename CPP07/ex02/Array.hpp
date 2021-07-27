@@ -49,14 +49,14 @@ public:
 
 	Array<T> &operator=(const Array<T> &rhs) {
 		std::cout << "check2 \n";
-		std::cout << rhs._size << std::endl;
+		std::cout << "_size " << _size << " _arr " << _arr << " _arr[0] " << _arr[0] << std::endl;
 		if (this == &rhs) {
 			return *this;
 		}
-//		if (_arr[0]) {
-//			delete[] _arr;
+		if (_arr[0]) {
+			delete[] _arr;
 ////			_arr = NULL;
-//		}
+		}
 		_size = rhs._size;
 		_arr = new T[rhs._size];
 		for (unsigned int i = 0; i < _size; ++i) {

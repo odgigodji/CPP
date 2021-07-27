@@ -9,7 +9,8 @@ int main(int, char**)
 	Array<int> a(15);
 //	delete[] a;
 	srand(time(NULL));
-	Array<int> b(0);
+	Array<int> b(1);
+	b[0] = 1234;
 	for (int i =0; i < 15; ++i) {
 		const int value = rand();
 		a[i] = value;
@@ -22,8 +23,12 @@ int main(int, char**)
 	s[0] = "hello";
 	std::cout << s[0] << std::endl;
 
-	Array<int> tmp = a;
-	Array<int> cpa(tmp);
+	std::cout << "b before =" << b[0] << std::endl;
+	b = a;
+	std::cout << "b after =" << b[0] << "b size " << b.size() << std::endl << std::endl;
+
+	Array<int> cpa(b);
+	std::cout << "cpa is " << cpa[0] << "cpa size " << cpa.size() << std::endl;
 //	//-----------------------------------intra ----------------------
 //    Array<int> numbers(MAX_VAL);
 //    int* mirror = new int[MAX_VAL];
