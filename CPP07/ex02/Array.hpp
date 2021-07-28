@@ -20,7 +20,7 @@ public:
 		std::cout << "+Array() size: " << _size << " arr: " << _arr << std::endl;
 	}
 
-	Array(unsigned int n) : _size(n) , _arr(new T[n]) {
+	Array(unsigned int n) :  _arr(new T[n]), _size(n) {
 		std::cout << "+Array(n) size: " << _size << " _arr: ";
 		std::cout << _arr << "_arr[0]: " << _arr[0] << std::endl;
 	}
@@ -71,7 +71,7 @@ public:
 		}
 	};
 
-	T &operator[](const int idx) {
+	T &operator[](const unsigned int idx) {
 		if (idx >= 0 && idx < _size) { return _arr[idx]; }
 		throw OutOfLimit();
 	}
