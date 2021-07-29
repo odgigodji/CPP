@@ -123,7 +123,7 @@ public:
 	{
 		_arr = new T[origin.size()]();
 		_size = origin.size();
-		for (int i = 0; i < size(); i++)
+		for (unsigned int i = 0; i < size(); i++)
 			_arr[i] = origin._arr[i];
 	};
 
@@ -138,13 +138,11 @@ public:
 		if (this->_arr) { delete[] _arr; }
 		this->_arr = new T[origin.size()]();
 		this->_size = origin.size();
-		for (int i = 0; i < this->size(); i++)
+		for (unsigned int i = 0; i < this->size(); i++)
 			this->_arr[i] = origin._arr[i];
 		return (*this);
 	};
 
-	// Getter - Setter
-	int     size(void) const { return (this->_size); }
 
 	T &operator[](const unsigned int idx) {
 		if (idx >= 0 && idx < _size) { return _arr[idx]; }
@@ -156,6 +154,8 @@ public:
 			return (RED"Out of limits"RESET);
 		}
 	};
+
+	unsigned int  size(void) const { return (_size); }
 };
 
 #endif //EX02_ARRAY_HPP
