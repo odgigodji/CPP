@@ -4,7 +4,7 @@ SRC = main.cpp
 
 INC =  Array.hpp
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
 
 all: $(NAME)
 
