@@ -18,9 +18,11 @@ private:
 
 public:
 	Array() : _arr(new T[0]()), _size(0) {
-		std::cout << "+Array() size: " << _size << " arr: " << _arr << std::endl;
+//		std::cout << "+Array() size: " << _size << " arr: " << _arr << std::endl;
 	} ;
-	Array(unsigned int n) : _arr(new T[n]()), _size(n) {} ;
+	Array(unsigned int n) : _arr(new T[n]()), _size(n) {
+//		std::cout << "+Array() size: " << _size << " arr: " << _arr << std::endl;
+	} ;
 
 	Array(const Array& origin)
 	{
@@ -30,9 +32,7 @@ public:
 			_arr[i] = origin._arr[i];
 	};
 
-	~Array() {
-		delete [] _arr;
-	};
+	~Array() { delete [] _arr; };
 
 	Array &operator=(const Array& rhs)
 	{

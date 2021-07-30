@@ -1,11 +1,25 @@
 #include <iostream>
 #include <cstdlib>
 #include "Array.hpp"
-#include <iostream>
 
 #define MAX_VAL 750
 int main(int, char**)
 {
+    Array<int> z(50);
+	Array<std::string> str(42);
+    for (int i = 0; i < 5; i++) {
+		z[i] = 420;
+	    std::cout << z[i] << std::endl;
+	    str[i] = "star wars";
+	    std::cout << str[i] << std::endl;
+    }
+	Array<std::string> copy = str;
+	std::cout << "copy:" << copy[2] << std::endl;
+	try {
+		std::cout << z[51] << std::endl;
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
 
 //	//-----------------------------------intra ----------------------
     Array<int> numbers(MAX_VAL);
