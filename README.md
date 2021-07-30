@@ -17,6 +17,8 @@
 
 ### [Module07](https://github.com/odgigodji/CPP/tree/master/CPP07) : Шаблоны функций и классов. Templates.
 
+### [Module08](https://github.com/odgigodji/CPP/tree/master/CPP08) : Шаблонные контейнеры, итераторы, алгоритмы.
+
 ### Для создания исполняемых файлов использовать команду `make`
 
 ## Resources
