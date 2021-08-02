@@ -11,8 +11,8 @@ int main () {
 	a.push_back(4);
 
 	try {
-		std::_List_iterator<int> it_list = easyfind(a, 3);
-		std::cout << "search res in list is " << *it_list << std::endl;
+		std::_List_iterator<int> it = easyfind(a, 3);
+		std::cout << "search res is " << *it << std::endl;
 	}
 	catch (const char* &e)
 	{
@@ -27,7 +27,6 @@ int main () {
 	{
 		std::cerr << e << std::endl;
 	}
-
 
 	return 0;
 }
