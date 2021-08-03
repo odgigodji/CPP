@@ -12,10 +12,8 @@ typename T::iterator	easyfind(T& arr, int b) {
 	typename T::iterator it;
 
 	it = std::find(arr.begin(), arr.end(), b);
-	if (it == arr.end())
-		throw "Can't be found\n";
+	if (it == arr.end()) { throw "Can't be found"; }
 	return it;
 }
-
 
 #endif //EX00_EASYFIND_HPP
