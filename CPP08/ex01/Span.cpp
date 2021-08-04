@@ -9,33 +9,34 @@ Span::Span() {}
 Span::Span(const unsigned int N) {
 	_N = N;
 	_v.reserve(N);
+	_size = 0;
 }
 
 Span::Span(const Span &origin) {
-
+	_N = origin.get_N();
+	_v = origin.get_v();
+	_size = origin.get_size();
 }
 
 Span &Span::operator=(const Span &rhs) {
-
+	_N = rhs.get_N();
+	_v = rhs.get_v();
+	_size = rhs.get_size();
 	return *this;
 }
 
 void Span::addNumber(const int _nb) {
-	static size_t size = 0;
-	if (size < _N) {
+	if (get_size() < _N) {
 		_v.push_back(_nb);
-		++size;
+		++_size;
 	} else {
-		std::cout << "shit happen" << std::endl;
-		throw -2;
+		throw -1;
 	}
-	std::cout << "size is " << size << std::endl;
-
 }
 
 unsigned int Span::shortestSpan() const
 {
-	if (_v.size() < 2) { throw  -1; } //throw exception
+	if (_v.size() < 2) { throw  SomethingWrong("aboba"); }
 	else
 	{
 		unsigned int res;
@@ -59,15 +60,19 @@ unsigned int Span::shortestSpan() const
 }
 
 unsigned int Span::longestSpan() const {
+	if (_v.size() < 2) { throw -2; }
 	return (static_cast<unsigned int>(*std::max_element(_v.begin(), _v.end()) -
 		*std::min_element(_v.begin(), _v.end())));
 }
 
-Span::~Span() {
-//	delete[] _N;
-}
+Span::~Span() {}
 
 int &Span::operator[](const unsigned int i) {
-	if (i > _N) { throw "out of range"; }
+	if (i > _N) { throw -3; }
 	else { return _v[i]; }
 }
+
+//getters:
+const std::vector<int> &Span::get_v() const { return _v; }
+unsigned int Span::get_N() const { return _N; }
+unsigned int Span::get_size() const { return _size; }

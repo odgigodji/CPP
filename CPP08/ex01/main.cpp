@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Span.hpp"
+#include <ctime>
 
 int main()
 {
@@ -10,11 +11,27 @@ int main()
 	sp.addNumber(17);
 	sp.addNumber(9);
 	sp.addNumber(11);
-//	sp.addNumber(11);
-
 	std::cout << sp.shortestSpan() << std::endl;
 	std::cout << sp.longestSpan() << std::endl;
 
-	//my tests
+	//my tesst
+	Span sp1 = Span(10000);
+	try {
+		std::cout << "shortest: " << sp1.shortestSpan() << std::endl;
 
+	} catch(std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+	std::srand(std::time(NULL));
+	for (int i = 0; i < 10001; ++i) {
+		try {
+			sp1.addNumber(std::rand());
+//			std::cout << "i is " << i << std::endl;
+		}
+		catch (...) {
+			std::cout << "-something wrong\n";
+		}
+	}
+	std::cout << "shortest " << sp1.shortestSpan() << std::endl;
+	std::cout << "longest " << sp1.longestSpan() << std::endl;
 }

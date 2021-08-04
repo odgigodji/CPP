@@ -8,13 +8,31 @@
 #include <iostream>
 #include <cmath>     //for abs
 #include <algorithm> //for std::min/max_element
+#include <stdexcept>
+#include <exception>
 
 class Span {
 private:
 	std::vector<int>    _v;
 	unsigned int        _N;
+	unsigned int        _size;
 
 	Span();
+
+	class SomethingWrong : public std::exception {
+	private:
+		std::string _message;
+		SomethingWrong() {};
+	public:
+		SomethingWrong(std::string message) {
+			_message = message;
+		}
+		const char* what() const throw() {
+			return static_cast<const char *>(_message.c_str());
+		}
+		virtual ~SomethingWrong() {};
+	};
+
 public:
 	Span(const unsigned int N);
 	Span(const Span &origin);
@@ -25,6 +43,12 @@ public:
 	unsigned int shortestSpan() const ;
 	unsigned int  longestSpan()  const;
 	int &operator[](const unsigned int i);
+
+
+//getters:
+	const std::vector<int> &get_v() const;
+	unsigned int get_N() const;
+	unsigned int get_size() const;
 };
 
 
