@@ -47,7 +47,7 @@ unsigned int Span::shortestSpan() const
 		res = static_cast<unsigned int>(abs(*it2 - *it1));
 		for(; it1 != _v.end(); ++it1) {
 			for(; it2 != _v.end(); ++it2) {
-				if (it2 != it1 && abs(*it2 - *it1) < res ) {
+				if (it2 != it1 && abs(*it2 - *it1) < (int)res ) {
 					res = static_cast<unsigned int>(abs(*it2 - *it1));
 				}
 			}

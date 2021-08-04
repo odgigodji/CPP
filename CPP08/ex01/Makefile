@@ -5,7 +5,7 @@ SRC = 	main.cpp \
 
 INC =  Span.hpp
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
