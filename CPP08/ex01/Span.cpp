@@ -6,10 +6,8 @@
 
 Span::Span() {}
 
-Span::Span(const unsigned int N) {
-	_N = N;
+Span::Span(const unsigned int N) : _N(N), _size(0) {
 	_v.reserve(N);
-	_size = 0;
 }
 
 Span::Span(const Span &origin) {
@@ -30,13 +28,13 @@ void Span::addNumber(const int _nb) {
 		_v.push_back(_nb);
 		++_size;
 	} else {
-		throw -1;
+		throw SomethingWrong("Out of size"); ;
 	}
 }
 
 unsigned int Span::shortestSpan() const
 {
-	if (_v.size() < 2) { throw  SomethingWrong("aboba"); }
+	if (_v.size() < 2) { throw  SomethingWrong("Less than 2 elem in array"); }
 	else
 	{
 		unsigned int res;
@@ -60,7 +58,7 @@ unsigned int Span::shortestSpan() const
 }
 
 unsigned int Span::longestSpan() const {
-	if (_v.size() < 2) { throw -2; }
+	if (_v.size() < 2) { throw SomethingWrong("Less than 2 elem in array"); }
 	return (static_cast<unsigned int>(*std::max_element(_v.begin(), _v.end()) -
 		*std::min_element(_v.begin(), _v.end())));
 }
@@ -68,7 +66,7 @@ unsigned int Span::longestSpan() const {
 Span::~Span() {}
 
 int &Span::operator[](const unsigned int i) {
-	if (i > _N) { throw -3; }
+	if (i > _N) { throw SomethingWrong("Out of range"); ; }
 	else { return _v[i]; }
 }
 

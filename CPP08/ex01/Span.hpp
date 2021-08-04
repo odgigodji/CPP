@@ -22,15 +22,12 @@ private:
 	class SomethingWrong : public std::exception {
 	private:
 		std::string _message;
-		SomethingWrong() {};
 	public:
-		SomethingWrong(std::string message) {
-			_message = message;
-		}
+		SomethingWrong(std::string msg) : _message(msg) {};
 		const char* what() const throw() {
 			return static_cast<const char *>(_message.c_str());
 		}
-		virtual ~SomethingWrong() {};
+		virtual ~SomethingWrong() throw() {};
 	};
 
 public:

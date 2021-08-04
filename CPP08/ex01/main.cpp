@@ -26,10 +26,9 @@ int main()
 	for (int i = 0; i < 10001; ++i) {
 		try {
 			sp1.addNumber(std::rand());
-//			std::cout << "i is " << i << std::endl;
 		}
-		catch (...) {
-			std::cout << "-something wrong\n";
+		catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
 		}
 	}
 	std::cout << "shortest " << sp1.shortestSpan() << std::endl;
