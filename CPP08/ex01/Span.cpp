@@ -55,18 +55,6 @@ unsigned int Span::shortestSpan() const
 			}
 			it2 = _v.begin();
 		}
-//		while(it2 !=_v.end())
-//		{
-//			el1 = *it1;
-//			el2 = *it2;
-//
-//			if (el2 - el1 < shorts) {
-//				shorts = abs(el2 - el1);
-//			}
-//
-//			it1++;
-//			it2 = it1 + 1;
-//		}
 		std::cout << res << std::endl;
 		return (res);
 	}
