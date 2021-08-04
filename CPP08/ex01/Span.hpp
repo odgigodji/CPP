@@ -41,7 +41,6 @@ public:
 	unsigned int  longestSpan()  const;
 	int &operator[](const unsigned int i);
 
-
 //getters:
 	const std::vector<int> &get_v() const;
 	unsigned int get_N() const;
