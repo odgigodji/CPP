@@ -4,10 +4,10 @@
 
 #ifndef EX01_SPAN_HPP
 #define EX01_SPAN_HPP
-#include <iterator>
 #include <vector>
 #include <iostream>
-#include <cmath>
+#include <cmath>     //for abs
+#include <algorithm> //for std::min/max_element
 
 class Span {
 private:
