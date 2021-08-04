@@ -6,6 +6,8 @@
 #define EX01_SPAN_HPP
 #include <iterator>
 #include <vector>
+#include <iostream>
+#include <cmath>
 
 class Span {
 private:
@@ -20,7 +22,7 @@ public:
 	~Span();
 
 	void addNumber(const unsigned int _nb);
-	unsigned int  shortestSpan() const ;
+	unsigned int shortestSpan() const ;
 	unsigned int  longestSpan()  const;
 	int &operator[](const unsigned int i);
 };
