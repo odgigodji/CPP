@@ -13,11 +13,13 @@ int main() {
 //	catch (const char *e) {
 //		std::cout << e << std::endl;
 //	}
-	sp.addNumber(15);
+	sp.addNumber(0);
 
-	sp.addNumber(20);
 	sp.addNumber(45);
+	sp.addNumber(5);
+
 	sp.addNumber(70);
+	sp.addNumber(5);
 	sp.addNumber(110);
 
 	sp.shortestSpan();

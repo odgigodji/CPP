@@ -23,7 +23,7 @@ Span &Span::operator=(const Span &rhs) {
 	return *this;
 }
 
-void Span::addNumber(const unsigned int _nb) {
+void Span::addNumber(const int _nb) {
 	_v.push_back(_nb);
 
 }
@@ -34,8 +34,6 @@ unsigned int Span::shortestSpan() const
 	else
 	{
 		unsigned int res;
-//		int el1;
-//		int	el2;
 
 		std::vector<int>::const_iterator it1;
 		std::vector<int>::const_iterator it2;
@@ -44,14 +42,10 @@ unsigned int Span::shortestSpan() const
 		it2 = it1 + 1;
 		res = static_cast<unsigned int>(abs(*it2 - *it1));
 		for(; it1 != _v.end(); ++it1) {
-//			el1 = *it1;
 			for(; it2 != _v.end(); ++it2) {
-				if (*it2 != *it1 && abs(*it2 - *it1) < res ) {
+				if (it2 != it1 && abs(*it2 - *it1) < res ) {
 					res = static_cast<unsigned int>(abs(*it2 - *it1));
-//					std::cout << "res is " << res << std::endl;
 				}
-//				el2 = *it2;
-
 			}
 			it2 = _v.begin();
 		}

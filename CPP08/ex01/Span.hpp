@@ -21,7 +21,7 @@ public:
 	Span &operator=(const Span &rhs);
 	~Span();
 
-	void addNumber(const unsigned int _nb);
+	void addNumber(const int _nb);
 	unsigned int shortestSpan() const ;
 	unsigned int  longestSpan()  const;
 	int &operator[](const unsigned int i);
