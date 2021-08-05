@@ -27,7 +27,7 @@ int main()
 	}
 	std::stack<int> s(mstack);
 
-//mytests---
+//mytests---------------------------------------------:
 	std::cout << "\n---------my tests-------\n";
 	std::list<int> mstack1;
 
