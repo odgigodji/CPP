@@ -32,12 +32,16 @@ void Span::addNumber(const int _nb) {
 	}
 }
 
+void Span::addNumbers(std::vector<int> _nbs) {
+
+}
+
 unsigned int Span::shortestSpan() const
 {
 	if (_v.size() < 2) { throw  SomethingWrong("Less than 2 elem in array"); }
 	else
 	{
-		unsigned int res;
+		unsigned int res = 0;
 
 		std::vector<int>::const_iterator it1;
 		std::vector<int>::const_iterator it2;

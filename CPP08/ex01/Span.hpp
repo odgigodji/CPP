@@ -37,6 +37,8 @@ public:
 	~Span();
 
 	void addNumber(const int _nb);
+	void addNumbers(std::vector<int> _nbs);
+
 	unsigned int shortestSpan() const ;
 	unsigned int  longestSpan()  const;
 	int &operator[](const unsigned int i);
