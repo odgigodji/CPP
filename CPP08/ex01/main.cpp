@@ -25,9 +25,8 @@ int main()
 
 	std::vector<int> v(3, 100);
 	sp1.addNumbers(v);
-//	std::cout << "get size is " << sp1.get_size() << std::endl;
-	std::vector<int> g(5, 200);
 
+	std::vector<int> g(5, 200);
 	try {
 		sp1.addNumbers(g);
 	}
