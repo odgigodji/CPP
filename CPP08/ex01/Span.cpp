@@ -28,12 +28,17 @@ void Span::addNumber(const int _nb) {
 		_v.push_back(_nb);
 		++_size;
 	} else {
-		throw SomethingWrong("Out of size"); ;
+		throw SomethingWrong("Out of size");
 	}
 }
 
 void Span::addNumbers(std::vector<int> _nbs) {
-
+	if (get_size() + _nbs.size() <= get_N()) {
+		_v.insert(_v.end(), _nbs.begin(), _nbs.end());
+		_size += _nbs.size();
+	} else {
+		throw SomethingWrong("Out of size");
+	}
 }
 
 unsigned int Span::shortestSpan() const
@@ -72,6 +77,13 @@ Span::~Span() {}
 int &Span::operator[](const unsigned int i) {
 	if (i > _N) { throw SomethingWrong("Out of range"); ; }
 	else { return _v[i]; }
+}
+
+std::ostream &operator<<(std::ostream &oS, const Span &span) {
+	for(std::vector<int>::const_iterator it = span.get_v().begin(); it != span.get_v().end(); ++it) {
+		oS << *it << " ";
+	}
+	return oS;
 }
 
 //getters:

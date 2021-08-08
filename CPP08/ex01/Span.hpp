@@ -49,5 +49,5 @@ public:
 	unsigned int get_size() const;
 };
 
-
+std::ostream &operator<<(std::ostream &oS, const Span &span);
 #endif //EX01_SPAN_HPP
