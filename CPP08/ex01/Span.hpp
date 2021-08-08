@@ -37,7 +37,7 @@ public:
 	~Span();
 
 	void addNumber(const int _nb);
-	void addNumbers(std::vector<int> _nbs);
+	void addNumbers(const std::vector<int> _nbs);
 
 	unsigned int shortestSpan() const ;
 	unsigned int  longestSpan()  const;
@@ -50,4 +50,5 @@ public:
 };
 
 std::ostream &operator<<(std::ostream &oS, const Span &span);
+
 #endif //EX01_SPAN_HPP

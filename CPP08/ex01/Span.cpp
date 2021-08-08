@@ -3,6 +3,8 @@
 //
 
 #include "Span.hpp"
+# define MAG 	"\x1b[35m"
+# define RESET	"\x1b[0m"
 
 Span::Span() {}
 
@@ -28,22 +30,22 @@ void Span::addNumber(const int _nb) {
 		_v.push_back(_nb);
 		++_size;
 	} else {
-		throw SomethingWrong("Out of size");
+		throw SomethingWrong(MAG"Out of size."RESET);
 	}
 }
 
-void Span::addNumbers(std::vector<int> _nbs) {
+void Span::addNumbers(const std::vector<int> _nbs) {
 	if (get_size() + _nbs.size() <= get_N()) {
 		_v.insert(_v.end(), _nbs.begin(), _nbs.end());
 		_size += _nbs.size();
 	} else {
-		throw SomethingWrong("Out of size");
+		throw SomethingWrong(MAG"Out of size."RESET);
 	}
 }
 
 unsigned int Span::shortestSpan() const
 {
-	if (_v.size() < 2) { throw  SomethingWrong("Less than 2 elem in array"); }
+	if (_v.size() < 2) { throw  SomethingWrong(MAG"Less than 2 elem in array."RESET); }
 	else
 	{
 		unsigned int res = 0;
@@ -67,7 +69,7 @@ unsigned int Span::shortestSpan() const
 }
 
 unsigned int Span::longestSpan() const {
-	if (_v.size() < 2) { throw SomethingWrong("Less than 2 elem in array"); }
+	if (_v.size() < 2) { throw SomethingWrong(MAG"Less than 2 elem in array."RESET); }
 	return (static_cast<unsigned int>(*std::max_element(_v.begin(), _v.end()) -
 		*std::min_element(_v.begin(), _v.end())));
 }
@@ -75,7 +77,7 @@ unsigned int Span::longestSpan() const {
 Span::~Span() {}
 
 int &Span::operator[](const unsigned int i) {
-	if (i > _N) { throw SomethingWrong("Out of range"); ; }
+	if (i > _N) { throw SomethingWrong(MAG"Out of range."RESET); ; }
 	else { return _v[i]; }
 }
 
