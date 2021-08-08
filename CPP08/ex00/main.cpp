@@ -10,7 +10,7 @@ int main () {
 	a.push_back(4);
 
 	try {
-		std::_List_iterator<int> it = easyfind(a, 3);
+		std::list<int>::iterator it = easyfind(a, 3);
 		std::cout << "search res is " << *it << std::endl;
 	}
 	catch (const char* &e)
@@ -19,7 +19,7 @@ int main () {
 	}
 
 	try {
-		std::_List_iterator<int> it = easyfind(a, 5);
+		std::list<int>::iterator it = easyfind(a, 5);
 		std::cout << "search res is " << *it << std::endl;
 	}
 	catch (const char* &e)

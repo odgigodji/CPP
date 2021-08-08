@@ -6,13 +6,15 @@
 #define EX00_EASYFIND_HPP
 #include <iostream>
 #include <algorithm>    // std::find
+# define MAG 	"\x1b[35m"
+# define RESET	"\x1b[0m"
 
 template <class T>
 typename T::iterator	easyfind(T& arr, int b) {
 	typename T::iterator it;
 
 	it = std::find(arr.begin(), arr.end(), b);
-	if (it == arr.end()) { throw "Can't be found"; }
+	if (it == arr.end()) { throw MAG"Can't be found"RESET; }
 	return it;
 }
 
