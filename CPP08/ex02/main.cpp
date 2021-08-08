@@ -28,7 +28,7 @@ int main()
 	std::stack<int> s(mstack);
 
 //mytests---------------------------------------------:
-	std::cout << "\n---------my tests-------\n";
+	std::cout << "---------same at list-------\n";
 	std::list<int> mstack1;
 
 	mstack1.push_back(5);
@@ -51,5 +51,20 @@ int main()
 		std::cout << *it1 << std::endl;
 		++it1;
 	}
+
+	std::cout << "---------several tests-------\n";
+	MutantStack<int> b;
+	if (b.empty()) { std::cout << "-a- is empty\n"; }
+	MutantStack<int> a = b;
+	for (int i = 1; i < 43; ++i) {
+		a.push(i);
+	}
+
+	MutantStack<int>::iterator i = a.end() - 1;
+	for (; i >= a.begin(); i--) {
+		std::cout << *i << std::endl;
+	}
+
+	std::cout << "-a- size is " << a.size() << std::endl;
 	return 0;
 }
