@@ -21,6 +21,9 @@
 ### Для создания исполняемых файлов использовать команду `make`
 
 ## Resources
-1. [Ravesli](https://ravesli.com/uroki-cpp/)
-2. [cplusplus.com](https://www.cplusplus.com/)
-3. [Ромбовидное наследование](https://www.youtube.com/watch?v=oqpx7L5ipbw&ab_channel=%23SimpleCode)
+1. [std::map](https://www.cplusplus.com/reference/map/map/?kw=map)
+2. [std::vector](https://www.cplusplus.com/reference/vector/vector/)
+3. [std::allocator](https://en.cppreference.com/w/cpp/memory/allocator)
+4. [АВЛ-деревья на хабр](https://habr.com/ru/post/150732/)
+5. [AVL-tree visualisation](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)
+6. [iterators](https://www.cplusplus.com/reference/iterator/InputIterator/)
